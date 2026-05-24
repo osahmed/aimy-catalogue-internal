@@ -1,0 +1,29 @@
+# Environment files with secrets
+.env
+.env.local
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Sensitive data files
+jira_issues_cache.json
+aimy-catalogue-site/catalogue-data.json
+aimy-catalogue-site/internal-review-notes.md
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
