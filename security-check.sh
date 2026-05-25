@@ -23,7 +23,7 @@ fi
 
 # 2. Check for sensitive JSON files
 echo "Checking for sensitive data files..."
-if git diff --cached --name-only | grep -E "jira_issues_cache\.json|catalogue-data\.json|internal-review-notes\.md"; then
+if git diff --cached --name-only | grep -E "jira_issues_cache\.json|catalogue-data\.json|internal-review-notes\.md|catalogue-internal-evidence\.json"; then
     echo -e "${RED}❌ ERROR: Sensitive data file detected in commit${NC}"
     echo "   These files contain internal information (emails, account IDs, internal notes)."
     ISSUES_FOUND=1

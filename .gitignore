@@ -17,6 +17,8 @@ dist/
 jira_issues_cache.json
 aimy-catalogue-site/catalogue-data.json
 aimy-catalogue-site/internal-review-notes.md
+internal-review-notes.md
+data/catalogue-internal-evidence.json
 
 # OS files
 .DS_Store

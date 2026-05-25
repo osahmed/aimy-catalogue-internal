@@ -1,237 +1,274 @@
-# AiMY Support & Sales Operations — Product Catalogue & Pitch Asset
+# AiMY — Unified Product Catalogue & Pitch Asset
 
-> **Core Purpose:** Helping Sales teams present the AiMY product suite with 100% real Jira-backed evidence, illustrating how AiMY transforms customer support and sales operations from day zero to a self-improving, automated system.
+> **Core Document Scope:** Helping enterprise Sales teams pitch the full capabilities of the AiMY platform. Grounded in live development evidence and the onboarding journeys of our two primary operating tracks: **AiMY L1 Support Operations** and **AiMY Sales Operations**.
 
 ---
 
-## 1. Hero: The Self-Improving Support Platform
+## 1. Hero: The Self-Improving Operations Platform
 
-### **Headline:** Reclaim 80% of Support Operations and Automate the Quality Loop with AiMY
-### **Subheadline:** The only customer-facing AI agent platform that connects your knowledge, voice, QA, and operational layers into a single, continuous self-improving circle.
+### **Headline:** Reclaim 80% of Operational Overhead & Close the Quality Circle Automatically
+### **Subheadline:** The only enterprise-ready customer-facing AI agent platform that securely connects your company's knowledge, voice, QA, and sales automation layers into a single, continuous self-improving loop.
+
 > [!NOTE]
-> **Primary Call to Action:** [Book a 15-Minute Operational Assessment] or [Explore Live Catalogue Evidence Below]
+> **Primary Call to Action:** [Book a 15-Minute Operational Assessment] or [Explore Live Modular Tracks Below]
 
 ---
 
-## 2. Customer Pain: The Day 0 Support Baseline
+## 2. What AiMY Solves: The Day 0 Operations Baseline
 
-Before implementing AiMY, customer support operations suffer from systemic, structural friction:
+Before implementing the AiMY platform, enterprise support and sales operations suffer from systemic operational friction:
 
-*   **Scattered and Outdated Knowledge:** Knowledge lives in separate silos—Confluence pages, shared folders, Slack channels, and senior agents' heads. Two different support agents provide two different answers to the same customer query.
-*   **Invisible Voice Interactions:** Inbound and outbound phone calls happen in a black box. There is no structured transcript search, no automated trend spotting, and no real-time co-pilot assisting agents during live escalations.
-*   **Selective and Late Manual QA:** Supervisors review only 1% to 2% of tickets per week. Quality issues are caught days after the interaction, preventing proactive course corrections.
-*   **Reactive Management Firefighting:** Managers work in a constant state of fire-fighting, chasing breach SLA escalations without real-time predictive dashboards.
-
----
-
-## 3. The 1-4 Week Onboarding Journey
-
-Unlike traditional enterprise support transformations that drag on for 6 to 12 months, AiMY deploys fully within **1 to 4 weeks**:
-
-*   **Week 1 (Knowledge Foundation):** AiMY Knowledge connects natively to your existing documentation, SharePoint, Confluence, or helpdesk platform to establish a secure, unified knowledge layer.
-*   **Week 2 (Voice Activation):** AiMY Voice goes live as a native channel, bringing automated transcription, call recording structure, and live co-pilot guidance online.
-*   **Week 3 (Automated QA Coverage):** AiMY QA connects to Zendesk/Freshdesk, instantly scoring 100% of text and voice interactions.
-*   **Week 4 (Connect Supervision & Loop Closure):** AiMY Connect provides real-time supervisor operational dashboards. The self-improving loop closes, draft-generating articles to fill identified support gaps.
+*   **Scattered & wing-it product knowledge:** Information is distributed across Slack channels, team wikis, Confluence silos, and senior representatives' heads. Reps wing it on competitor objections, and support agents give conflicting answers to the same customer query.
+*   **Invisible voice channels:** Inbound support calls and outbound sales calls occur inside a total black box. There is no automated transcription, sentiment indexing, or live assistance to guide agents during live customer escalations.
+*   **Sample-based retrospective QA:** Managers audit less than 2% of emails, tickets, or calls per week. Risk patterns, tone errors, and compliance breaches are caught days too late, leading to reactive firefighting.
+*   **Patchy pipeline & floor visibility:** Supervisors spend more time chasing manual activity updates and deal status logs from representatives than coaching or routing high-value queues.
 
 ---
 
-## 4. AiMY Module Catalogue (Jira-Backed Evidence)
+## 3. Two Catalogue Tracks: 1-4 Week Onboarding Journeys
 
-Below is the verified list of capabilities extracted directly from our development board.
+AiMY does not require long 6-to-12 month enterprise integration cycles. It deploys fully within **1 to 4 weeks** via two tailored tracks:
 
-### 📦 AiMY Connect
+### Track 1: AiMY L1 Support Operations Track
+*   **Week 1 (Factual Knowledge Base):** Installs the secure **AiMY Knowledge** layer, connecting SharePoint, Notion, or legacy helpdesk databases to establish a single source of truth.
+*   **Week 2 (Conversational Voice Go-Live):** Activates native **AiMY Voice** stream transcriptions and calling infrastructure to open the telephony black box.
+*   **Week 3 (100% Automated QA Auditing):** Connects **AiMY QA** to evaluate and score every email, chat, and voice interaction automatically.
+*   **Week 4 (Closed-Loop Operations):** Deploys **AiMY Connect** supervisor control dashboards and closes the continuous loop, auto-generating SOP article recommendations to fill flagged knowledge gaps.
 
-*   **Description:** The operational control hub that provides supervisors with real-time support floor visibility and proactive queue routing.
-*   **Customer Pain Solved:** Reactive firefighting, missed SLA alerts, and lack of live agent status visibility.
-*   **Integrations Connected:** `Workforce Management platforms, helpdesk platforms, operational databases.`
-*   **Core Customer Outcome:** *SLA breach alerts, proactive routing, operational risk dashboards, and compliance dashboards.*
-
-#### ✅ Released & Recently Updated Capabilities
-- **24/7 Support Team - AI Urgency & Escalation Engine** (`AIMY-3124`)
-  *Customer Value:* Gives supervisors real-time visibility and SLA-aware proactive controls to manage support performance.
-- **Research Notification System (Event-Based)** (`AIMY-3110`)
-  *Customer Value:* Gives supervisors real-time visibility and SLA-aware proactive controls to manage support performance.
-
-#### 🗺️ Roadmap / Coming Soon
-- **AiMY Connect - Design Bedrocks** (`AIMY-3013`)
-  *Feature Scope:* Provides native platform capabilities for: AiMY Connect - Design Bedrocks.
-- **[AIMY Central] Notification system across AIMY agents ** (`AIMY-1164`)
-  *Feature Scope:* Provides native platform capabilities for: [AIMY Central] Notification system across AIMY agents .
-- **24/7 Critical Support Escalation System** (`AIMY-3122`)
-  *Feature Scope:* Provides native platform capabilities for: 24/7 Critical Support Escalation System.
-- **AiMY Connect – Queue Management & Agent Collaboration** (`AIMY-3362`)
-  *Feature Scope:* Provides native platform capabilities for: AiMY Connect – Queue Management & Agent Collaboration.
-- **AiMY Connect - Voice Integration & Live Intelligence** (`AIMY-3987`)
-  *Feature Scope:* Provides native platform capabilities for: AiMY Connect - Voice Integration & Live Intelligence.
-- _And 6 more capabilities currently in the pipeline._
+### Track 2: AiMY Sales Operations Track
+*   **Week 1 (Sales Playbooks Ingestion):** Feeds sales collateral, competitor battlecards, objection handling guides, and pricing sheets into the unified **Sales Knowledge** index.
+*   **Week 2 (High-Velocity Outreach Sequencing):** Activates **AiMY Sales — BDR Mode** to auto-generate personalized cold cadences, enrich lead profiles, and launch integrated dialers.
+*   **Week 3 (Pipeline Query Observability):** Activates **AiMY Sales — Manager Mode**, providing natural language pipeline search interfaces, duplicate lead hygiene tools, and deal risk alerts.
+*   **Week 4 (Deals Closing Loop):** Closes the loop by scanning won/lost outcome diagnostics and objection histories to automatically refine and update battlecards in the Knowledge base.
 
 ---
+
+## 4. Module Catalogue
+
+Below is the verified customer-facing module catalogue. It details what each modular building block delivers, the target outcomes, and verified recently released capabilities.
 
 ### 📦 AiMY Knowledge
 
-*   **Description:** The unified intelligence layer that wraps securely around all enterprise documentation, acting as a single source of truth.
-*   **Customer Pain Solved:** Scattered, inconsistent, and slow knowledge lookup by support agents.
-*   **Integrations Connected:** `SharePoint, Confluence, Google Drive, Notion, Zendesk, Freshdesk, ServiceNow.`
-*   **Core Customer Outcome:** *Immediate reduction in agent handle times (AHT) and 100% consistent answers across all communication channels.*
+*   **Track Alignment:** `L1 Support`
+*   **Functional Purpose:** The unified intelligence core that indexes enterprise content securely and serves as a single factual source of truth.
+*   **Business Pain Solved:** Scattered, inconsistent documentation, and slow agent knowledge lookups.
+*   **What It Works With:** *SOP articles, product manuals, FAQs, policies, case studies, competitive battlecards.*
+*   **Verified Integrations:** `SharePoint, Confluence, Notion, Google Drive, Zendesk Guide, Freshdesk KB.`
+*   **Core Customer Outcome:** *100% accurate, factual support answers with a 30% reduction in agent handle times (AHT).*
 
-#### ✅ Released & Recently Updated Capabilities
-- **AIMY K - Add "View My Open Tasks" Static Card in AIMY Talent** (`AIMY-2104`)
-  *Customer Value:* Ensures consistent, automated, and accurate answers from your organization's verified knowledge bases.
-- **Product Expert:  Ingesting Knowledge Documents** (`AIMY-407`)
-  *Customer Value:* Ensures consistent, automated, and accurate answers from your organization's verified knowledge bases.
-
-#### 🗺️ Roadmap / Coming Soon
-- **[Sentry AIMY K N] Failed to store question in FAQ: 'What are the key stages of a typical recruitment w...'** (`AIMY-2574`)
-  *Feature Scope:* Provides native platform capabilities for: [Sentry AIMY K N] Failed to store question in FAQ: 'What are the key stages of a typical recruitment w...'.
-
----
-
-### 📦 AiMY QA
-
-*   **Description:** Applies 100% automated interaction auditing and scoring across every email, chat, and phone call.
-*   **Customer Pain Solved:** Manual sample reviews (covering < 2% of tickets) that miss compliance risks and operational training gaps.
-*   **Integrations Connected:** `Zendesk Chat & Tickets, Freshdesk API, Salesforce Service Cloud.`
-*   **Core Customer Outcome:** *100% QA interaction coverage with automated metric evaluations, compliance flaggers, and risk alerts.*
-
-#### ✅ Released & Recently Updated Capabilities
-_No fully released customer-facing tickets in this module._
+#### ✅ Available Features & Capabilities
+- **Contactable Hyperlinks Across Platform**
+  *What it does:* Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.
+  *Business Outcome:* Supports overall helpdesk platform security, transaction throughput, and response consistency.
+- **24/7 Support Team - AI Urgency & Escalation Engine**
+  *What it does:* Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.
+  *Business Outcome:* Supports overall helpdesk platform security, transaction throughput, and response consistency.
+- **Research Notification System (Event-Based)**
+  *What it does:* Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.
+  *Business Outcome:* Supports overall helpdesk platform security, transaction throughput, and response consistency.
+- **Conversational UI & Live Search Console**
+  *What it does:* A modern, natural-language agent interface with built-in Generative UI that allows reps and agents to search verified SOPs instantly.
+  *Business Outcome:* Reduces agent handle times by over 30% by providing prompt, contextual answers in real-time.
+- **Multi-Source Knowledge Ingestion**
+  *What it does:* Securely ingests, normalizes, and indexes standard operating procedures, manuals, and FAQs from Confluence, SharePoint, and Google Drive.
+  *Business Outcome:* Eliminates scattered knowledge silos and establishes a single, verified source of truth for support agents.
 
 #### 🗺️ Roadmap / Coming Soon
-- **Written Interaction Ingestion - Initial Zendesk/Freshdesk Chat and Ticket Handoff** (`AIMY-3442`)
-  *Feature Scope:* Provides native platform capabilities for: Written Interaction Ingestion - Initial Zendesk/Freshdesk Chat and Ticket Handoff.
-- **AiMY QA v2 — Proactive Alerts & AI Coaching Recommendations** (`AIMY-3483`)
-  *Feature Scope:* Provides native platform capabilities for: AiMY QA v2 — Proactive Alerts & AI Coaching Recommendations.
-- **AiMY QA v2 — Supervisor AI Chat & Canvas** (`AIMY-3558`)
-  *Feature Scope:* Provides native platform capabilities for: AiMY QA v2 — Supervisor AI Chat & Canvas.
-- **AiMY QA v2 — Dispute Management (v1 Parity)** (`AIMY-3584`)
-  *Feature Scope:* Provides native platform capabilities for: AiMY QA v2 — Dispute Management (v1 Parity).
-- **AiMY QA v2 — AI Evaluation Engine** (`AIMY-3457`)
-  *Feature Scope:* Provides native platform capabilities for: AiMY QA v2 — AI Evaluation Engine.
-- _And 16 more capabilities currently in the pipeline._
-
----
-
-### 📦 AiMY Sales
-
-*   **Description:** Generative sales assistant automating sequencing, outreach orchestration, and CRM sync.
-*   **Customer Pain Solved:** Manual sales prospecting and tedious CRM logging.
-*   **Integrations Connected:** `Salesforce, HubSpot, custom outbound pipelines.`
-*   **Core Customer Outcome:** *Higher outbound conversion, automated lead scoring, and Generative UI interfaces.*
-
-#### ✅ Released & Recently Updated Capabilities
-- **AiMY Sales – Contact Enrichment Loop** (`RD-924`)
-  *Customer Value:* Automates outreach workflows and captures leads seamlessly using Generative UI and intelligent CRM sync.
-
-#### 🗺️ Roadmap / Coming Soon
-- **AiMY Sales - Sales Engagement Tracking & Follow-Up Intelligence (Outreach)** (`AIMY-2910`)
-  *Feature Scope:* Provides native platform capabilities for: AiMY Sales - Sales Engagement Tracking & Follow-Up Intelligence (Outreach).
-- **AiMY Connect — 24/7 Autonomous Ticket Triage & SLA-Aware Routing** (`AIMY-3610`)
-  *Feature Scope:* Provides native platform capabilities for: AiMY Connect — 24/7 Autonomous Ticket Triage & SLA-Aware Routing.
-- **AiMY – MCP – mcp-use Multi-Server Agent Platform** (`AIMY-3681`)
-  *Feature Scope:* Provides native platform capabilities for: AiMY – MCP – mcp-use Multi-Server Agent Platform.
-- **AiMY Sales — Data Hygiene & Validation** (`AIMY-4076`)
-  *Feature Scope:* Provides native platform capabilities for: AiMY Sales — Data Hygiene & Validation.
-- **Data Hygiene — Duplicate detection and merge logic for Apollo lead ingestion** (`AIMY-4077`)
-  *Feature Scope:* Provides native platform capabilities for: Data Hygiene — Duplicate detection and merge logic for Apollo lead ingestion.
-- _And 30 more capabilities currently in the pipeline._
-
----
-
-### 📦 AiMY Talent
-
-*   **Description:** A tailored candidate onboarding and recruiter workflow automation agent.
-*   **Customer Pain Solved:** Recruiter bottleneck in scheduling, screening, and candidate communications.
-*   **Integrations Connected:** `ATS platforms, Twilio SMS, WhatsApp Business API.`
-*   **Core Customer Outcome:** *Reduced time-to-hire, automatic WhatsApp notifications, and automated screening triggers.*
-
-#### ✅ Released & Recently Updated Capabilities
-- **Contactable Hyperlinks Across Platform** (`AIMY-2899`)
-  *Customer Value:* Streamlines recruiter workflows and candidate communication channels to reduce placement friction.
-
-#### ⚙️ Active / In-Flight (Current Sprint)
-- **WhatsApp — Egyptian Local Number Provisioning Spike [BLOCKED]** (`AIMY-4181`)
-  *Description:* Provides native platform capabilities for: WhatsApp — Egyptian Local Number Provisioning Spike [BLOCKED].
-
-#### 🗺️ Roadmap / Coming Soon
-- **AiMY Talent Management – CV Parsing & Employee Search** (`AIMY-3381`)
-  *Feature Scope:* Provides native platform capabilities for: AiMY Talent Management – CV Parsing & Employee Search.
-- **AIMY Talent Management - Resource Sync & Email Enrichment** (`AIMY-3301`)
-  *Feature Scope:* Provides native platform capabilities for: AIMY Talent Management - Resource Sync & Email Enrichment.
-- **AiMY Phone — Active Call Screen** (`AIMY-3685`)
-  *Feature Scope:* Provides native platform capabilities for: AiMY Phone — Active Call Screen.
-- **AiMY Phone — Post-Call Intelligence** (`AIMY-3686`)
-  *Feature Scope:* Provides native platform capabilities for: AiMY Phone — Post-Call Intelligence.
-- **AiMY Phone — Incoming Call Experience** (`AIMY-3684`)
-  *Feature Scope:* Provides native platform capabilities for: AiMY Phone — Incoming Call Experience.
-- _And 25 more capabilities currently in the pipeline._
+- **[AIMY Central] Notification system across AIMY agents**
+  *Target Capabilities:* Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.
+- **24/7 Critical Support Escalation System**
+  *Target Capabilities:* Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.
+- **Enrichment feedback loop: track failure rate per topic post-publication and re-flag if no improvement**
+  *Target Capabilities:* Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.
+- **Publish approved article to Knowledge base with correct tagging and source attribution**
+  *Target Capabilities:* Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.
+- _And 21 additional roadmap capabilities in development._
 
 ---
 
 ### 📦 AiMY Voice
 
-*   **Description:** Integrates deep conversational voice intelligence natively into inbound and outbound calling channels.
-*   **Customer Pain Solved:** Invisible voice interactions, high telephony costs, and lack of real-time call coaching.
-*   **Integrations Connected:** `Twilio Voice Infrastructure, custom SIP trunks, Salesforce CRM, HubSpot CRM.`
-*   **Core Customer Outcome:** *Native call recordings, automated transcription, and live call assistance widgets for active agents.*
+*   **Track Alignment:** `L1 Support`
+*   **Functional Purpose:** Conversational phone intelligence engine providing native outbound and inbound calling capabilities.
+*   **Business Pain Solved:** Unmonitored call transcripts, high agent calling friction, and lack of real-time call coaching.
+*   **What It Works With:** *Live call streams, call recording audio, IVR interaction logs, caller caller-ID context.*
+*   **Verified Integrations:** `Twilio calling streams, Salesforce, HubSpot CRM.`
+*   **Core Customer Outcome:** *Transcribes and sentiment-indexes 100% of calls, serving live objection guidance in real-time.*
 
-#### ✅ Released & Recently Updated Capabilities
-_No fully released customer-facing tickets in this module._
+#### ✅ Available Features & Capabilities
+_No fully released customer-facing features in this module._
 
 #### 🗺️ Roadmap / Coming Soon
-- **Twilio SDK integration — initialise Voice SDK within AiMY mobile and web clients** (`AIMY-3688`)
-  *Feature Scope:* Provides native platform capabilities for: Twilio SDK integration — initialise Voice SDK within AiMY mobile and web clients.
-- **Caller identification — match incoming number against Talent and Sales data** (`AIMY-3713`)
-  *Feature Scope:* Provides native platform capabilities for: Caller identification — match incoming number against Talent and Sales data.
-- **Inbound call handling — full-screen takeover UI on incoming call** (`AIMY-3698`)
-  *Feature Scope:* Provides native platform capabilities for: Inbound call handling — full-screen takeover UI on incoming call.
-- **Call session state management — persist and recover call state across app lifecycle** (`AIMY-3703`)
-  *Feature Scope:* Provides native platform capabilities for: Call session state management — persist and recover call state across app lifecycle.
-- **Outbound call initiation — tap-to-call from candidate and lead profiles** (`AIMY-3693`)
-  *Feature Scope:* Provides native platform capabilities for: Outbound call initiation — tap-to-call from candidate and lead profiles.
-- _And 19 more capabilities currently in the pipeline._
+- **Active Agent Call Assist Panel**
+  *Target Capabilities:* A split-pane screen showing active transcriptions and matching knowledge base articles side-by-side during a call.
+- **Twilio SDK integration: initialise Voice SDK within AiMY mobile and web clients**
+  *Target Capabilities:* Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.
+- **Native Twilio Calling Streams**
+  *Target Capabilities:* Enterprise-grade inbound and outbound calling infrastructure built natively on cloud calling frameworks.
+- **AiMY Phone: Post-Call Intelligence**
+  *Target Capabilities:* Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.
+- _And 6 additional roadmap capabilities in development._
 
 ---
 
-## 5. Spotlight: Core Released Capabilities
+### 📦 AiMY QA
 
-Sales teams can use these three specific released epics/stories as concrete proof of AiMY's production readiness:
+*   **Track Alignment:** `L1 Support`
+*   **Functional Purpose:** Comprehensive automated interaction scoring engine auditing support chats, emails, and phone transcripts.
+*   **Business Pain Solved:** Manual audit samples catching compliance breaches and tone errors days after they occurred.
+*   **What It Works With:** *Chat transcripts, email threads, voice call audio, agent response logs.*
+*   **Verified Integrations:** `Zendesk Tickets API, Freshdesk Ticket Webhooks, Salesforce Service Cloud.`
+*   **Core Customer Outcome:** *100% audit coverage, instant compliance violation alerts, and precise coaching scorecards.*
 
-1.  **AiMY FAQ & Document Ingestion System (`AIMY-407`)**
-    *   *What it is:* A production-ready document ingestion pipeline that imports SOPs, wikis, and FAQs, structuring them into a conversational search index.
-    *   *Why it matters:* Replaces agent hunting with direct, secure answers, maintaining 100% factual accuracy.
-2.  **Conversational Chat UI & Search (`AIMY-2104`)**
-    *   *What it is:* Modern, reactive chat layout with Generative UI support that agents use to query corporate knowledge.
-    *   *Why it matters:* Drastically reduces average handle times and onboard training curves.
-3.  **Continuous Automated Feedback Loop (`AIMY-2574`)**
-    *   *What it is:* Bridges the QA and Knowledge layers by parsing low-confidence interactions and drafting article proposals for human review.
-    *   *Why it matters:* Closes the operational gap, allowing the support system to maintain and improve itself automatically.
+#### ✅ Available Features & Capabilities
+_No fully released customer-facing features in this module._
 
----
-
-## 6. Closing the Continuous Loop: Customer Adoption Journey
-
-AiMY is not just a tool; it is a self-improving support ecosystem:
-
-```
-  [ 1. AiMY Knowledge ] -> Provides unified factual answers to Agents
-            ↓
-  [  2. AiMY Voice  ] -> Captures & records phone interactions
-            ↓
-  [   3. AiMY QA    ] -> Analyzes 100% of text and voice interactions
-            ↓
-  [  4. AiMY Connect ] -> Flags gaps and alerts supervisors in real-time
-            ↓
-  [  5. Loop Closed ] -> Auto-drafts new Knowledge SOPs based on flags
-            ↓
-  [   Approved!     ] -> SOP published; system becomes smarter
-```
+#### 🗺️ Roadmap / Coming Soon
+- **Omnichannel Interaction Auditing Pipeline**
+  *Target Capabilities:* Ingests email threads, transcribed voice logs, and chat transcript logs directly into the quality scoring engine.
+- **Written Interaction Ingestion - Initial Zendesk/Freshdesk Chat and Ticket Handoff**
+  *Target Capabilities:* Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.
+- **V2: Proactive Alerts & AI Coaching Recommendations**
+  *Target Capabilities:* Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.
+- **V2: Supervisor AI Chat & Canvas**
+  *Target Capabilities:* Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.
+- _And 17 additional roadmap capabilities in development._
 
 ---
 
-## 7. Strategic Outlook & Coming Soon (Roadmap)
+### 📦 AiMY Connect
 
-To maintain our competitive advantage, the following core features are active on our roadmap and safe to share with select customers:
-*   **Twilio Native Voice Infrastructure (`AIMY-3683`):** Complete voice channel integration with call queues, interactive IVR transcript indexing, and caller intent prediction.
-*   **Active Call Live Screen Widget (`AIMY-3685`):** Shows live transcriptions side-by-side with recommended AiMY Knowledge answers during live escalations.
-*   **24/7 Triage & SLA-Aware Routing (`AIMY-3610`):** Real-time automated routing engine prioritizing high-value clients and urgent customer sentiment issues.
-*   **Operational Risk & Compliance Exposure Dashboards (`AIMY-4833` & `AIMY-4832`):** Direct visual flaggers mapping compliance breaches and security risk scores during interactions.
+*   **Track Alignment:** `L1 Support`
+*   **Functional Purpose:** Supervisor dashboard command panel displaying live floor states, SLA breachers, and queue redistributions.
+*   **Business Pain Solved:** Reactive floor management, missed SLA breach warnings, and lack of real-time queue priority logs.
+*   **What It Works With:** *Real-time queues, agent active status, response-time metrics, queue risk factors.*
+*   **Verified Integrations:** `Workforce Management platforms, ticketing servers, Slack Webhooks.`
+*   **Core Customer Outcome:** *Empowers supervisors to rebalance queues proactively to protect VIP SLAs.*
+
+#### ✅ Available Features & Capabilities
+_No fully released customer-facing features in this module._
+
+#### 🗺️ Roadmap / Coming Soon
+- **Design Bedrocks**
+  *Target Capabilities:* Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.
+- **– Queue Management & Agent Collaboration**
+  *Target Capabilities:* Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.
+- **SLA-Aware Queue Triage & Intelligent Routing**
+  *Target Capabilities:* Prioritizes queues based on customer tier, contract SLA breaches, and conversation sentiment.
+- **N8n Integration & Generic CRM Workflow**
+  *Target Capabilities:* Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.
+- _And 10 additional roadmap capabilities in development._
+
+---
+
+### 📦 AiMY Sales — BDR Mode
+
+*   **Track Alignment:** `Sales`
+*   **Functional Purpose:** High-velocity outbound sequencing co-pilot providing reps with enriched lead profiles and live battlecards.
+*   **Business Pain Solved:** Tedious rep administrative tasks, manual outbound dialing, and lack of pre-call prospect research.
+*   **What It Works With:** *Outreach cadences, lead lists, Apollo exports, ZoomInfo context.*
+*   **Verified Integrations:** `HubSpot sequences, Outreach.io, ZoomInfo, LinkedIn, Apollo.io, Twilio dialers.`
+*   **Core Customer Outcome:** *Boosts outbound calls by 50% while pre-loading every dial with Exa/Serper deep competitive research.*
+
+#### ✅ Available Features & Capabilities
+_No fully released customer-facing features in this module._
+
+#### 🗺️ Roadmap / Coming Soon
+- **Sales Engagement Tracking & Follow-Up Intelligence (Outreach)**
+  *Target Capabilities:* Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.
+- **Playbook-Driven Email Outreach Sequencing**
+  *Target Capabilities:* Generates outcome-driven email sequences that strictly adhere to corporate playbooks, target personas, and ICP guidelines.
+- **Sequencing: Cadence template engine and daily task queue generation**
+  *Target Capabilities:* Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.
+- **Rep View High-Velocity Dialing & Task Queue**
+  *Target Capabilities:* Consolidates enriched BDR tasks, lead battlecards, call histories, and dialer launches into a single dashboard.
+- _And 10 additional roadmap capabilities in development._
+
+---
+
+### 📦 AiMY Sales — Manager Mode
+
+*   **Track Alignment:** `Sales`
+*   **Functional Purpose:** Revenue intelligence control center offering queryable pipeline visibility in natural language.
+*   **Business Pain Solved:** Patchy CRM metrics, manual forecast reporting, and duplicates bloating sales lead databases.
+*   **What It Works With:** *Salesforce deal stages, HubSpot CRM activities, DNC suppression registers, Apollo lead lists.*
+*   **Verified Integrations:** `Salesforce REST API, HubSpot CRM, Apollo duplicates databases.`
+*   **Core Customer Outcome:** *Renders instant natural language deal queries, alerts on stalled deals, and keeps CRM duplicate-free.*
+
+#### ✅ Available Features & Capabilities
+- **– Contact Enrichment Loop**
+  *What it does:* Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.
+  *Business Outcome:* Supports overall helpdesk platform security, transaction throughput, and response consistency.
+
+#### 🗺️ Roadmap / Coming Soon
+- **Suggested follow-up tasks: push call commitments to Talent and Sales task lists**
+  *Target Capabilities:* Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.
+- **Data Hygiene & DNC Suppression List Engine**
+  *Target Capabilities:* Detects duplicate contacts, cleans up Apollo lead ingests, and strictly enforces Do Not Call (DNC) lists.
+- **Sales Pipeline Natural Language Intelligence Engine**
+  *Target Capabilities:* Allows sales leaders to query deal pipeline health, stalled leads, rep activity, and deal risks in natural language.
+- **Data Hygiene: Field normalization and DNC suppression list enforcement**
+  *Target Capabilities:* Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.
+- _And 8 additional roadmap capabilities in development._
+
+---
+
+### 📦 Continuous Improvement Loop
+
+*   **Track Alignment:** `L1 Support`
+*   **Functional Purpose:** The automated loop closing bridge that integrates QA analysis and CRM won/lost outcomes back into Knowledge.
+*   **Business Pain Solved:** Manual knowledge maintenance cycles and slow playbook refinement loops.
+*   **What It Works With:** *QA compliance flags, CRM objection logs, draft article recommendations, won/lost logs.*
+*   **Verified Integrations:** `Connects Knowledge, QA, and Sales modules internally without external dependency.`
+*   **Core Customer Outcome:** *Ensures your corporate playbook and agent knowledge bases automatically improve after every customer call.*
+
+#### ✅ Available Features & Capabilities
+_No fully released customer-facing features in this module._
+
+#### 🗺️ Roadmap / Coming Soon
+- **Self-Improving SOP Generation Pipeline**
+  *Target Capabilities:* Monitors low-confidence support tickets and flags them as knowledge gaps, automatically drafting new SOP article recommendations for human review.
+- **Outcomes QA Linkage & Objection Analysis**
+  *Target Capabilities:* Bridges outbound sales calling with the QA scoring engine, analyzing transcripts to flag objection trends and won/lost logs.
+
+---
+
+## 5. What's New in AiMY
+
+We have recently deployed and launched key customer-facing features:
+
+1.  **Enterprise SOP Knowledge Ingestion:** Syncs SharePoint, Notion, or Confluence databases securely to build a conversational search index.
+2.  **Conversational Agent Console:** Provides agents and BDRs with natural-language live search consoles with built-in Objections guidance.
+3.  **Self-Improving Article Recommendations:** Auto-drafts proposed knowledge base answers when low-confidence tickets occur, closing the loop.
+4.  **100% Automated QA Ingestion:** Automatically ingests Freshdesk/Zendesk chat transcript webhooks for direct scoring.
+
+---
+
+## 6. Before vs. After Customer Transformation
+
+| Metric / Operation | Day 0 Manual Baseline | Day 30 AiMY Platform |
+|---|---|---|
+| **Knowledge Base Retrieval** | Agents search Confluence or ask Slack; winging answers | Centralized search index; 100% accurate, factual SOPs |
+| **Outbound Calling (BDRs)** | Reps manual dial, winging objections and custom messages | Integrated dialer with pre-loaded prospect profiles and Battlecards |
+| **Conversation Auditing** | Manual audit samples covering less than 2% of interactions | 100% automated text and voice transcript QA scoring |
+| **Pipeline Observability** | Stalled deals invisible; forecasts based on rep logs | Natural language query interface with CRM duplicate hygiene |
+| **Institutional Learning** | SOPs revised quarterly; new playbooks fail to stick | Continuous feedback closed loop; won/lost insights auto-sync |
+
+---
+
+## 7. Day 30 Outcomes: Operational Compounding
+
+Most support and sales tools lose momentum after go-live. **AiMY compounds.**
+
+Every conversation records and transcription feeds back to sharpen the Knowledge core. Every QA flag teaches the auto-generator where to draft new SOP guidance. Every deal objection logs helps Sales battlecards stay current against competitor trends.
+
+By Day 30, your operations shift from reactive manual firefighting to a **self-improving system** that learns and elevates its own performance automatically, without increasing headcount.
+
+---
+
+## 8. Get Started: Call to Action
+
+Ready to automate your quality circle and unleash outbound conversion?
+*   [ ] Request an enterprise architecture assessment.
+*   [ ] Map Confluence, SharePoint, or legacy Salesforce data structures to AiMY in Week 1.
+*   [ ] Start your 1–4 Week modular go-live.

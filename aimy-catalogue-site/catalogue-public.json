@@ -1,0 +1,1871 @@
+{
+  "meta": {
+    "name": "AiMY Customer Catalogue",
+    "purpose": "Customer-facing pitch asset for AiMY support and sales operations",
+    "audience": "Sales teams, customer stakeholders, implementation sponsors",
+    "sourceNarratives": [
+      "AiMY L1 Support — Client Onboarding Journey",
+      "AiMY Sales — Client Onboarding Journey"
+    ],
+    "securityModel": "Public UI contains no internal issue keys, internal URLs, ownership fields, internal labels, or raw ticket summaries. Release data is translated into customer-safe capability themes."
+  },
+  "tracks": [
+    {
+      "id": "support",
+      "name": "AiMY L1 Support",
+      "tagline": "Turn reactive support into a self-improving operating system.",
+      "day0": [
+        "Knowledge is scattered across drives, wikis, chat threads, and senior agents' heads.",
+        "QA is manual, selective, and late, so most conversations are never reviewed.",
+        "Voice interactions are hard to monitor, search, and feed back into process improvement.",
+        "Supervisors react to escalations instead of seeing risk early."
+      ],
+      "journey": [
+        "Knowledge foundation",
+        "Voice activation",
+        "Automated QA coverage",
+        "Supervisor visibility through Connect",
+        "Closed improvement loop"
+      ],
+      "day30": [
+        "Agents work from one consistent knowledge layer.",
+        "Text and voice channels are covered by the same intelligence layer.",
+        "Conversation QA becomes continuous instead of sampled.",
+        "Supervisors get real-time operational visibility.",
+        "Knowledge gaps turn into reviewed improvement actions."
+      ]
+    },
+    {
+      "id": "sales",
+      "name": "AiMY Sales",
+      "tagline": "Make outreach, pipeline visibility, and sales learning repeatable.",
+      "day0": [
+        "Pipeline visibility depends on CRM data quality and rep follow-up.",
+        "Outreach varies by rep, creating inconsistent messaging and follow-up cadence.",
+        "Product knowledge and proof points are scattered across systems.",
+        "Managers spend too much time chasing updates and not enough time coaching."
+      ],
+      "journey": [
+        "Sales knowledge foundation",
+        "BDR mode for playbook-grounded outreach",
+        "Manager mode for queryable pipeline visibility",
+        "Closed sales improvement loop"
+      ],
+      "day30": [
+        "Every rep works from the same product knowledge and playbooks.",
+        "Outreach becomes consistent, grounded, and repeatable.",
+        "Pipeline risk and activity are easier to query and act on.",
+        "Managers coach from evidence instead of chasing manual updates.",
+        "Win/loss patterns feed back into future playbooks and outreach guidance."
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": "knowledge",
+      "name": "AiMY Knowledge",
+      "track": "Support + Sales",
+      "status": "Available foundation",
+      "oneLiner": "A unified knowledge layer that grounds AiMY answers in your real content.",
+      "problem": "Teams lose time hunting for the right answer, policy, case study, or process note.",
+      "whatItDoes": "Connects to approved knowledge sources and gives agents or reps fast, consistent, contextual answers.",
+      "worksWith": [
+        "SOPs",
+        "FAQs",
+        "Product documentation",
+        "Sales collateral",
+        "Playbooks",
+        "Competitive intelligence",
+        "Case studies"
+      ],
+      "integrations": [
+        "SharePoint",
+        "Confluence",
+        "Google Drive",
+        "Notion",
+        "Helpdesk knowledge bases",
+        "CRM-linked knowledge bases"
+      ],
+      "outcome": "A single operating baseline: fewer guessed answers, faster ramp-up, and more consistent customer conversations.",
+      "releaseThemes": [
+        "Knowledge document ingestion",
+        "FAQ and task surfaces",
+        "Grounded product expert experiences"
+      ],
+      "features": [
+        {
+          "id": "feat-aimy-knowledge-1",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Enterprise Omnichannel Knowledge API",
+          "description": "A secure API gateway providing high-speed retrieval of verified SOPs across all digital channels (web, chat, and native voice).",
+          "customer_value": "Maintains 100% consistent and factual support answers regardless of client touchpoint.",
+          "integrations": [
+            "Enterprise REST APIs"
+          ],
+          "availability": "Needs Review"
+        },
+        {
+          "id": "feat-aimy-knowledge-2",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Contactable Hyperlinks Across Platform",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Available"
+        },
+        {
+          "id": "feat-aimy-knowledge-3",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "[AIMY Central] Notification system across AIMY agents",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-4",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "24/7 Critical Support Escalation System",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-5",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "24/7 Support Team - AI Urgency & Escalation Engine",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Available"
+        },
+        {
+          "id": "feat-aimy-knowledge-6",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Research Notification System (Event-Based)",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Available"
+        },
+        {
+          "id": "feat-aimy-knowledge-7",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Conversational UI & Live Search Console",
+          "description": "A modern, natural-language agent interface with built-in Generative UI that allows reps and agents to search verified SOPs instantly.",
+          "customer_value": "Reduces agent handle times by over 30% by providing prompt, contextual answers in real-time.",
+          "integrations": [
+            "React",
+            "Zendesk Chat",
+            "Freshdesk Chat"
+          ],
+          "availability": "Available"
+        },
+        {
+          "id": "feat-aimy-knowledge-8",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Enrichment feedback loop: track failure rate per topic post-publication and re-flag if no improvement",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-9",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Publish approved article to Knowledge base with correct tagging and source attribution",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-10",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "AiMY – MCP – mcp-use Multi-Server Agent Platform",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-11",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Inbound call handling: full-screen takeover UI on incoming call",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-12",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Call session state management: persist and recover call state across app lifecycle",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-13",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Outbound call initiation: tap-to-call from candidate and lead profiles",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-14",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Answer, decline, and remind-me actions: three-option incoming call controls",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-15",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Pre-call context card: show caller match score, activity, and open actions before answering",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-16",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Missed call notification: in-app alert with one-tap callback",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-17",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Real-time AI nudges: live coaching cards on the Active Call screen",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-18",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Call controls: mute, hold, and end call on the Active Call screen",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-19",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Persistent call mini-player: floating call bar when navigating away during a call",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-20",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Audio device routing: switch between earpiece, speaker, and Bluetooth during a call",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-21",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Post-call insights engine: extract intent, sentiment, and key moments from transcript",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-22",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Actionable insight cards: ranked one-tap actions on the Post-Call screen",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-23",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Profile sync: write call outcome and summary back to candidate or lead profile",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-24",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Live transcription: real-time speech-to-text with speaker labels during call",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-25",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Incoming call push notification: alert with answer and decline when app is backgrounded",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-26",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Missed call push notification: background alert with one-tap callback action",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-27",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Deep link routing: notification taps open the correct screen and context in AiMY",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-28",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Post-call reminder notification: nudge rep to complete unfinished post-call actions",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-29",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "AI call summary: auto-generate post-call recap from transcript",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-30",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "AiMY Platform: Generative UI (Chat + Canvas)",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-knowledge-31",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Multi-Source Knowledge Ingestion",
+          "description": "Securely ingests, normalizes, and indexes standard operating procedures, manuals, and FAQs from Confluence, SharePoint, and Google Drive.",
+          "customer_value": "Eliminates scattered knowledge silos and establishes a single, verified source of truth for support agents.",
+          "integrations": [
+            "Confluence",
+            "SharePoint",
+            "Notion",
+            "Google Drive",
+            "Zendesk Guide",
+            "Freshdesk KB"
+          ],
+          "availability": "Available"
+        },
+        {
+          "id": "feat-aimy-knowledge-32",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "AiMY (Operations Agent) - Closing Loops",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Needs Review"
+        },
+        {
+          "id": "feat-aimy-knowledge-33",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Conversational AI - VOIP - Session Persistence - Research",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Needs Review"
+        },
+        {
+          "id": "feat-aimy-knowledge-34",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Conversational AI - VOIP - Escalation Logic & Workflows - Research",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Needs Review"
+        },
+        {
+          "id": "feat-aimy-knowledge-35",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "AIMY HR - Calls Research - Candidate Callbacks & WhatsApp Integration",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Needs Review"
+        },
+        {
+          "id": "feat-aimy-knowledge-36",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "Conversational AI - VOIP - Google Live API Integration - Research",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Needs Review"
+        },
+        {
+          "id": "feat-aimy-knowledge-37",
+          "track": "L1 Support",
+          "module": "AiMY Knowledge",
+          "feature_name": "AIMY Recruitment - Interview Booking & Feedback Flow",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Needs Review"
+        }
+      ]
+    },
+    {
+      "id": "voice",
+      "name": "AiMY Voice",
+      "track": "Support + Sales",
+      "status": "Activation track",
+      "oneLiner": "Turns calls into searchable, coachable, structured operational data.",
+      "problem": "Voice conversations are usually a black box, even though they contain the richest customer signals.",
+      "whatItDoes": "Captures call context, supports live assistance, and feeds transcripts and outcomes into QA, knowledge, and follow-up workflows.",
+      "worksWith": [
+        "Inbound calls",
+        "Outbound calls",
+        "Call recordings",
+        "Live transcripts",
+        "IVR interaction logs"
+      ],
+      "integrations": [
+        "Existing telephony",
+        "CRM caller context",
+        "Voice infrastructure",
+        "Call transcription services"
+      ],
+      "outcome": "Calls stop disappearing after they end; they become part of the same improvement loop as tickets and chats.",
+      "releaseThemes": [
+        "Native voice infrastructure",
+        "Active call screen",
+        "Post-call intelligence",
+        "Caller context and follow-up actions"
+      ],
+      "features": [
+        {
+          "id": "feat-aimy-voice-1",
+          "track": "L1 Support",
+          "module": "AiMY Voice",
+          "feature_name": "Active Agent Call Assist Panel",
+          "description": "A split-pane screen showing active transcriptions and matching knowledge base articles side-by-side during a call.",
+          "customer_value": "Guides reps with real-time coaching suggestions, maximizing first-call resolution (FCR) rates.",
+          "integrations": [
+            "Twilio Streaming",
+            "AiMY Knowledge"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-voice-2",
+          "track": "L1 Support",
+          "module": "AiMY Voice",
+          "feature_name": "Twilio SDK integration: initialise Voice SDK within AiMY mobile and web clients",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-voice-3",
+          "track": "L1 Support",
+          "module": "AiMY Voice",
+          "feature_name": "Native Twilio Calling Streams",
+          "description": "Enterprise-grade inbound and outbound calling infrastructure built natively on cloud calling frameworks.",
+          "customer_value": "Stops phone calls from being a black box, integrating the voice channel into the rest of the operational loop.",
+          "integrations": [
+            "Twilio Voice API",
+            "Custom SIP trunks"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-voice-4",
+          "track": "L1 Support",
+          "module": "AiMY Voice",
+          "feature_name": "AiMY Phone: Post-Call Intelligence",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-voice-5",
+          "track": "L1 Support",
+          "module": "AiMY Voice",
+          "feature_name": "Real-time Live Call Transcription Pipeline",
+          "description": "Converts active phone streams into structured text, split by speaker (agent vs. customer), for immediate processing.",
+          "customer_value": "Enables search, text index, and automatic sentiment tracking on 100% of phone interactions.",
+          "integrations": [
+            "Deepgram API",
+            "AssemblyAI"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-voice-6",
+          "track": "L1 Support",
+          "module": "AiMY Voice",
+          "feature_name": "Voice AI handoff: transfer active call to Voice AI and reclaim control",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-voice-7",
+          "track": "L1 Support",
+          "module": "AiMY Voice",
+          "feature_name": "AiMY Phone: Notifications & Deep Links",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-voice-8",
+          "track": "L1 Support",
+          "module": "AiMY Voice",
+          "feature_name": "Voice Integration & Live Intelligence",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-voice-9",
+          "track": "L1 Support",
+          "module": "AiMY Voice",
+          "feature_name": "In-app notification centre integration: Phone call events in the AiMY notification panel",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-voice-10",
+          "track": "L1 Support",
+          "module": "AiMY Voice",
+          "feature_name": "Sequencing: Auto-trigger AiMY Phone dialer from cadence call steps",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-voice-11",
+          "track": "L1 Support",
+          "module": "AiMY Voice",
+          "feature_name": "AIMY - Voice AI - Conversational AI - VOIP Integration - Research & Prototyping",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Needs Review"
+        }
+      ]
+    },
+    {
+      "id": "qa",
+      "name": "AiMY QA",
+      "track": "L1 Support",
+      "status": "Capability track",
+      "oneLiner": "Continuous QA coverage across support conversations.",
+      "problem": "Manual QA reviews a sample, catches issues late, and misses recurring patterns.",
+      "whatItDoes": "Analyses interactions against quality standards, flags risks, and turns repeated failures into coaching and knowledge signals.",
+      "worksWith": [
+        "Support tickets",
+        "Chat transcripts",
+        "Email threads",
+        "Call recordings",
+        "Voice transcripts",
+        "Agent response data"
+      ],
+      "integrations": [
+        "Zendesk",
+        "Freshdesk",
+        "ServiceNow",
+        "Salesforce Service Cloud",
+        "Voice data from AiMY Voice"
+      ],
+      "outcome": "Quality becomes a live signal instead of a delayed audit process.",
+      "releaseThemes": [
+        "Written interaction ingestion",
+        "AI evaluation engine",
+        "Supervisor coaching canvas",
+        "Knowledge gap detection"
+      ],
+      "features": [
+        {
+          "id": "feat-aimy-qa-1",
+          "track": "L1 Support",
+          "module": "AiMY QA",
+          "feature_name": "Omnichannel Interaction Auditing Pipeline",
+          "description": "Ingests email threads, transcribed voice logs, and chat transcript logs directly into the quality scoring engine.",
+          "customer_value": "Eliminates sample-based auditing, providing managers with a total operational signal.",
+          "integrations": [
+            "Kafka pipelines",
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-qa-2",
+          "track": "L1 Support",
+          "module": "AiMY QA",
+          "feature_name": "Written Interaction Ingestion - Initial Zendesk/Freshdesk Chat and Ticket Handoff",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-qa-3",
+          "track": "L1 Support",
+          "module": "AiMY QA",
+          "feature_name": "V2: Proactive Alerts & AI Coaching Recommendations",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-qa-4",
+          "track": "L1 Support",
+          "module": "AiMY QA",
+          "feature_name": "V2: Supervisor AI Chat & Canvas",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-qa-5",
+          "track": "L1 Support",
+          "module": "AiMY QA",
+          "feature_name": "V2: Dispute Management (v1 Parity)",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-qa-6",
+          "track": "L1 Support",
+          "module": "AiMY QA",
+          "feature_name": "100% Automated Conversational Metric Scoring",
+          "description": "Evaluates every interaction against custom compliance benchmarks, agent tone guidelines, and technical accuracy scores.",
+          "customer_value": "Flags critical customer risks, tone errors, and compliance breaches within minutes of conversation closure.",
+          "integrations": [
+            "OpenAI GPT-4",
+            "Anthropic Claude"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-qa-7",
+          "track": "L1 Support",
+          "module": "AiMY QA",
+          "feature_name": "V2: Agent & Team Performance Intelligence",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-qa-8",
+          "track": "L1 Support",
+          "module": "AiMY QA",
+          "feature_name": "Evaluation Output Contracts - Canonical Result Schema and Read API",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-qa-9",
+          "track": "L1 Support",
+          "module": "AiMY QA",
+          "feature_name": "QA-Driven Knowledge Gap Detection & Article Enrichment",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-qa-10",
+          "track": "L1 Support",
+          "module": "AiMY QA",
+          "feature_name": "Knowledge gap detection engine: cluster QA failure topics and emit gap signal on threshold",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-qa-11",
+          "track": "L1 Support",
+          "module": "AiMY QA",
+          "feature_name": "WhatsApp: Conversation Handoff to  for Scoring",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-qa-12",
+          "track": "L1 Support",
+          "module": "AiMY QA",
+          "feature_name": "V2: KPI Template Framework",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-qa-13",
+          "track": "L1 Support",
+          "module": "AiMY QA",
+          "feature_name": "V2: Sentiment Intelligence",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-qa-14",
+          "track": "L1 Support",
+          "module": "AiMY QA",
+          "feature_name": "V2: AI Interaction Evaluation",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-qa-15",
+          "track": "L1 Support",
+          "module": "AiMY QA",
+          "feature_name": "V2: Ecosystem Event Architecture",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-qa-16",
+          "track": "L1 Support",
+          "module": "AiMY QA",
+          "feature_name": "V2: KPI Governance & Platform Metric Registry",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-qa-17",
+          "track": "L1 Support",
+          "module": "AiMY QA",
+          "feature_name": "CI Recommendations API for Managed Ops Layer",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-qa-18",
+          "track": "L1 Support",
+          "module": "AiMY QA",
+          "feature_name": "V2: Evaluation Output Contracts",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-qa-19",
+          "track": "L1 Support",
+          "module": "AiMY QA",
+          "feature_name": "Operational Insights Dashboard",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-qa-20",
+          "track": "L1 Support",
+          "module": "AiMY QA",
+          "feature_name": "Recurring Failure Pattern Analysis",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-qa-21",
+          "track": "L1 Support",
+          "module": "AiMY QA",
+          "feature_name": "Helpdesk Automatic Ticket Ingestion API",
+          "description": "Native API webhooks pulling customer ticket updates from external support helpdesks automatically.",
+          "customer_value": "Seamless plug-and-play setup that connects your legacy ticketing systems to the QA intelligence layer.",
+          "integrations": [
+            "Zendesk Ticket Webhooks",
+            "Freshdesk API"
+          ],
+          "availability": "Coming Soon"
+        }
+      ]
+    },
+    {
+      "id": "connect",
+      "name": "AiMY Connect",
+      "track": "Support Operations",
+      "status": "Supervisor layer",
+      "oneLiner": "A real-time operating view for supervisors and managers.",
+      "problem": "Supervisors often discover problems only after escalation, SLA risk, or quality drift has already happened.",
+      "whatItDoes": "Brings operational signals together so supervisors can see performance, queue pressure, escalation patterns, and coaching needs.",
+      "worksWith": [
+        "Agent activity",
+        "Queue metrics",
+        "Ticket trends",
+        "Escalation logs",
+        "QA scores",
+        "Flagged interactions"
+      ],
+      "integrations": [
+        "Helpdesk platforms",
+        "Workforce management tools",
+        "CRM systems",
+        "Operational data sources"
+      ],
+      "outcome": "Supervisors move from firefighting to proactive operations management.",
+      "releaseThemes": [
+        "Urgency and escalation intelligence",
+        "Event-based notifications",
+        "Queue management",
+        "Operational risk views"
+      ],
+      "features": [
+        {
+          "id": "feat-aimy-connect-1",
+          "track": "L1 Support",
+          "module": "AiMY Connect",
+          "feature_name": "Design Bedrocks",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-connect-2",
+          "track": "L1 Support",
+          "module": "AiMY Connect",
+          "feature_name": "– Queue Management & Agent Collaboration",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-connect-3",
+          "track": "L1 Support",
+          "module": "AiMY Connect",
+          "feature_name": "SLA-Aware Queue Triage & Intelligent Routing",
+          "description": "Prioritizes queues based on customer tier, contract SLA breaches, and conversation sentiment.",
+          "customer_value": "Prevents churn by routing frustrated or high-value clients to senior reps automatically.",
+          "integrations": [
+            "Zendesk Routing Engine",
+            "n8n"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-connect-4",
+          "track": "L1 Support",
+          "module": "AiMY Connect",
+          "feature_name": "N8n Integration & Generic CRM Workflow",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-connect-5",
+          "track": "L1 Support",
+          "module": "AiMY Connect",
+          "feature_name": "Rep View: Connect live data from Sequencing, Data Hygiene, and Attempt Log",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-connect-6",
+          "track": "L1 Support",
+          "module": "AiMY Connect",
+          "feature_name": "Manager View: Register Sales data model and connect live data to Generative UI canvas",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-connect-7",
+          "track": "L1 Support",
+          "module": "AiMY Connect",
+          "feature_name": "WhatsApp Intg in  for Recruiters",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-connect-8",
+          "track": "L1 Support",
+          "module": "AiMY Connect",
+          "feature_name": "Managed Services Operations Hub Views",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-connect-9",
+          "track": "L1 Support",
+          "module": "AiMY Connect",
+          "feature_name": "Sales Ops Hub: Lead redistribution controls",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-connect-10",
+          "track": "L1 Support",
+          "module": "AiMY Connect",
+          "feature_name": "Sales Ops Hub: BDR activity dashboard",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-connect-11",
+          "track": "L1 Support",
+          "module": "AiMY Connect",
+          "feature_name": "Sales Ops Hub: Campaign execution health view",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-connect-12",
+          "track": "L1 Support",
+          "module": "AiMY Connect",
+          "feature_name": "Compliance Exposure Risk Flagger",
+          "description": "Identifies sensitive interactions that breach data protection laws (e.g., exposing credit card numbers or private credentials).",
+          "customer_value": "Protects operations from massive data compliance fines by immediately masking sensitive attributes.",
+          "integrations": [
+            "AiMY QA core"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-connect-13",
+          "track": "L1 Support",
+          "module": "AiMY Connect",
+          "feature_name": "Predictive SLA Breach Alerting Engine",
+          "description": "Scans ongoing queue metrics and issues instant warnings when response-time thresholds are approaching breach.",
+          "customer_value": "Saves critical enterprise accounts by flagging high-risk delays before they breach SLAs.",
+          "integrations": [
+            "n8n",
+            "Slack Webhooks"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-connect-14",
+          "track": "L1 Support",
+          "module": "AiMY Connect",
+          "feature_name": "Supervisor Operational Risk Dashboard",
+          "description": "Real-time command panel highlighting support queue backlogs, agent live states, and coaching suggestions.",
+          "customer_value": "Empowers supervisors to pivot floor operations proactively rather than reactively firefighting.",
+          "integrations": [
+            "Workforce Management systems"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-connect-15",
+          "track": "L1 Support",
+          "module": "AiMY Connect",
+          "feature_name": "Sensitive Case Detection & Priority Routing",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-connect-16",
+          "track": "L1 Support",
+          "module": "AiMY Connect",
+          "feature_name": "Analytics, Observability, and Reporting",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Needs Review"
+        },
+        {
+          "id": "feat-aimy-connect-17",
+          "track": "L1 Support",
+          "module": "AiMY Connect",
+          "feature_name": "Copilot",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "Freshdesk"
+          ],
+          "availability": "Needs Review"
+        }
+      ]
+    },
+    {
+      "id": "sales-bdr",
+      "name": "AiMY Sales — BDR Mode",
+      "track": "Sales",
+      "status": "Sales activation track",
+      "oneLiner": "AI-assisted outreach grounded in your ICP, messaging, and playbooks.",
+      "problem": "Every rep runs a slightly different version of the sales motion, making scale and quality hard to manage.",
+      "whatItDoes": "Helps reps draft, sequence, and follow up using approved messaging, account context, and playbook logic.",
+      "worksWith": [
+        "Prospect data",
+        "Account data",
+        "ICP definitions",
+        "Outreach templates",
+        "Historical engagement data"
+      ],
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Sales engagement tools",
+        "Prospecting and enrichment sources"
+      ],
+      "outcome": "A repeatable outbound motion that helps new reps ramp faster and keeps experienced reps focused on conversations.",
+      "releaseThemes": [
+        "Sales engagement tracking",
+        "Follow-up intelligence",
+        "Contact enrichment",
+        "Lead data hygiene",
+        "Next-best-action sequencing"
+      ],
+      "features": [
+        {
+          "id": "feat-aimy-sales-bdr-mode-1",
+          "track": "Sales",
+          "module": "AiMY Sales — BDR Mode",
+          "feature_name": "Sales Engagement Tracking & Follow-Up Intelligence (Outreach)",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "HubSpot"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-bdr-mode-2",
+          "track": "Sales",
+          "module": "AiMY Sales — BDR Mode",
+          "feature_name": "Playbook-Driven Email Outreach Sequencing",
+          "description": "Generates outcome-driven email sequences that strictly adhere to corporate playbooks, target personas, and ICP guidelines.",
+          "customer_value": "Establishes structured, high-conversion outbound messaging across the entire sales team.",
+          "integrations": [
+            "HubSpot sequences",
+            "Outreach.io"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-bdr-mode-3",
+          "track": "Sales",
+          "module": "AiMY Sales — BDR Mode",
+          "feature_name": "Sequencing: Cadence template engine and daily task queue generation",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "HubSpot"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-bdr-mode-4",
+          "track": "Sales",
+          "module": "AiMY Sales — BDR Mode",
+          "feature_name": "Rep View High-Velocity Dialer & Task Queue",
+          "description": "Consolidates enriched BDR tasks, lead battlecards, call histories, and dialer launches into a single dashboard.",
+          "customer_value": "Boosts outbound dials by 50% by eliminating rep administrative overhead.",
+          "integrations": [
+            "Salesforce layout widgets",
+            "HubSpot Layouts"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-bdr-mode-5",
+          "track": "Sales",
+          "module": "AiMY Sales — BDR Mode",
+          "feature_name": "Sequencing: Attempt logging and outcome-driven cadence advancement",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "HubSpot"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-bdr-mode-6",
+          "track": "Sales",
+          "module": "AiMY Sales — BDR Mode",
+          "feature_name": "Sequencing: Aging alerts for stalled leads and manager notifications",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "HubSpot"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-bdr-mode-7",
+          "track": "Sales",
+          "module": "AiMY Sales — BDR Mode",
+          "feature_name": "Sequencing: Next-best action suggestions for stalled sequences",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "HubSpot"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-bdr-mode-8",
+          "track": "Sales",
+          "module": "AiMY Sales — BDR Mode",
+          "feature_name": "Lead Enrichment Signal Scraper",
+          "description": "Performs deep contextual research on prospects by scraping live signals, matching target ICPs, and outputting enrichment scores.",
+          "customer_value": "Ensures every rep call is pre-loaded with deep competitive context, reducing cold call friction.",
+          "integrations": [
+            "Exa API",
+            "Serper",
+            "ZoomInfo",
+            "LinkedIn"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-bdr-mode-9",
+          "track": "Sales",
+          "module": "AiMY Sales — BDR Mode",
+          "feature_name": "Sequencing: Enriched call queue with pre-loaded prospect context",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "HubSpot"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-bdr-mode-10",
+          "track": "Sales",
+          "module": "AiMY Sales — BDR Mode",
+          "feature_name": "High-Velocity Twilio Outbound Dialer integration",
+          "description": "Enables one-click BDR cold calling with native live voice transcription and speaker sentiment logs.",
+          "customer_value": "Speeds outbound executions while recording exact call records directly in CRM.",
+          "integrations": [
+            "Twilio Voice API",
+            "Deepgram"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-bdr-mode-11",
+          "track": "Sales",
+          "module": "AiMY Sales — BDR Mode",
+          "feature_name": "Automated Post-Call Summaries & Next Actions",
+          "description": "Analyzes call transcripts, logs conversation outcomes, and drafts immediate post-call follow-ups automatically.",
+          "customer_value": "Removes manual CRM update time, keeping deal records 100% current.",
+          "integrations": [
+            "HubSpot CRM",
+            "Salesforce"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-bdr-mode-12",
+          "track": "Sales",
+          "module": "AiMY Sales — BDR Mode",
+          "feature_name": "Sequencing: Lead state machine and transition enforcement",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "HubSpot"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-bdr-mode-13",
+          "track": "Sales",
+          "module": "AiMY Sales — BDR Mode",
+          "feature_name": "Real-time Rep Call Objection Battlecards",
+          "description": "Renders floating battlecards and objection-handling guidelines on screen during live outbound calls.",
+          "customer_value": "Gives junior BDRs the exact objections playbook in real-time, boosting call conversion by 20%.",
+          "integrations": [
+            "AiMY Knowledge Base",
+            "Deepgram streaming"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-bdr-mode-14",
+          "track": "Sales",
+          "module": "AiMY Sales — BDR Mode",
+          "feature_name": "Automated Calendar Meeting Booker",
+          "description": "Enables post-qualification hooks that automatically trigger meeting scheduling requests directly to the prospect's inbox.",
+          "customer_value": "Increases meeting hold rates by booking calendar slots immediately upon live call verbal qualification.",
+          "integrations": [
+            "Calendly API",
+            "Google Calendar",
+            "Outlook"
+          ],
+          "availability": "Coming Soon"
+        }
+      ]
+    },
+    {
+      "id": "sales-manager",
+      "name": "AiMY Sales — Manager Mode",
+      "track": "Sales Leadership",
+      "status": "Sales leadership layer",
+      "oneLiner": "Queryable pipeline visibility for sales managers.",
+      "problem": "Managers rely on stale CRM updates, gut-feel forecasting, and manual rep check-ins.",
+      "whatItDoes": "Gives sales leadership a natural-language way to inspect pipeline risk, stalled deals, activity gaps, and rep performance signals.",
+      "worksWith": [
+        "CRM pipeline data",
+        "Deal stages",
+        "Activity logs",
+        "Engagement history",
+        "Forecast data",
+        "Quota and rep metrics"
+      ],
+      "integrations": [
+        "Salesforce",
+        "HubSpot",
+        "Revenue intelligence tools",
+        "Forecasting tools"
+      ],
+      "outcome": "Forecasting and coaching become evidence-based instead of reactive.",
+      "releaseThemes": [
+        "Sales ops hub",
+        "Pipeline health views",
+        "BDR activity dashboard",
+        "Campaign execution health"
+      ],
+      "features": [
+        {
+          "id": "feat-aimy-sales-manager-mode-1",
+          "track": "Sales",
+          "module": "AiMY Sales — Manager Mode",
+          "feature_name": "Suggested follow-up tasks: push call commitments to Talent and Sales task lists",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "HubSpot"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-manager-mode-2",
+          "track": "Sales",
+          "module": "AiMY Sales — Manager Mode",
+          "feature_name": "Data Hygiene & DNC Suppression List Engine",
+          "description": "Detects duplicate contacts, cleans up Apollo lead ingests, and strictly enforces Do Not Call (DNC) lists.",
+          "customer_value": "Keeps your sales database clean and ensures 100% legal compliance with DNC regulations.",
+          "integrations": [
+            "Apollo.io",
+            "DNC suppression databases"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-manager-mode-3",
+          "track": "Sales",
+          "module": "AiMY Sales — Manager Mode",
+          "feature_name": "Data Hygiene: Duplicate detection and merge logic for Apollo lead ingestion",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "HubSpot"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-manager-mode-4",
+          "track": "Sales",
+          "module": "AiMY Sales — Manager Mode",
+          "feature_name": "Sales Pipeline Natural Language Intelligence Engine",
+          "description": "Allows sales leaders to query deal pipeline health, stalled leads, rep activity, and deal risks in natural language.",
+          "customer_value": "Stops managers from wasting hours building manual reports, bringing immediate pipeline visibility.",
+          "integrations": [
+            "Salesforce Service API",
+            "HubSpot REST API"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-manager-mode-5",
+          "track": "Sales",
+          "module": "AiMY Sales — Manager Mode",
+          "feature_name": "Data Hygiene: Field normalization and DNC suppression list enforcement",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "HubSpot"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-manager-mode-6",
+          "track": "Sales",
+          "module": "AiMY Sales — Manager Mode",
+          "feature_name": "Rep View: Daily task queue with lead cards, dispositions, and dialer launch",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "HubSpot"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-manager-mode-7",
+          "track": "Sales",
+          "module": "AiMY Sales — Manager Mode",
+          "feature_name": "Generative UI: Chat + Canvas scaffold with query interpretation and agent adapter interface",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "HubSpot"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-manager-mode-8",
+          "track": "Sales",
+          "module": "AiMY Sales — Manager Mode",
+          "feature_name": "Data Hygiene: Bad-fit filtering and confidence scoring per lead record",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "HubSpot"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-manager-mode-9",
+          "track": "Sales",
+          "module": "AiMY Sales — Manager Mode",
+          "feature_name": "Funnel Performance & CRM State Machine Monitor",
+          "description": "Tracks deal stage progressions, alerts when deals stall past playbook thresholds, and calculates conversion ratios.",
+          "customer_value": "Pins down weak points in the pipeline, pointing managers exactly where to focus coaching.",
+          "integrations": [
+            "Salesforce pipeline schemas",
+            "HubSpot Deal API"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-manager-mode-10",
+          "track": "Sales",
+          "module": "AiMY Sales — Manager Mode",
+          "feature_name": "BDR Activity & Lead Redistribution Console",
+          "description": "Supervisors dashboard tracking outbound dial metrics, lead queue health, and providing controls for lead reassignment.",
+          "customer_value": "Allows sales leaders to re-balance BDR pipelines on the fly to maximize lead coverage.",
+          "integrations": [
+            "n8n",
+            "Salesforce"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-manager-mode-11",
+          "track": "Sales",
+          "module": "AiMY Sales — Manager Mode",
+          "feature_name": "Lead Intelligence: First-pass signal scoring via Serper",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "HubSpot"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-manager-mode-12",
+          "track": "Sales",
+          "module": "AiMY Sales — Manager Mode",
+          "feature_name": "Lead Intelligence: Deep research and enrichment profile via Exa",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "HubSpot"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-manager-mode-13",
+          "track": "Sales",
+          "module": "AiMY Sales — Manager Mode",
+          "feature_name": "Lead Intelligence: Phase 2 enrichment sources: ZoomInfo and LinkedIn [BLOCKED]",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "HubSpot"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-aimy-sales-manager-mode-14",
+          "track": "Sales",
+          "module": "AiMY Sales — Manager Mode",
+          "feature_name": "AiMY - Sales V2",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "HubSpot"
+          ],
+          "availability": "Needs Review"
+        },
+        {
+          "id": "feat-aimy-sales-manager-mode-15",
+          "track": "Sales",
+          "module": "AiMY Sales — Manager Mode",
+          "feature_name": "– Contact Enrichment Loop",
+          "description": "Integrates automated operations pipelines to enable unified metrics and seamless helpdesk tracking.",
+          "customer_value": "Supports overall helpdesk platform security, transaction throughput, and response consistency.",
+          "integrations": [
+            "Zendesk",
+            "HubSpot"
+          ],
+          "availability": "Available"
+        }
+      ]
+    },
+    {
+      "id": "loop",
+      "name": "Continuous Improvement Loop",
+      "track": "Platform Layer",
+      "status": "Cross-module value loop",
+      "oneLiner": "AiMY learns from real outcomes and feeds improvements back into the operating model.",
+      "problem": "Most operations improve only during manual reviews, retraining cycles, or after problems become visible.",
+      "whatItDoes": "Turns QA findings, call outcomes, deal patterns, and knowledge gaps into reviewed improvement actions.",
+      "worksWith": [
+        "QA signals",
+        "Low-confidence answers",
+        "Won/lost outcomes",
+        "Objection patterns",
+        "Manager-flagged coaching moments"
+      ],
+      "integrations": [
+        "Runs across AiMY Knowledge, Voice, QA, Connect, and Sales layers"
+      ],
+      "outcome": "The system compounds: every conversation and deal can improve the next one.",
+      "releaseThemes": [
+        "Knowledge gap detection",
+        "Draft article workflow",
+        "Sales pattern feedback",
+        "Recurring failure analysis"
+      ],
+      "features": [
+        {
+          "id": "feat-continuous-improvement-loop-1",
+          "track": "L1 Support",
+          "module": "Continuous Improvement Loop",
+          "feature_name": "Self-Improving SOP Generation Pipeline",
+          "description": "Monitors low-confidence support tickets and flags them as knowledge gaps, automatically drafting new SOP article recommendations for human review.",
+          "customer_value": "Ensures the knowledge base maintains and updates itself automatically based on actual customer escalations.",
+          "integrations": [
+            "AiMY QA core",
+            "AiMY Knowledge core"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-continuous-improvement-loop-2",
+          "track": "Sales",
+          "module": "Continuous Improvement Loop",
+          "feature_name": "Outcomes QA Linkage & Objection Analysis",
+          "description": "Bridges outbound sales calling with the QA scoring engine, analyzing transcripts to flag objection trends and won/lost logs.",
+          "customer_value": "Aggregates won/lost trends to feed intelligence back into BDR outreach battlecards.",
+          "integrations": [
+            "AiMY QA core",
+            "AiMY Sales core"
+          ],
+          "availability": "Coming Soon"
+        },
+        {
+          "id": "feat-continuous-improvement-loop-3",
+          "track": "Sales",
+          "module": "Continuous Improvement Loop",
+          "feature_name": "Closed Loop Sales Playbook Auto-Refiner",
+          "description": "Feeds won/lost deal objection profiles back into the Sales Knowledge Battlecard repository, proposing playbook updates automatically.",
+          "customer_value": "Enables your outbound sales playbooks to improve continuously based on live deal logs.",
+          "integrations": [
+            "AiMY Knowledge Base",
+            "AiMY Sales CRM"
+          ],
+          "availability": "Needs Review"
+        }
+      ]
+    }
+  ],
+  "whatsNew": [
+    {
+      "title": "Support urgency and escalation intelligence",
+      "module": "AiMY Connect",
+      "availability": "Recently released / review for customer wording",
+      "whyItMatters": "Helps supervisors identify urgent cases and act before SLA or service risk escalates."
+    },
+    {
+      "title": "Event-based operational notifications",
+      "module": "AiMY Connect",
+      "availability": "Recently released / review for customer wording",
+      "whyItMatters": "Turns important operational changes into proactive alerts instead of dashboard hunting."
+    },
+    {
+      "title": "Knowledge ingestion and grounded answer foundation",
+      "module": "AiMY Knowledge",
+      "availability": "Available foundation",
+      "whyItMatters": "Creates the source-of-truth layer that both support agents and sales reps depend on."
+    },
+    {
+      "title": "Sales contact enrichment loop",
+      "module": "AiMY Sales — BDR Mode",
+      "availability": "Released / review for customer wording",
+      "whyItMatters": "Improves lead records so outreach and follow-up can be more relevant and less manual."
+    },
+    {
+      "title": "Sales outreach sequencing and follow-up intelligence",
+      "module": "AiMY Sales — BDR Mode",
+      "availability": "Roadmap / customer-safe once confirmed",
+      "whyItMatters": "Helps BDR teams keep follow-up consistent and act on stalled sequences."
+    },
+    {
+      "title": "Automated QA evaluation and coaching signals",
+      "module": "AiMY QA",
+      "availability": "Roadmap / customer-safe once confirmed",
+      "whyItMatters": "Moves QA from sampled manual checks toward continuous operational guidance."
+    },
+    {
+      "title": "Voice call context and post-call intelligence",
+      "module": "AiMY Voice",
+      "availability": "Roadmap / customer-safe once confirmed",
+      "whyItMatters": "Makes calls searchable, coachable, and usable for follow-up and knowledge improvement."
+    }
+  ]
+}
