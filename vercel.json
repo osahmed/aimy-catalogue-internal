@@ -2,24 +2,23 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/aimy-catalogue-site/index.html"
-    },
-    {
-      "source": "/index.html",
-      "destination": "/aimy-catalogue-site/index.html"
-    },
-    {
       "source": "/one-page-pitch",
-      "destination": "/aimy-catalogue-site/one-page-pitch.html"
-    },
-    {
-      "source": "/one-page-pitch.html",
-      "destination": "/aimy-catalogue-site/one-page-pitch.html"
-    },
+      "destination": "/one-page-pitch.html"
+    }
+  ],
+  "headers": [
     {
       "source": "/catalogue-public.json",
-      "destination": "/aimy-catalogue-site/catalogue-public.json"
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300, s-maxage=600"
+        }
+      ]
     }
   ]
 }
