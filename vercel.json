@@ -1,9 +1,15 @@
 {
   "cleanUrls": true,
-  "rewrites": [
+  "redirects": [
     {
       "source": "/one-page-pitch",
-      "destination": "/one-page-pitch.html"
+      "destination": "https://osahmed.github.io/aimy-pitch-public/",
+      "permanent": true
+    },
+    {
+      "source": "/one-page-pitch.html",
+      "destination": "https://osahmed.github.io/aimy-pitch-public/",
+      "permanent": true
     }
   ],
   "headers": [
