@@ -2,6 +2,12 @@
 
 A private repository for managing Jira data replication and generating customer-facing catalogue websites from Atlassian/Jira project data.
 
+## 🌐 Public Pitch Page
+**Live Site:** [https://osahmed.github.io/aimy-pitch-public/](https://osahmed.github.io/aimy-pitch-public/)  
+**Repository:** [aimy-pitch-public](https://github.com/osahmed/aimy-pitch-public)
+
+This is the internal repository. For the public-facing one-page pitch, visit the link above.
+
 ## 🔒 Security Notice
 
 This is a **private repository** containing tools for internal use only. The generated catalogue site is sanitized for customer viewing, but the source data and scripts contain FlairsTech internal workflows.
