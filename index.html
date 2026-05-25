@@ -5,83 +5,1809 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AiMY — Support & Sales Operations Pitch Platform</title>
     
-    <!-- Meta tags for SEO & Link Previews -->
-    <meta name="description" content="AiMY Premium Support & Sales Pitch Catalogue. Instantly toggle support capability matrices, sales outreaches, and interactive roadmaps.">
-    <meta property="og:title" content="AiMY — Support & Sales Operations Pitch Platform">
-    <meta property="og:description" content="Sanitized customer-facing operational pitch hub driven by Jira engineering evidence.">
-    <meta property="og:type" content="website">
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Immediate Redirect fallback -->
-    <meta http-equiv="refresh" content="0; url=/aimy-catalogue-site/index.html">
-    <script>
-        window.location.replace("/aimy-catalogue-site/index.html");
-    </script>
-    
+    <!-- Premium Aesthetics Styling -->
     <style>
+        :root {
+            --bg-deep: #071018;
+            --bg-surface: rgba(11, 19, 33, 0.75);
+            --bg-card: rgba(26, 32, 47, 0.45);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --border-glow: rgba(0, 242, 254, 0.25);
+            
+            /* Harmonic support colors */
+            --primary-support: #00f2fe;
+            --secondary-support: #4facfe;
+            --glow-support: rgba(0, 242, 254, 0.35);
+            
+            /* Harmonic sales colors */
+            --primary-sales: #ff5e62;
+            --secondary-sales: #ff9966;
+            --glow-sales: rgba(255, 94, 98, 0.35);
+            
+            /* Dynamic active state pointers */
+            --primary: var(--primary-support);
+            --secondary: var(--secondary-support);
+            --glow: var(--glow-support);
+            
+            --accent-magenta: #f35588;
+            --accent-purple: #a155ec;
+            --text-main: #eef7ff;
+            --text-muted: #a6b6c6;
+            --font-main: 'Inter', sans-serif;
+            --font-heading: 'Outfit', sans-serif;
+            
+            --shadow-glow: 0 8px 32px 0 rgba(0, 242, 254, 0.12);
+            --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            background-color: #071018;
-            color: #eef7ff;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: var(--font-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 242, 254, 0.04) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(255, 94, 98, 0.03) 0%, transparent 40%);
+            background-attachment: fixed;
+            transition: background-image 0.8s ease;
+        }
+
+        /* Dynamic track themes styling */
+        body.sales-track {
+            --primary: var(--primary-sales);
+            --secondary: var(--secondary-sales);
+            --glow: var(--glow-sales);
+            --shadow-glow: 0 8px 32px 0 rgba(255, 94, 98, 0.12);
+        }
+
+        /* Scrollbar Stylings */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-deep);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
+
+        /* Omnichannel Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(7, 16, 24, 0.78);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--border-glass);
+            padding: 1.1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-weight: 850;
+            font-size: 1.45rem;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+            cursor: pointer;
+        }
+
+        .logo span {
+            color: var(--primary);
+            transition: var(--transition-smooth);
+        }
+
+        /* Switcher switch buttons */
+        .track-switcher {
+            display: flex;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-glass);
+            padding: 4px;
+            border-radius: 999px;
+            gap: 4px;
+        }
+
+        .switcher-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 0.55rem 1.3rem;
+            border-radius: 999px;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .switcher-btn.active {
+            background: var(--primary);
+            color: #031019;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        header nav {
             display: flex;
             align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-            background-image: 
-                radial-gradient(circle at 50% 50%, rgba(0, 242, 254, 0.05) 0%, transparent 50%);
+            gap: 1.8rem;
         }
-        
-        .loader-container {
-            text-align: center;
-            background: rgba(11, 19, 33, 0.65);
-            padding: 3rem;
-            border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-        }
-        
-        .spinner {
-            width: 48px;
-            height: 48px;
-            border: 3px solid rgba(0, 242, 254, 0.1);
-            border-radius: 50%;
-            border-top-color: #00f2fe;
-            animation: spin 0.8s cubic-bezier(0.5, 0.1, 0.4, 0.9) infinite;
-            margin: 0 auto 1.5rem;
-        }
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        
-        h2 {
-            font-size: 1.15rem;
+
+        header nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.92rem;
             font-weight: 500;
-            letter-spacing: 0.5px;
-            margin: 0 0 0.5rem 0;
+            transition: var(--transition-smooth);
+        }
+
+        header nav a:hover {
+            color: var(--text-main);
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #031019;
+            border: none;
+            padding: 0.65rem 1.4rem;
+            border-radius: 999px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.88rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-glow);
+            transition: var(--transition-smooth);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px var(--glow);
+        }
+
+        /* Hero segment styling */
+        .hero {
+            position: relative;
+            padding: 10rem 5% 6rem;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 85vh;
+            z-index: 10;
+        }
+
+        .hero-glow {
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            width: 300px;
+            height: 300px;
+            background: var(--glow);
+            filter: blur(80px);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+            transition: var(--transition-smooth);
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 5.5vw, 4.8rem);
+            font-weight: 850;
+            line-height: 1.05;
+            letter-spacing: -2px;
+            max-width: 960px;
+            margin-bottom: 1.5rem;
             color: #ffffff;
         }
-        
-        p {
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #ffffff 20%, var(--primary) 70%, var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+            max-width: 820px;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #031019;
+            border: none;
+            padding: 0.95rem 2.2rem;
+            border-radius: 999px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-glow);
+            transition: var(--transition-smooth);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px var(--glow);
+        }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-main);
+            border: 1px solid var(--border-glass);
+            padding: 0.95rem 2.2rem;
+            border-radius: 999px;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Section layout */
+        section {
+            padding: 6rem 5%;
+            position: relative;
+        }
+
+        .section-header {
+            margin-bottom: 3.5rem;
+            max-width: 800px;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4.5vw, 3.4rem);
+            font-weight: 850;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+            margin-bottom: 0.8rem;
+            color: #ffffff;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.12rem;
+            font-weight: 300;
+        }
+
+        /* Before/After matrix cards */
+        .before-after-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.2rem;
+        }
+
+        .ba-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            padding: 2.5rem;
+            border-radius: 24px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            transition: var(--transition-smooth);
+        }
+
+        .ba-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .ba-card.before {
+            border-left: 4px solid var(--accent-magenta);
+        }
+
+        .ba-card.after {
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(0, 242, 254, 0.03);
+        }
+
+        .ba-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.45rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .ba-card ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+        }
+
+        .ba-card li {
+            position: relative;
+            padding-left: 28px;
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            font-weight: 300;
+        }
+
+        .ba-card li::before {
+            content: "✕";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--accent-magenta);
+            font-weight: bold;
             font-size: 0.9rem;
-            color: #a6b6c6;
-            margin: 0;
+        }
+
+        .ba-card.after li::before {
+            content: "✓";
+            color: var(--primary);
+            font-size: 1.1rem;
+            top: -2px;
+        }
+
+        .ba-card li strong {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        /* Timeline Journey steps */
+        .timeline-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.2rem;
+            position: relative;
+            margin-top: 2rem;
+        }
+
+        .timeline-step {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 1.6rem;
+            min-height: 160px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .timeline-step:hover {
+            transform: translateY(-5px);
+            border-color: var(--border-glow);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .step-num {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: var(--transition-smooth);
+        }
+
+        .timeline-step h4 {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0.6rem 0 0.4rem;
+        }
+
+        .timeline-step p {
+            color: var(--text-muted);
+            font-size: 0.82rem;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+
+        /* Module catalogue card grids */
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.8rem;
+        }
+
+        .module-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 24px;
+            padding: 2.2rem;
+            min-height: 320px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            transition: var(--transition-smooth);
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .module-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--border-glow);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .module-icon {
+            font-size: 2.2rem;
+            margin-bottom: 1.4rem;
+            transition: var(--transition-smooth);
+        }
+
+        .module-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.45rem;
+            font-weight: 700;
+            margin-bottom: 0.65rem;
+            color: #ffffff;
+        }
+
+        .module-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        .module-outcomes {
+            font-family: var(--font-heading);
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition-smooth);
+        }
+
+        .module-card:hover .module-outcomes {
+            gap: 10px;
+        }
+
+        /* What's new grid */
+        .whats-new-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+        }
+
+        .wn-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 1.6rem 2.2rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            transition: var(--transition-smooth);
+        }
+
+        .wn-card:hover {
+            border-color: var(--border-glow);
+            background: rgba(255, 255, 255, 0.02);
+            transform: translateX(5px);
+        }
+
+        .wn-icon {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .wn-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.3rem;
+        }
+
+        .wn-card p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            font-weight: 300;
+        }
+
+        /* Interactive loop visualizer */
+        .loop-section {
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.015) 0%, transparent 60%);
+        }
+
+        .loop-viz-container {
+            display: flex;
+            align-items: center;
+            gap: 3.5rem;
+            margin-top: 2rem;
+        }
+
+        .loop-diagram {
+            position: relative;
+            width: 500px;
+            height: 400px;
+            flex-shrink: 0;
+        }
+
+        .loop-node {
+            position: absolute;
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            padding: 0.95rem 1.4rem;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: #ffffff;
+            cursor: pointer;
+            z-index: 10;
+            transition: var(--transition-smooth);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .loop-node:hover, .loop-node.active {
+            border-color: var(--primary);
+            box-shadow: 0 0 20px var(--glow);
+            transform: scale(1.05);
+            background: rgba(0, 242, 254, 0.05);
+        }
+
+        /* Coordinates of nodes in oval */
+        .node-1 { top: 8%; left: 50%; transform: translateX(-50%); }
+        .node-2 { top: 38%; right: 5%; }
+        .node-3 { bottom: 8%; right: 15%; }
+        .node-4 { bottom: 8%; left: 15%; }
+        .node-5 { top: 38%; left: 5%; }
+
+        .loop-arrow-svg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .loop-explanation {
+            flex: 1;
+            background: rgba(26, 32, 47, 0.35);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 2.2rem;
+            backdrop-filter: blur(16px);
+            min-height: 290px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .loop-explanation h3 {
+            font-family: var(--font-heading);
+            font-size: 1.55rem;
+            color: #ffffff;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .loop-explanation p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            font-weight: 300;
+            margin-bottom: 1.3rem;
+        }
+
+        /* Interactive Pitch Customizer */
+        .pitch-container {
+            background: rgba(26, 32, 47, 0.25);
+            border: 1px solid var(--border-glass);
+            border-radius: 24px;
+            padding: 2.5rem;
+            margin-top: 2.5rem;
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .pitch-config {
+            flex: 1;
+        }
+
+        .pitch-config h3 {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .pitch-config p {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            margin-bottom: 1.3rem;
+            font-weight: 300;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255,255,255,0.01);
+            border: 1px solid var(--border-glass);
+            padding: 0.75rem 1.1rem;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .checkbox-item:hover {
+            background: rgba(255,255,255,0.03);
+            border-color: rgba(255,255,255,0.12);
+        }
+
+        .checkbox-item input {
+            width: 17px;
+            height: 17px;
+            accent-color: var(--primary);
+            cursor: pointer;
+        }
+
+        .pitch-deck-sim {
+            flex: 1.2;
+            background: radial-gradient(circle at top right, #131724, #080a11);
+            border: 1px solid var(--border-glow);
+            border-radius: 20px;
+            padding: 2.2rem;
+            position: relative;
+            box-shadow: var(--shadow-glow);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition-smooth);
+        }
+
+        .pitch-deck-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-glass);
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .pitch-deck-title {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .pitch-deck-logo {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 1rem;
+            color: var(--primary);
+            transition: var(--transition-smooth);
+        }
+
+        .pitch-deck-body {
+            flex-grow: 1;
+        }
+
+        .pitch-slide-content h4 {
+            font-family: var(--font-heading);
+            color: var(--primary);
+            margin: 1.1rem 0 0.4rem;
+            font-size: 1.05rem;
+            transition: var(--transition-smooth);
+        }
+
+        .pitch-slide-content p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            font-weight: 300;
+        }
+
+        /* Booking/CTA Section styling */
+        .cta-section {
+            background: radial-gradient(circle at center, rgba(0, 242, 254, 0.02) 0%, transparent 60%);
+            text-align: center;
+            padding: 6rem 5%;
         }
         
-        a {
-            color: #00f2fe;
-            text-decoration: none;
-            font-weight: 500;
+        .cta-section h2 {
+            font-family: var(--font-heading);
+            font-size: 2.6rem;
+            font-weight: 850;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-glass);
+            padding: 2.8rem 5%;
+            text-align: center;
+            background: rgba(4, 5, 8, 0.6);
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            font-weight: 300;
+        }
+
+        /* Modal styling */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(4, 5, 8, 0.85);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition-smooth);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-content {
+            background: radial-gradient(circle at top right, #111622, #07090e);
+            border: 1px solid var(--border-glass);
+            border-radius: 28px;
+            width: min(940px, calc(100% - 40px));
+            max-height: 85vh;
+            padding: 3rem;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.5);
+            transform: scale(0.95);
+            transition: var(--transition-smooth);
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border-glass);
+            color: var(--text-muted);
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: var(--transition-smooth);
+        }
+
+        .close-modal:hover {
+            color: #ffffff;
+            border-color: rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .modal-header-meta {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 0.8rem;
+        }
+
+        .modal-tag {
+            font-family: var(--font-heading);
+            font-size: 0.72rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            background: rgba(0, 242, 254, 0.05);
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid rgba(0, 242, 254, 0.15);
+            transition: var(--transition-smooth);
+        }
+
+        .modal-content h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 850;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .modal-section-title {
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--primary);
+            margin: 1.8rem 0 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-glass);
+            padding-bottom: 6px;
+            transition: var(--transition-smooth);
+        }
+
+        /* Chips styling */
+        .modal-chips-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .modal-chip {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border-glass);
+            color: var(--text-muted);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.84rem;
+            font-weight: 400;
+        }
+
+        /* Verifiable evidence ticket table styling */
+        .ticket-list-wrapper {
+            display: grid;
+            gap: 10px;
+            max-height: 320px;
+            overflow-y: auto;
+            margin-top: 1rem;
+            padding-right: 5px;
+        }
+
+        .ticket-item {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid var(--border-glass);
+            border-radius: 12px;
+            padding: 1rem;
+            transition: var(--transition-smooth);
+        }
+
+        .ticket-item:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .ticket-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.4rem;
+        }
+
+        .ticket-key {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .ticket-key span:first-child {
+            color: var(--primary);
+            font-size: 0.8rem;
+        }
+
+        .ticket-status-pill {
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 3px 8px;
+            border-radius: 99px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .status-released {
+            color: #73f0ba;
+            border-color: rgba(115, 240, 186, 0.25);
+            background: rgba(115, 240, 186, 0.08);
+        }
+
+        .status-recently-updated {
+            color: #ffd166;
+            border-color: rgba(255, 209, 102, 0.24);
+            background: rgba(255, 209, 102, 0.08);
+        }
+
+        .status-roadmap {
+            color: var(--text-muted);
+            border-color: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .status-needs-review {
+            color: var(--accent-magenta);
+            border-color: rgba(255, 94, 98, 0.2);
+            background: rgba(255, 94, 98, 0.04);
+        }
+
+        .ticket-desc {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            font-weight: 300;
+            line-height: 1.4;
+            margin-bottom: 0.4rem;
+        }
+
+        .ticket-value {
+            font-size: 0.84rem;
+            color: var(--text-main);
+            border-left: 2px solid var(--primary);
+            padding-left: 8px;
+            font-style: italic;
+        }
+
+        .ticket-search-box {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border-glass);
+            border-radius: 10px;
+            padding: 5px 12px;
+            color: #ffffff;
+            font-size: 0.84rem;
+            outline: none;
+            width: 200px;
+            transition: var(--transition-smooth);
+        }
+
+        .ticket-search-box:focus {
+            border-color: var(--primary);
+            width: 250px;
+        }
+
+        @media (max-width: 900px) {
+            header nav { display: none; }
+            .before-after-grid, .timeline-container, .module-grid { grid-template-columns: 1fr; }
+            .loop-viz-container { flex-direction: column; }
+            .pitch-container { flex-direction: column; }
         }
     </style>
 </head>
-<body>
-    <div class="loader-container">
-        <div class="spinner"></div>
-        <h2>Loading AiMY Pitch Hub</h2>
-        <p>If you are not redirected automatically, <a href="/aimy-catalogue-site/index.html">click here</a>.</p>
+<body class="support-track">
+
+    <!-- Omnichannel Header -->
+    <header>
+        <div class="logo">
+            <span>AiMY</span> Pitch Hub
+        </div>
+        
+        <!-- Unified Track Switcher Toggle -->
+        <div class="track-switcher">
+            <button class="switcher-btn active" id="btn-support" onclick="switchTrack('support')">L1 Support Operations</button>
+            <button class="switcher-btn" id="btn-sales" onclick="switchTrack('sales')">Sales Operations</button>
+        </div>
+        
+        <nav>
+            <a href="#comparison">Overview</a>
+            <a href="#journey">Journey</a>
+            <a href="#explorer">Modules</a>
+            <a href="#loop">The Loop</a>
+            <a href="#pitch">Pitch Customizer</a>
+            <a href="./one-page-pitch.html" style="color: var(--accent-magenta);">One-Page Pitch</a>
+        </nav>
+        <button class="cta-btn" onclick="openDemoModal()">Request Assessment</button>
+    </header>
+
+    <!-- Hero Landing Section -->
+    <section class="hero" id="home">
+        <div class="hero-glow"></div>
+        <h1 id="hero-title">Reclaim 80% of Support Operations and <span>Close the Quality Circle Automatically</span></h1>
+        <p id="hero-subtitle">The only enterprise-ready customer-facing AI agent platform that securely connects your corporate knowledge, voice channels, QA, and operational metrics into a single self-improving system.</p>
+        <div class="hero-actions">
+            <button class="btn-primary" onclick="scrollToElement('explorer')">Explore Modular Capabilities</button>
+            <button class="btn-outline" onclick="scrollToElement('journey')">View Our 1-4 Week Journey</button>
+        </div>
+    </section>
+
+    <!-- Before / After Comparison -->
+    <section id="comparison">
+        <div class="section-header">
+            <h2 id="comp-title">The Support Operations Paradigm</h2>
+            <p id="comp-subtitle">Compare the structural differences of a manual support floor against the speed of an AiMY-driven ecosystem.</p>
+        </div>
+        <div class="before-after-grid" id="comp-grid">
+            <!-- Populated via Javascript -->
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section id="journey" style="background: rgba(255, 255, 255, 0.005);">
+        <div class="section-header">
+            <h2>The Phased 1-4 Week Onboarding Journey</h2>
+            <p>Our rapid deployment modules activate sequentially to build the self-improving continuous loop without operational downtime.</p>
+        </div>
+        <div class="timeline-container" id="timeline-grid">
+            <!-- Populated via Javascript -->
+        </div>
+    </section>
+
+    <!-- Module Explorer -->
+    <section id="explorer">
+        <div class="section-header">
+            <h2>Explore our Modular Capabilities</h2>
+            <p>Select any module below to investigate what it solves, supported integrations, and **recently released plain-English capabilities**.</p>
+        </div>
+        <div class="module-grid" id="modules-list-grid">
+            <!-- Populated via Javascript -->
+        </div>
+    </section>
+
+    <!-- What's New Section -->
+    <section id="new" style="background: rgba(255, 255, 255, 0.005);">
+        <div class="section-header">
+            <h2>What's New in AiMY</h2>
+            <p>Our team has recently deployed and launched key customer-facing enhancements across the platform.</p>
+        </div>
+        <div class="whats-new-grid" id="whats-new-list">
+            <!-- Populated via Javascript -->
+        </div>
+    </section>
+
+    <!-- Continuous loop visualization -->
+    <section class="loop-section" id="loop">
+        <div class="section-header">
+            <h2>The Continuous Self-Improving Loop</h2>
+            <p>Click any node in the diagram below to understand how the modules communicate to reinforce and upgrade playbooks automatically.</p>
+        </div>
+        <div class="loop-viz-container">
+            <div class="loop-diagram">
+                <svg class="loop-arrow-svg" viewBox="0 0 500 400">
+                    <path d="M 250, 70 A 180,150 0 1,1 249,70" fill="none" stroke="rgba(255, 255, 255, 0.05)" stroke-width="3" stroke-dasharray="10 5" />
+                </svg>
+                <div class="loop-node node-1 active" onclick="activateLoopNode(1)">1. Knowledge Core</div>
+                <div class="loop-node node-2" onclick="activateLoopNode(2)">2. Live Channels</div>
+                <div class="loop-node node-3" onclick="activateLoopNode(3)">3. 100% QA Scoring</div>
+                <div class="loop-node node-4" onclick="activateLoopNode(4)">4. Operations Dashboard</div>
+                <div class="loop-node node-5" onclick="activateLoopNode(5)">5. Closed Loop Closure</div>
+            </div>
+            
+            <div class="loop-explanation" id="loop-explain-box">
+                <h3 id="loop-explain-title">1. Knowledge Core</h3>
+                <p id="loop-explain-desc">The factual starting point. AiMY Knowledge indexes SOPs, manuals, playbooks, and competitive battlecards, acting as the secure single source of truth serving both tracks.</p>
+                <div style="font-size: 0.8rem; color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;" id="loop-explain-phase">Continuous Loop Phase 1/5</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pitch Customizer -->
+    <section id="pitch">
+        <div class="section-header">
+            <h2>The Dynamic Pitch Builder</h2>
+            <p>Configure the ideal architecture blocks based on your customer's pain points, and watch the pitch slide compile instantly with **sanitized release proof**.</p>
+        </div>
+        <div class="pitch-container">
+            <div class="pitch-config">
+                <h3>Select Modular Blocks</h3>
+                <p>Select which modules your prospect needs:</p>
+                <div class="checkbox-group" id="pitch-checkboxes">
+                    <!-- Populated via Javascript based on track -->
+                </div>
+            </div>
+            
+            <div class="pitch-deck-sim">
+                <div>
+                    <div class="pitch-deck-header">
+                        <div class="pitch-deck-logo">AiMY Pitch Deck Simulator</div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted)">Slide 1 of 1</div>
+                    </div>
+                    <div class="pitch-deck-body">
+                        <div class="pitch-slide-content">
+                            <h3 style="font-family: var(--font-heading); color: #ffffff; font-size: 1.45rem; margin-bottom: 0.8rem;" id="pitch-title">Establishing Your Factual Knowledge Foundation</h3>
+                            <p style="font-size: 1rem; color: var(--text-muted); margin-bottom: 1.4rem;" id="pitch-opening">Your primary focus is solving scattered knowledge and agent search friction. Implementing **AiMY Knowledge** connects securely to your SOPs to enable consistent support answers.</p>
+                            
+                            <h4>📦 Suggested Operational Blueprint</h4>
+                            <p id="pitch-package" style="margin-bottom: 0.8rem;">AiMY Knowledge layer deployment + helpdesk integrations connecting in Week 1.</p>
+                            
+                            <h4>📊 Target Customer Outcomes</h4>
+                            <p id="pitch-outcomes" style="margin-bottom: 0.8rem;">Immediate reduction in Average Handle Times (AHT) and 100% answer consistency.</p>
+                            
+                            <h4>🛡️ Verifiable Production Proof</h4>
+                            <p id="pitch-evidence" style="color: var(--primary); font-family: var(--font-heading); font-weight: 600;">Enterprise SOP & FAQ Ingestion Pipeline</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="border-top: 1px solid var(--border-glass); padding-top: 0.8rem; margin-top: 1.2rem; display: flex; justify-content: space-between; align-items: center;">
+                    <div style="font-size: 0.8rem; color: var(--text-muted);">Confidential — Customer Sales Pitch Deck</div>
+                    <button class="cta-btn" style="padding: 0.45rem 1.1rem; font-size: 0.78rem;" onclick="alert('Sales pitch package exported! Explore aimy-catalogue-site/ for copywriting docs.')">Export Slide</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking CTA Section -->
+    <section class="cta-section" id="cta">
+        <h2>Unleash Self-Improving Operations</h2>
+        <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 2.5rem; font-weight: 300;">Connect your existing Confluence, SharePoint, or helpdesk platform, and see the continuous operational loop go-live in weeks.</p>
+        <button class="btn-primary" style="padding: 0.9rem 2.5rem;" onclick="openDemoModal()">Book 15-Minute Architecture Call</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 AiMY Platform. Constructed strictly for offline pitch prototype demonstration. All rights reserved.</p>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 5px;">Strictly confidential. No Jira issue keys or internal tracking endpoints are exposed in this public prototype.</p>
+    </footer>
+
+    <!-- Interactive Module Detail Modal -->
+    <div class="modal-overlay" id="module-modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModuleModal()">✕</button>
+            <div class="modal-header-meta">
+                <span class="modal-tag" id="modal-module-tag">AiMY Module</span>
+                <span class="modal-tag" style="background: rgba(255,255,255,0.04); color: #ffffff;" id="modal-onboarding-tag">Week 1</span>
+            </div>
+            <h2 id="modal-title">Module Title</h2>
+            
+            <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 2rem; margin-top: 0.5rem;">
+                <div>
+                    <div class="modal-section-title">Overview & Capabilities</div>
+                    <p id="modal-desc" style="color: var(--text-main); font-size: 1rem; margin-bottom: 1rem; font-weight: 300;">Detailed module description.</p>
+                    
+                    <div class="modal-section-title">Works With</div>
+                    <div class="modal-chips-container" id="modal-works-with"></div>
+                    
+                    <div class="modal-section-title">Verified Integrations</div>
+                    <div class="modal-chips-container" id="modal-integrations"></div>
+                    
+                    <div class="modal-section-title">Product Capability Themes</div>
+                    <div class="modal-chips-container" id="modal-themes"></div>
+                </div>
+                
+                <div>
+                    <div style="background: rgba(255, 255, 255, 0.015); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1.5rem; margin-bottom: 1.5rem;">
+                        <div class="modal-section-title" style="margin-top:0; border-bottom:0; padding-bottom:0;">Pain it solves</div>
+                        <p id="modal-problem" style="color: var(--text-muted); font-size: 0.95rem; font-weight: 300; line-height: 1.5; margin-top: 0.5rem;">Pain solved outlines.</p>
+                    </div>
+                    
+                    <div style="background: rgba(255, 255, 255, 0.015); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1.5rem;">
+                        <div class="modal-section-title" style="margin-top:0; border-bottom:0; padding-bottom:0;">Core Business Outcome</div>
+                        <p id="modal-benefit" style="color: var(--text-main); font-size: 0.95rem; font-weight: 300; font-style: italic; line-height: 1.5; margin-top: 0.5rem;">Customer outcome outline.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Live JIRA Ticket Proof list -->
+            <div class="modal-section-title" style="margin-top: 2.5rem;">
+                <span>Verifiable Production Features</span>
+                <input type="text" class="ticket-search-box" id="ticket-search" placeholder="Search features..." oninput="filterModalTickets()">
+            </div>
+            
+            <div class="ticket-list-wrapper" id="modal-tickets-list">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
     </div>
+
+    <!-- Booking Modal -->
+    <div class="modal-overlay" id="demo-modal">
+        <div class="modal-content" style="max-width: 480px; text-align: center;">
+            <button class="close-modal" onclick="closeDemoModal()">✕</button>
+            <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 0.8rem;">Schedule Operational Call</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.8rem; font-weight: 300;">Book a 15-minute call with our solution architecture team to map your current platforms and design your go-live plan.</p>
+            <div style="display: flex; flex-direction: column; gap: 10px; text-align: left; margin-bottom: 1.8rem;">
+                <label style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Work Email Address</label>
+                <input type="email" placeholder="you@company.com" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-glass); padding: 0.75rem 1rem; border-radius: 10px; color: #ffffff; font-size: 0.95rem; outline: none; width: 100%;">
+            </div>
+            <button class="btn-primary" style="width: 100%;" onclick="alert('Assessment meeting requested! In production, this hooks to corporate calendars.')">Schedule 15-Min Call</button>
+        </div>
+    </div>
+
+    <!-- Dynamic JavaScript Loading Core -->
+    <script>
+        // Fallback default dictionary for offline file:// mode
+        let CATALOGUE_DB = {
+            "meta": { "name": "AiMY Customer Catalogue" },
+            "tracks": [
+                {
+                    "id": "support",
+                    "name": "AiMY L1 Support",
+                    "tagline": "Turn reactive support into a self-improving operating system.",
+                    "day0": [
+                        "Knowledge is scattered across drives, wikis, chat threads, and senior agents' heads.",
+                        "QA is manual, selective, and late, so most conversations are never reviewed.",
+                        "Voice interactions are hard to monitor, search, and feed back into process improvement.",
+                        "Supervisors react to escalations instead of seeing risk early."
+                    ],
+                    "journey": [
+                        "Knowledge foundation",
+                        "Voice activation",
+                        "Automated QA coverage",
+                        "Supervisor visibility through Connect",
+                        "Closed improvement loop"
+                    ],
+                    "day30": [
+                        "Agents work from one consistent knowledge layer.",
+                        "Text and voice channels are covered by the same intelligence layer.",
+                        "Conversation QA becomes continuous instead of sampled.",
+                        "Supervisors get real-time operational visibility.",
+                        "Knowledge gaps turn into reviewed improvement actions."
+                    ]
+                },
+                {
+                    "id": "sales",
+                    "name": "AiMY Sales",
+                    "tagline": "Make outreach, pipeline visibility, and sales learning repeatable.",
+                    "day0": [
+                        "Pipeline visibility depends on CRM data quality and rep follow-up.",
+                        "Outreach varies by rep, creating inconsistent messaging and follow-up cadence.",
+                        "Product knowledge and proof points are scattered across systems.",
+                        "Managers spend too much time chasing updates and not enough time coaching."
+                    ],
+                    "journey": [
+                        "Sales knowledge foundation",
+                        "BDR mode for playbook-grounded outreach",
+                        "Manager mode for queryable pipeline visibility",
+                        "Closed sales improvement loop"
+                    ],
+                    "day30": [
+                        "Every rep works from the same product knowledge and playbooks.",
+                        "Outreach becomes consistent, grounded, and repeatable.",
+                        "Pipeline risk and activity are easier to query and act on.",
+                        "Managers coach from evidence instead of chasing manual updates.",
+                        "Win/loss patterns feed back into future playbooks and outreach guidance."
+                    ]
+                }
+            ],
+            "modules": [
+                {
+                    "id": "knowledge",
+                    "name": "AiMY Knowledge",
+                    "track": "Support + Sales",
+                    "status": "Available foundation",
+                    "oneLiner": "A unified knowledge layer that grounds AiMY answers in your real content.",
+                    "problem": "Teams lose time hunting for the right answer, policy, case study, or process note.",
+                    "whatItDoes": "Connects to approved knowledge sources and gives agents or reps fast, consistent, contextual answers.",
+                    "worksWith": ["SOPs", "FAQs", "Product documentation", "Sales collateral", "Playbooks", "Competitive intelligence", "Case studies"],
+                    "integrations": ["SharePoint", "Confluence", "Google Drive", "Notion", "Helpdesk knowledge bases", "CRM-linked knowledge bases"],
+                    "outcome": "A single operating baseline: fewer guessed answers, faster ramp-up, and more consistent customer conversations.",
+                    "releaseThemes": ["Knowledge document ingestion", "FAQ and task surfaces", "Grounded product expert experiences"],
+                    "features": []
+                },
+                {
+                    "id": "voice",
+                    "name": "AiMY Voice",
+                    "track": "Support + Sales",
+                    "status": "Activation track",
+                    "oneLiner": "Turns calls into searchable, coachable, structured operational data.",
+                    "problem": "Voice conversations are usually a black box, even though they contain the richest customer signals.",
+                    "whatItDoes": "Captures call context, supports live assistance, and feeds transcripts and outcomes into QA, knowledge, and follow-up workflows.",
+                    "worksWith": ["Inbound calls", "Outbound calls", "Call recordings", "Live transcripts", "IVR interaction logs"],
+                    "integrations": ["Existing telephony", "CRM caller context", "Voice infrastructure", "Call transcription services"],
+                    "outcome": "Calls stop disappearing after they end; they become part of the same improvement loop as tickets and chats.",
+                    "releaseThemes": ["Native voice infrastructure", "Active call screen", "Post-call intelligence", "Caller context and follow-up actions"],
+                    "features": []
+                },
+                {
+                    "id": "qa",
+                    "name": "AiMY QA",
+                    "track": "L1 Support",
+                    "status": "Capability track",
+                    "oneLiner": "Continuous QA coverage across support conversations.",
+                    "problem": "Manual QA reviews a sample, catches issues late, and misses recurring patterns.",
+                    "whatItDoes": "Analyses interactions against quality standards, flags risks, and turns repeated failures into coaching and knowledge signals.",
+                    "worksWith": ["Support tickets", "Chat transcripts", "Email threads", "Call recordings", "Voice transcripts", "Agent response data"],
+                    "integrations": ["Zendesk", "Freshdesk", "ServiceNow", "Salesforce Service Cloud", "Voice data from AiMY Voice"],
+                    "outcome": "Quality becomes a live signal instead of a delayed audit process.",
+                    "releaseThemes": ["Written interaction ingestion", "AI evaluation engine", "Supervisor coaching canvas", "Knowledge gap detection"],
+                    "features": []
+                },
+                {
+                    "id": "connect",
+                    "name": "AiMY Connect",
+                    "track": "Support Operations",
+                    "status": "Supervisor layer",
+                    "oneLiner": "A real-time operating view for supervisors and managers.",
+                    "problem": "Supervisors often discover problems only after escalation, SLA risk, or quality drift has already happened.",
+                    "whatItDoes": "Brings operational signals together so supervisors can see performance, queue pressure, escalation patterns, and coaching needs.",
+                    "worksWith": ["Agent activity", "Queue metrics", "Ticket trends", "Escalation logs", "QA scores", "Flagged interactions"],
+                    "integrations": ["Helpdesk platforms", "Workforce management tools", "CRM systems", "Operational data sources"],
+                    "outcome": "Supervisors move from firefighting to proactive operations management.",
+                    "releaseThemes": ["Urgency and escalation intelligence", "Event-based notifications", "Queue management", "Operational risk views"],
+                    "features": []
+                },
+                {
+                    "id": "sales-bdr",
+                    "name": "AiMY Sales — BDR Mode",
+                    "track": "Sales",
+                    "status": "Sales activation track",
+                    "oneLiner": "AI-assisted outreach grounded in your ICP, messaging, and playbooks.",
+                    "problem": "Every rep runs a slightly different version of the sales motion, making scale and quality hard to manage.",
+                    "whatItDoes": "Helps reps draft, sequence, and follow up using approved messaging, account context, and playbook logic.",
+                    "worksWith": ["Prospect data", "Account data", "ICP definitions", "Outreach templates", "Historical engagement data"],
+                    "integrations": ["Salesforce", "HubSpot", "Sales engagement tools", "Prospecting and enrichment sources"],
+                    "outcome": "A repeatable outbound motion that helps new reps ramp faster and keeps experienced reps focused on conversations.",
+                    "releaseThemes": ["Sales engagement tracking", "Follow-up intelligence", "Contact enrichment", "Lead data hygiene", "Next-best-action sequencing"],
+                    "features": []
+                },
+                {
+                    "id": "sales-manager",
+                    "name": "AiMY Sales — Manager Mode",
+                    "track": "Sales Leadership",
+                    "status": "Sales leadership layer",
+                    "oneLiner": "Queryable pipeline visibility for sales managers.",
+                    "problem": "Managers rely on stale CRM updates, gut-feel forecasting, and manual rep check-ins.",
+                    "whatItDoes": "Gives sales leadership a natural-language way to inspect pipeline risk, stalled deals, activity gaps, and rep performance signals.",
+                    "worksWith": ["CRM pipeline data", "Deal stages", "Activity logs", "Engagement history", "Forecast data", "Quota and rep metrics"],
+                    "integrations": ["Salesforce", "HubSpot", "Revenue intelligence tools", "Forecasting tools"],
+                    "outcome": "Forecasting and coaching become evidence-based instead of reactive.",
+                    "releaseThemes": ["Sales ops hub", "Pipeline health views", "BDR activity dashboard", "Campaign execution health"],
+                    "features": []
+                },
+                {
+                    "id": "loop",
+                    "name": "Continuous Improvement Loop",
+                    "track": "Platform Layer",
+                    "status": "Cross-module value loop",
+                    "oneLiner": "AiMY learns from real outcomes and feeds improvements back into the operating model.",
+                    "problem": "Most operations improve only during manual reviews, retraining cycles, or after problems become visible.",
+                    "whatItDoes": "Turns QA findings, call outcomes, deal patterns, and knowledge gaps into reviewed improvement actions.",
+                    "worksWith": ["QA signals", "Low-confidence answers", "Won/lost outcomes", "Objection patterns", "Manager-flagged coaching moments"],
+                    "integrations": ["Runs across AiMY Knowledge, Voice, QA, Connect, and Sales layers"],
+                    "outcome": "The system compounds: every conversation and deal can improve the next one.",
+                    "releaseThemes": ["Knowledge gap detection", "Draft article workflow", "Sales pattern feedback", "Recurring failure analysis"],
+                    "features": []
+                }
+            ],
+            "whatsNew": [
+                {
+                    "title": "Support urgency and escalation intelligence",
+                    "module": "AiMY Connect",
+                    "availability": "Recently released / review for customer wording",
+                    "whyItMatters": "Helps supervisors identify urgent cases and act before SLA or service risk escalates."
+                },
+                {
+                    "title": "Event-based operational notifications",
+                    "module": "AiMY Connect",
+                    "availability": "Recently released / review for customer wording",
+                    "whyItMatters": "Turns important operational changes into proactive alerts instead of dashboard hunting."
+                },
+                {
+                    "title": "Knowledge ingestion and grounded answer foundation",
+                    "module": "AiMY Knowledge",
+                    "availability": "Available foundation",
+                    "whyItMatters": "Creates the source-of-truth layer that both support agents and sales reps depend on."
+                }
+            ]
+        };
+
+        let currentTrack = "support";
+        let activeModuleId = "knowledge";
+
+        const TRACK_THEMES = {
+            "support": {
+                "heroTitle": "Reclaim 80% of Support Operations and <span>Close the Quality Circle Automatically</span>",
+                "heroSubtitle": "The only enterprise-ready customer-facing AI agent platform that securely connects your corporate knowledge, voice channels, QA, and operational metrics into a single self-improving system.",
+                "compTitle": "The Support Operations Paradigm",
+                "compSubtitle": "Compare the structural differences of a manual support floor against the speed of an AiMY-driven ecosystem."
+            },
+            "sales": {
+                "heroTitle": "Scale Outbound Sales Conversions and <span>Keep CRM Deals Duplicate-Free</span>",
+                "heroSubtitle": "The ultimate customer-facing AI outreach platform that connects sales playbooks, deep lead enrichment profiling, and natural language CRM queries into a self-compounding engine.",
+                "compTitle": "The Sales Operations Paradigm",
+                "compSubtitle": "Compare the inconsistent rep outputs of a manual sales floor against the playbook speed of an AiMY Sales operation."
+            }
+        };
+
+        function switchTrack(trackName) {
+            currentTrack = trackName;
+            
+            document.querySelectorAll('.switcher-btn').forEach(btn => btn.classList.remove('active'));
+            if (trackName === 'support') {
+                document.getElementById('btn-support').classList.add('active');
+                document.body.className = "support-track";
+            } else {
+                document.getElementById('btn-sales').classList.add('active');
+                document.body.className = "sales-track";
+            }
+            
+            renderTrackContent();
+            updatePitchSlide();
+        }
+
+        function renderTrackContent() {
+            const trackData = CATALOGUE_DB.tracks.find(t => t.id === currentTrack);
+            const theme = TRACK_THEMES[currentTrack];
+            
+            // 1. Hero Text
+            document.getElementById('hero-title').innerHTML = theme.heroTitle;
+            document.getElementById('hero-subtitle').innerText = theme.heroSubtitle;
+            
+            // 2. Before / After Comparison
+            document.getElementById('comp-title').innerText = theme.compTitle;
+            document.getElementById('comp-subtitle').innerText = theme.compSubtitle;
+            
+            const compGrid = document.getElementById('comp-grid');
+            compGrid.innerHTML = `
+                <div class="ba-card before">
+                    <h3>Day 0 Manual Baseline</h3>
+                    <ul>
+                        ${trackData.day0.map(x => `<li>${x}</li>`).join('')}
+                    </ul>
+                </div>
+                <div class="ba-card after">
+                    <h3>Day 30 AiMY Ecosystem</h3>
+                    <ul>
+                        ${trackData.day30.map(x => `<li><strong>${x.split(":")[0] || ""}:</strong>${x.split(":")[1] || x}</li>`).join('')}
+                    </ul>
+                </div>
+            `;
+            
+            // 3. Timeline onboarding journey
+            const timelineGrid = document.getElementById('timeline-grid');
+            timelineGrid.innerHTML = trackData.journey.map((step, idx) => {
+                // Find matching module by name check to allow modal opening
+                let matchingModName = "AiMY Knowledge";
+                if (step.toLowerCase().includes("voice")) matchingModName = "AiMY Voice";
+                else if (step.toLowerCase().includes("qa")) matchingModName = "AiMY QA";
+                else if (step.toLowerCase().includes("connect") || step.toLowerCase().includes("visibility")) matchingModName = "AiMY Connect";
+                else if (step.toLowerCase().includes("bdr")) matchingModName = "AiMY Sales — BDR Mode";
+                else if (step.toLowerCase().includes("manager")) matchingModName = "AiMY Sales — Manager Mode";
+                else if (step.toLowerCase().includes("loop")) matchingModName = "Continuous Improvement Loop";
+                
+                return `
+                    <div class="timeline-step ${idx === 0 ? 'active' : ''}" onclick="openModuleModal('${matchingModName}')">
+                        <div class="step-num">Week ${idx + 1}</div>
+                        <h4>${step}</h4>
+                        <p>Modular enablement and configuration phase.</p>
+                    </div>
+                `;
+            }).join('');
+            
+            // 4. Modules Grid explorer
+            const modulesGrid = document.getElementById('modules-list-grid');
+            
+            // Filter modules belonging to this track
+            const activeModulesList = CATALOGUE_DB.modules.filter(m => {
+                if (currentTrack === 'support') {
+                    return m.track.toLowerCase().includes("support") || m.track.toLowerCase().includes("platform");
+                } else {
+                    return m.track.toLowerCase().includes("sales") || m.track.toLowerCase().includes("platform");
+                }
+            });
+            
+            modulesGrid.innerHTML = activeModulesList.map(m => {
+                let icon = "📚";
+                if (m.id === "voice") icon = "📞";
+                else if (m.id === "qa") icon = "🔍";
+                else if (m.id === "connect") icon = "⚡";
+                else if (m.id === "sales-bdr") icon = "🚀";
+                else if (m.id === "sales-manager") icon = "📊";
+                else if (m.id === "loop") icon = "🔄";
+                
+                return `
+                    <div class="module-card" onclick="openModuleModal('${m.name}')">
+                        <div>
+                            <div class="module-icon">${icon}</div>
+                            <h3>${m.name}</h3>
+                            <p>${m.oneLiner}</p>
+                        </div>
+                        <div class="module-outcomes">View details & proof →</div>
+                    </div>
+                `;
+            }).join('');
+            
+            // 5. What's new list
+            const whatsNewGrid = document.getElementById('whats-new-list');
+            // Filter whatsNew by module in the track
+            const activeWN = CATALOGUE_DB.whatsNew.filter(wn => {
+                if (currentTrack === 'support') {
+                    return !wn.module.toLowerCase().includes("sales");
+                } else {
+                    return wn.module.toLowerCase().includes("sales") || wn.module.toLowerCase().includes("knowledge") || wn.module.toLowerCase().includes("voice");
+                }
+            });
+            
+            whatsNewGrid.innerHTML = activeWN.map(wn => `
+                <div class="wn-card">
+                    <div class="wn-icon">✦</div>
+                    <div>
+                        <h3>${wn.title}</h3>
+                        <p><b>${wn.module}</b> — ${wn.whyItMatters} <span class="ticket-status-pill status-released" style="margin-left:8px;font-size:0.65rem;">${wn.availability}</span></p>
+                    </div>
+                </div>
+            `).join('');
+            
+            // 6. Pitch Builder customizer checkboxes
+            const chkGroup = document.getElementById('pitch-checkboxes');
+            chkGroup.innerHTML = activeModulesList.map((m, idx) => `
+                <label class="checkbox-item">
+                    <input type="checkbox" id="chk-node-${idx}" ${idx === 0 ? 'checked' : ''} onchange="updatePitchSlide()">
+                    <div>
+                        <strong>${m.name}</strong>
+                        <div style="font-size: 0.8rem; color: var(--text-muted)">${m.oneLiner}</div>
+                    </div>
+                </label>
+            `).join('');
+            
+            // 7. Loop explanation
+            activateLoopNode(1);
+        }
+
+        // Loop diagram interactivity
+        const LOOP_STEPS = [
+            { "title": "1. Knowledge Core", "desc": "The starting core. AiMY Knowledge indexes SOPs, manuals, pricing guides, and competitor battlecards, acting as the secure single source of truth serving both tracks." },
+            { "title": "2. Live Telephony & Outreach Channels", "desc": "Frontline interactions occur through text or native Twilio dialers, powered by live voice transcripts and floating objection battlecard alerts." },
+            { "title": "3. 100% Automated QA Evaluation", "desc": "AiMY QA automatically processes 100% of emails, chat transcriptions, and transcribed voice logs, scoring compliance and flagging tone risks." },
+            { "title": "4. Operational Command Dashboards", "desc": "Managers inspect team occupancy and stalled CRM pipeline details in natural language, receiving predictive SLA alerts." },
+            { "title": "5. Continuous Improvement Loop", "desc": "Won/lost sales objection profiles and low-confidence support tickets automatically draft new articles to continuously update Knowledge bases." }
+        ];
+
+        function activateLoopNode(num) {
+            document.querySelectorAll('.loop-node').forEach(node => node.classList.remove('active'));
+            document.querySelector(`.node-${num}`).classList.add('active');
+            
+            const step = LOOP_STEPS[num - 1];
+            document.getElementById('loop-explain-title').innerText = step.title;
+            document.getElementById('loop-explain-desc').innerText = step.desc;
+            document.getElementById('loop-explain-phase').innerText = `Continuous Loop Phase ${num}/5`;
+        }
+
+        // Slide simulator compiler
+        function updatePitchSlide() {
+            const title = document.getElementById('pitch-title');
+            const opening = document.getElementById('pitch-opening');
+            const packageText = document.getElementById('pitch-package');
+            const outcomes = document.getElementById('pitch-outcomes');
+            const evidence = document.getElementById('pitch-evidence');
+            
+            const chk0 = document.getElementById('chk-node-0') ? document.getElementById('chk-node-0').checked : false;
+            const chk1 = document.getElementById('chk-node-1') ? document.getElementById('chk-node-1').checked : false;
+            const chk2 = document.getElementById('chk-node-2') ? document.getElementById('chk-node-2').checked : false;
+            const chk3 = document.getElementById('chk-node-3') ? document.getElementById('chk-node-3').checked : false;
+            
+            if (currentTrack === 'support') {
+                if (chk0 && !chk1 && !chk2 && !chk3) {
+                    title.innerText = "Establishing Your Factual Knowledge Foundation";
+                    opening.innerHTML = "Your primary focus is solving scattered knowledge and agent search friction. Implementing **AiMY Knowledge** connects securely to your SOPs to enable consistent support answers.";
+                    packageText.innerText = "AiMY Knowledge layer deployment + helpdesk integrations connecting in Week 1.";
+                    outcomes.innerText = "Immediate reduction in Average Handle Times (AHT) and 100% answer consistency.";
+                    evidence.innerText = "Enterprise SOP & FAQ Ingestion Pipeline";
+                } else if (chk0 && chk1 && !chk2 && !chk3) {
+                    title.innerText = "Factual Knowledge + Native Call Transcription";
+                    opening.innerHTML = "Unlock complete support floor oversight by adding **AiMY Voice** call streams to your **AiMY Knowledge** foundation. Agents get live call transcriptions and answer assist widgets.";
+                    packageText.innerText = "AiMY Knowledge + AiMY Voice core integrations running in Week 1-2.";
+                    outcomes.innerText = "Native call recording search indices, live co-pilot answer assistance, and reduced handle times.";
+                    evidence.innerText = "Twilio native outbound/inbound calling pipelines";
+                } else if (chk0 && chk1 && chk2 && !chk3) {
+                    title.innerText = "Omnichannel Support + 100% QA Scoring";
+                    opening.innerHTML = "Establish complete operational confidence with **AiMY QA** scoring across all emails, chats, and transcribed live calls. Stop flying blind on conversation audits.";
+                    packageText.innerText = "Omnichannel ticket scoring + QA evaluation frameworks deployed in Week 1-3.";
+                    outcomes.innerText = "100% automated interaction audits, instant compliance violation flags, and granular agent coaching targets.";
+                    evidence.innerText = "Zendesk & Freshdesk Automatic Ticket Ingestion API";
+                } else if (chk0 && chk1 && chk2 && chk3) {
+                    title.innerText = "The Self-Improving Automated Control Loop";
+                    opening.innerHTML = "The complete AiMY ecosystem: **Knowledge, Voice, QA, and Connect** unified. Low-confidence QA flags automatically trigger article drafts to auto-fill support gaps, creating a self-improving operation.";
+                    packageText.innerText = "Full modular loop deployment completing fully in Week 4.";
+                    outcomes.innerText = "A support system that maintains and improves itself based on live customer conversation logs, completely removing manual overhead.";
+                    evidence.innerText = "Self-Improving SOP Generation Pipeline";
+                } else {
+                    title.innerText = "Custom AiMY Solution Architecture";
+                    opening.innerHTML = "Configure your modular building blocks above. AiMY scales flexibly from individual channels to complete self-improving helpdesk automation loops.";
+                    packageText.innerText = "Custom phased modular roadmap (deploying in 1-4 weeks).";
+                    outcomes.innerText = "Flexible operational handle time reductions and audit controls tailored to your current software stack.";
+                    evidence.innerText = "Omnichannel Enterprise API integrations";
+                }
+            } else {
+                if (chk0 && !chk1 && !chk2 && !chk3) {
+                    title.innerText = "Establishing Sales Battlecards & playbooks";
+                    opening.innerHTML = "Your primary focus is solving rep onboarding lag and obsolete battlecards. Implementing **AiMY Sales Knowledge** indexes Playbooks, competitive cards, and pricing securely.";
+                    packageText.innerText = "Sales playbooks & battlecards repository ingestion in Week 1.";
+                    outcomes.innerText = "Uniform objection handling and 100% accurate competitor positioning by every rep.";
+                    evidence.innerText = "Sales Objections Battlecards Ingestion Core";
+                } else if (chk0 && chk1 && !chk2 && !chk3) {
+                    title.innerText = "Playbook-Driven Outbound Outreach Sequencing";
+                    opening.innerHTML = "Your primary focus is establishing high-volume outbound cadences. Implementing **AiMY Sales — BDR Mode** equips reps with automated, playbook-grounded email outreach sequences.";
+                    packageText.innerText = "AiMY Sales BDR Mode activation + CRM sequencing integrations deploying in Week 2.";
+                    outcomes.innerText = "Increase outbound dials by 50% while enforcing 100% consistent product positioning.";
+                    evidence.innerText = "Playbook-Driven email outreach sequencing";
+                } else if (chk0 && chk1 && chk2 && !chk3) {
+                    title.innerText = "High-Velocity Outreach + Natural Language CRM queries";
+                    opening.innerHTML = "Equip BDR reps with automated outreach sequences and give revenue leaders a real-time, **natural language pipeline dashboard** via Manager Mode.";
+                    packageText.innerText = "BDR Outreach sequences + Manager natural language query consoles in Week 1-3.";
+                    outcomes.innerText = "Absolute pipeline transparency, duplicate-free CRM hygiene, and 50% higher outbound conversation ratios.";
+                    evidence.innerText = "Apollo duplicates scrubbing & DNC Suppression register";
+                } else if (chk0 && chk1 && chk2 && chk3) {
+                    title.innerText = "Self-Improving Outbound Revenue Engine";
+                    opening.innerHTML = "The complete sales acceleration loop: Playbook Knowledge, BDR outreach sequencing, Manager natural language pipeline queries, and won/lost closing loops closing automatically.";
+                    packageText.innerText = "Full dual-track sales loop implementation complete in Week 4.";
+                    outcomes.innerText = "Playbooks and battlecards update automatically based on won/lost transcripts and objection outcomes, maximizing closing speed.";
+                    evidence.innerText = "Closed Loop Sales Playbook Auto-Refiner";
+                } else {
+                    title.innerText = "Custom Outbound Sales Blueprint";
+                    opening.innerHTML = "Configure your modular building blocks above. Scale outbound lead intelligence scraping, auto-sequencing, and CRM data hygiene on a custom roadmap.";
+                    packageText.innerText = "Custom sales modular pipeline blueprint (1-4 weeks).";
+                    outcomes.innerText = "Tailored outbound dials, Apollo enrichments, and real-time CRM forecast checks.";
+                    evidence.innerText = "Apollo.io & HubSpot Sequencing interfaces";
+                }
+            }
+        }
+
+        // Modal triggers
+        function openModuleModal(moduleName) {
+            let cleanSearch = moduleName;
+            if (moduleName.includes("Knowledge")) cleanSearch = "knowledge";
+            else if (moduleName.includes("Voice")) cleanSearch = "voice";
+            else if (moduleName.includes("QA")) cleanSearch = "qa";
+            else if (moduleName.includes("Connect")) cleanSearch = "connect";
+            else if (moduleName.includes("BDR")) cleanSearch = "sales-bdr";
+            else if (moduleName.includes("Manager")) cleanSearch = "sales-manager";
+            else if (moduleName.includes("Loop")) cleanSearch = "loop";
+            
+            activeModuleId = cleanSearch;
+            const m = CATALOGUE_DB.modules.find(x => x.id === cleanSearch);
+            if (!m) return;
+            
+            document.getElementById('modal-title').innerText = m.name;
+            document.getElementById('modal-desc').innerText = m.whatItDoes;
+            document.getElementById('modal-problem').innerText = m.problem;
+            document.getElementById('modal-benefit').innerText = m.outcome;
+            document.getElementById('modal-module-tag').innerText = m.track;
+            
+            // Onboarding week calculation
+            let weekTag = "Week 1 Go-Live";
+            if (cleanSearch === "voice" || cleanSearch === "sales-bdr") weekTag = "Week 2 Activation";
+            else if (cleanSearch === "qa" || cleanSearch === "sales-manager") weekTag = "Week 3 Core Scoring";
+            else if (cleanSearch === "connect" || cleanSearch === "loop") weekTag = "Week 4 Integration";
+            document.getElementById('modal-onboarding-tag').innerText = weekTag;
+            
+            // Build chips
+            document.getElementById('modal-works-with').innerHTML = m.worksWith.map(x => `<span class="chip modal-chip">${x}</span>`).join('');
+            document.getElementById('modal-integrations').innerHTML = m.integrations.map(x => `<span class="chip modal-chip">${x}</span>`).join('');
+            document.getElementById('modal-themes').innerHTML = m.releaseThemes.map(x => `<span class="chip modal-chip">${x}</span>`).join('');
+            
+            document.getElementById('ticket-search').value = "";
+            renderTickets(m.features || []);
+            
+            document.getElementById('module-modal').classList.add('active');
+        }
+
+        function closeModuleModal() {
+            document.getElementById('module-modal').classList.remove('active');
+        }
+
+        function renderTickets(ticketsList) {
+            const list = document.getElementById('modal-tickets-list');
+            list.innerHTML = "";
+            
+            if (!ticketsList || ticketsList.length === 0) {
+                list.innerHTML = `<div style="text-align: center; color: var(--text-muted); padding: 2rem;">No matching customer-facing capabilities found.</div>`;
+                return;
+            }
+            
+            ticketsList.forEach(t => {
+                let pillClass = "status-roadmap";
+                if (t.availability === "Available") pillClass = "status-released";
+                else if (t.availability === "Recently Released") pillClass = "status-recently-updated";
+                else if (t.availability === "Coming Soon") pillClass = "status-roadmap";
+                else if (t.availability === "Needs Review") pillClass = "status-needs-review";
+                
+                const item = document.createElement('div');
+                item.className = "ticket-item";
+                item.innerHTML = `
+                    <div class="ticket-header">
+                        <div class="ticket-key">
+                            <span>✦</span>
+                            <span>${t.feature_name}</span>
+                        </div>
+                        <span class="ticket-status-pill ${pillClass}">${t.availability}</span>
+                    </div>
+                    <div class="ticket-desc">${t.description}</div>
+                    <div class="ticket-value"><strong>Customer Outcome:</strong> ${t.customer_value}</div>
+                `;
+                list.appendChild(item);
+            });
+        }
+
+        function filterModalTickets() {
+            const query = document.getElementById('ticket-search').value.toLowerCase();
+            const m = CATALOGUE_DB.modules.find(x => x.id === activeModuleId);
+            if (!m) return;
+            
+            const filtered = (m.features || []).filter(t => 
+                t.feature_name.toLowerCase().includes(query) || 
+                t.description.toLowerCase().includes(query) ||
+                t.customer_value.toLowerCase().includes(query)
+            );
+            renderTickets(filtered);
+        }
+
+        function openDemoModal() {
+            document.getElementById('demo-modal').classList.add('active');
+        }
+        
+        function closeDemoModal() {
+            document.getElementById('demo-modal').classList.remove('active');
+        }
+
+        function scrollToElement(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        window.onload = function() {
+            // Attempt to load dynamic data from catalogue-public.json if serving via web server
+            fetch('catalogue-public.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("HTTP error " + response.status);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data && data.tracks && data.modules) {
+                        CATALOGUE_DB = data;
+                        console.log("Successfully loaded latest dynamic catalogue data with " + data.modules.length + " modules.");
+                    }
+                })
+                .catch(err => {
+                    console.warn("Could not fetch catalogue-public.json dynamically (local file mode or offline). Using default fallback data.", err);
+                })
+                .finally(() => {
+                    renderTrackContent();
+                });
+        };
+    </script>
 </body>
 </html>
