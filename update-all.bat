@@ -63,8 +63,12 @@ echo.
 echo [SUCCESS] Both repositories updated and deployed
 echo.
 echo Private Catalogue: https://github.com/osahmed/aimy-catalogue-internal
-echo Public Pitch Page: https://osahmed.github.io/aimy-pitch-public/
 echo.
-echo GitHub Pages deployment takes 1-2 minutes to go live.
+echo Public Pitch Deployments:
+echo  - Vercel (Primary):     https://aimy-pitch-report.vercel.app
+echo  - GitHub Pages (Backup): https://osahmed.github.io/aimy-pitch-public/
+echo.
+echo NOTE: Vercel auto-deploys from private repo (instant)
+echo       GitHub Pages deployment takes 1-2 minutes.
 echo.
 pause

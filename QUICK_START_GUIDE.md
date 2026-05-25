@@ -79,7 +79,12 @@ Visit: https://github.com/osahmed/aimy-catalogue-internal/commits/main
 - You should see a new commit with today's date
 
 ### Public Pitch Page
-Visit: https://osahmed.github.io/aimy-pitch-public/
+**Primary (Vercel):** https://aimy-pitch-report.vercel.app
+- Updates automatically from private repo
+- Changes appear instantly (no wait time)
+
+**Backup (GitHub Pages):** https://osahmed.github.io/aimy-pitch-public/
+- Requires manual sync via `update-public-pitch.bat`
 - Wait 1-2 minutes after script completes
 - Refresh the page (Ctrl+F5 for hard refresh)
 
