@@ -1,20 +1,21 @@
 {
   "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/((?!aimy-catalogue-site/).*)",
+      "destination": "/aimy-catalogue-site/$1"
+    }
+  ],
   "redirects": [
     {
       "source": "/one-page-pitch",
-      "destination": "https://osahmed.github.io/aimy-pitch-public/",
-      "permanent": true
-    },
-    {
-      "source": "/one-page-pitch.html",
-      "destination": "https://osahmed.github.io/aimy-pitch-public/",
-      "permanent": true
+      "destination": "/aimy-catalogue-site/one-page-pitch.html",
+      "statusCode": 302
     }
   ],
   "headers": [
     {
-      "source": "/catalogue-public.json",
+      "source": "/aimy-catalogue-site/catalogue-public.json",
       "headers": [
         {
           "key": "Content-Type",
