@@ -2,15 +2,16 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/((?!aimy-catalogue-site/).*)",
-      "destination": "/aimy-catalogue-site/$1"
-    }
-  ],
-  "redirects": [
+      "source": "/",
+      "destination": "/aimy-catalogue-site/index.html"
+    },
     {
       "source": "/one-page-pitch",
-      "destination": "/aimy-catalogue-site/one-page-pitch.html",
-      "statusCode": 302
+      "destination": "/aimy-catalogue-site/one-page-pitch.html"
+    },
+    {
+      "source": "/catalogue-public.json",
+      "destination": "/aimy-catalogue-site/catalogue-public.json"
     }
   ],
   "headers": [
