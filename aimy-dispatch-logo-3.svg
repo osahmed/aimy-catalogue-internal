@@ -1,0 +1,21 @@
+<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient3" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#0066ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8c4ff4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Data bars -->
+  <rect x="140" y="65" width="8" height="40" rx="4" fill="url(#gradient3)"/>
+  <rect x="152" y="55" width="8" height="60" rx="4" fill="url(#gradient3)"/>
+  <rect x="164" y="60" width="8" height="50" rx="4" fill="url(#gradient3)"/>
+  <rect x="176" y="50" width="8" height="65" rx="4" fill="url(#gradient3)"/>
+  <rect x="188" y="62" width="8" height="45" rx="4" fill="url(#gradient3)"/>
+
+  <!-- Text -->
+  <text x="200" y="145" font-family="'Poppins', sans-serif" font-size="48" font-weight="700"
+        fill="#1F2937" text-anchor="middle" letter-spacing="-1">AIMY</text>
+  <text x="200" y="165" font-family="'Poppins', sans-serif" font-size="14" font-weight="500"
+        fill="#8c4ff4" text-anchor="middle" letter-spacing="6">DISPATCH</text>
+</svg>

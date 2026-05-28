@@ -6,16 +6,17 @@
     <title>AiMY — Operational Transformation One-Page Sheet</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1e3a8a;
-            --primary-glow: #3b82f6;
-            --accent: #ff5e62;
+            --primary: #0066FF;
+            --primary-glow: #5582FF;
+            --accent: #8C4FF4;
+            --accent-teal: #6FDFE2;
             --text-main: #1f2937;
             --text-muted: #4b5563;
             --border: #e5e7eb;
-            --bg-light: #f9fafb;
+            --bg-light: #F4F4F8;
         }
 
         * {
@@ -27,7 +28,7 @@
         body {
             background: #ffffff;
             color: var(--text-main);
-            font-family: 'Inter', sans-serif;
+            font-family: 'Poppins', sans-serif;
             padding: 3rem;
             line-height: 1.5;
         }
@@ -51,8 +52,62 @@
             align-items: flex-end;
         }
 
+        .header-left {
+            display: flex;
+            align-items: flex-end;
+            gap: 1.5rem;
+        }
+
+        .aimy-dispatch-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .logo-icon {
+            display: flex;
+            gap: 2px;
+        }
+
+        .logo-bar {
+            width: 4px;
+            background: linear-gradient(180deg, #8c4ff4 0%, #0066ff 100%);
+            border-radius: 2px;
+        }
+
+        .logo-bar:nth-child(1) { height: 18px; }
+        .logo-bar:nth-child(2) { height: 26px; }
+        .logo-bar:nth-child(3) { height: 22px; }
+        .logo-bar:nth-child(4) { height: 28px; }
+        .logo-bar:nth-child(5) { height: 20px; }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1;
+        }
+
+        .logo-text .aimy {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text .dispatch {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.5rem;
+            font-weight: 500;
+            color: #8c4ff4;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+        }
+
         .title-block h1 {
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 2.2rem;
             font-weight: 800;
             color: var(--primary);
@@ -66,12 +121,12 @@
         }
 
         .btn-print {
-            background: var(--primary);
+            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
             color: #ffffff;
             border: none;
             padding: 0.5rem 1.2rem;
             border-radius: 20px;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-weight: 600;
             font-size: 0.85rem;
             cursor: pointer;
@@ -83,7 +138,7 @@
         }
 
         h2 {
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 1.25rem;
             font-weight: 700;
             color: var(--primary);
@@ -110,7 +165,7 @@
             background: var(--bg-light);
             text-align: left;
             padding: 0.6rem 1rem;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-weight: 700;
             border: 1px solid var(--border);
             color: var(--primary);
@@ -140,7 +195,7 @@
         }
 
         .track-box h3 {
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 1.05rem;
             color: var(--primary);
             margin-bottom: 0.6rem;
@@ -179,20 +234,26 @@
         }
 
         .outcome-item h4 {
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Poppins', sans-serif;
             color: var(--primary);
             font-size: 0.95rem;
             margin-bottom: 0.3rem;
         }
 
         footer {
-            border-top: 1px solid var(--border);
+            border-top: 2px solid var(--primary);
             margin-top: 2rem;
             padding-top: 1rem;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             font-size: 0.78rem;
             color: var(--text-muted);
+        }
+
+        .footer-logo {
+            height: 28px;
+            width: auto;
         }
 
         @media print {
@@ -214,9 +275,25 @@
 
     <div class="pitch-container">
         <header>
-            <div class="title-block">
-                <h1>AiMY — Operational Transformation</h1>
-                <p>The Omnichannel Self-Improving AI Agent Platform</p>
+            <div class="header-left">
+                <div class="aimy-dispatch-logo">
+                    <div class="logo-icon">
+                        <div class="logo-bar"></div>
+                        <div class="logo-bar"></div>
+                        <div class="logo-bar"></div>
+                        <div class="logo-bar"></div>
+                        <div class="logo-bar"></div>
+                    </div>
+                    <div class="logo-text">
+                        <div class="aimy">AIMY</div>
+                        <div class="dispatch">DISPATCH</div>
+                    </div>
+                </div>
+
+                <div class="title-block">
+                    <h1>AiMY — Operational Transformation</h1>
+                    <p>The Omnichannel Self-Improving AI Agent Platform</p>
+                </div>
             </div>
             <button class="btn-print" onclick="window.print()">Print Pitch Sheet</button>
         </header>
@@ -302,8 +379,11 @@
         </p>
 
         <footer>
-            <span>Strictly Confidential — Enterprise Pitch Collateral</span>
-            <span>© 2026 AiMY Platform</span>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <img src="FlairsTech-logo.svg" alt="FlairsTech" class="footer-logo">
+                <span>Strictly Confidential — Enterprise Pitch Collateral</span>
+            </div>
+            <span>© 2026 FlairsTech | AiMY Platform</span>
         </footer>
     </div>
 
