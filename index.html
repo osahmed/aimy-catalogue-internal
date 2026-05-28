@@ -8,7 +8,7 @@
     <!-- Modern Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Premium Aesthetics Styling -->
     <style>
@@ -17,29 +17,30 @@
             --bg-surface: rgba(11, 19, 33, 0.75);
             --bg-card: rgba(26, 32, 47, 0.45);
             --border-glass: rgba(255, 255, 255, 0.08);
-            --border-glow: rgba(0, 242, 254, 0.25);
-            
-            /* Harmonic support colors */
-            --primary-support: #00f2fe;
-            --secondary-support: #4facfe;
-            --glow-support: rgba(0, 242, 254, 0.35);
-            
-            /* Harmonic sales colors */
-            --primary-sales: #ff5e62;
-            --secondary-sales: #ff9966;
-            --glow-sales: rgba(255, 94, 98, 0.35);
-            
+            --border-glow: rgba(0, 102, 255, 0.25);
+
+            /* FlairsTech Brand Colors - Primary */
+            --primary-support: #0066FF;
+            --secondary-support: #5582FF;
+            --glow-support: rgba(0, 102, 255, 0.35);
+
+            /* FlairsTech Brand Colors - Sales */
+            --primary-sales: #8C4FF4;
+            --secondary-sales: #B01CFF;
+            --glow-sales: rgba(140, 79, 244, 0.35);
+
             /* Dynamic active state pointers */
             --primary: var(--primary-support);
             --secondary: var(--secondary-support);
             --glow: var(--glow-support);
-            
-            --accent-magenta: #f35588;
-            --accent-purple: #a155ec;
+
+            --accent-magenta: #8C4FF4;
+            --accent-purple: #8D98FF;
+            --accent-teal: #6FDFE2;
             --text-main: #eef7ff;
             --text-muted: #a6b6c6;
-            --font-main: 'Inter', sans-serif;
-            --font-heading: 'Outfit', sans-serif;
+            --font-main: 'Poppins', sans-serif;
+            --font-heading: 'Poppins', sans-serif;
             
             --shadow-glow: 0 8px 32px 0 rgba(0, 242, 254, 0.12);
             --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -49,6 +50,10 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        html {
+            font-size: 80%;
         }
 
         body {
@@ -101,6 +106,79 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .aimy-dispatch-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .logo-icon {
+            display: flex;
+            gap: 2px;
+        }
+
+        @keyframes barSlideUp {
+            from {
+                transform: scaleY(0);
+                opacity: 0;
+            }
+            to {
+                transform: scaleY(1);
+                opacity: 1;
+            }
+        }
+
+        .logo-bar {
+            width: 4px;
+            background: linear-gradient(180deg, #8c4ff4 0%, #0066ff 100%);
+            border-radius: 2px;
+            transition: var(--transition-smooth);
+            transform-origin: bottom;
+            animation: barSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+        }
+
+        .logo-bar:nth-child(1) { height: 20px; animation-delay: 0.1s; }
+        .logo-bar:nth-child(2) { height: 30px; animation-delay: 0.2s; }
+        .logo-bar:nth-child(3) { height: 25px; animation-delay: 0.3s; }
+        .logo-bar:nth-child(4) { height: 32px; animation-delay: 0.4s; }
+        .logo-bar:nth-child(5) { height: 22px; animation-delay: 0.5s; }
+
+        .aimy-dispatch-logo:hover .logo-bar {
+            transform: scaleY(1.1);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1;
+        }
+
+        .logo-text .aimy {
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text .dispatch {
+            font-family: var(--font-heading);
+            font-size: 0.55rem;
+            font-weight: 500;
+            color: #8c4ff4;
+            letter-spacing: 3px;
+            text-transform: uppercase;
         }
 
         .logo {
@@ -183,6 +261,10 @@
             box-shadow: 0 12px 30px var(--glow);
         }
 
+        .cta-btn:active {
+            transform: scale(0.97);
+        }
+
         /* Hero segment styling */
         .hero {
             position: relative;
@@ -193,6 +275,12 @@
             justify-content: center;
             min-height: 85vh;
             z-index: 10;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            33% { transform: translate(30px, -20px); }
+            66% { transform: translate(-20px, 30px); }
         }
 
         .hero-glow {
@@ -207,6 +295,7 @@
             pointer-events: none;
             z-index: -1;
             transition: var(--transition-smooth);
+            animation: float 20s ease-in-out infinite;
         }
 
         .hero h1 {
@@ -260,6 +349,10 @@
             box-shadow: 0 15px 35px var(--glow);
         }
 
+        .btn-primary:active {
+            transform: scale(0.97);
+        }
+
         .btn-outline {
             background: rgba(255, 255, 255, 0.02);
             color: var(--text-main);
@@ -277,6 +370,10 @@
             background: rgba(255, 255, 255, 0.05);
             border-color: rgba(255, 255, 255, 0.2);
             transform: translateY(-2px);
+        }
+
+        .btn-outline:active {
+            transform: scale(0.97);
         }
 
         /* Section layout */
@@ -634,78 +731,104 @@
             margin-bottom: 1.3rem;
         }
 
-        /* Interactive Pitch Customizer */
-        .pitch-container {
-            background: rgba(26, 32, 47, 0.25);
-            border: 1px solid var(--border-glass);
-            border-radius: 24px;
-            padding: 2.5rem;
-            margin-top: 2.5rem;
+        /* Pitch Deck Carousel */
+        .pitch-carousel-container {
             display: flex;
-            gap: 2.5rem;
-        }
-
-        .pitch-config {
-            flex: 1;
-        }
-
-        .pitch-config h3 {
-            font-family: var(--font-heading);
-            font-size: 1.35rem;
-            color: #ffffff;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .pitch-config p {
-            font-size: 0.92rem;
-            color: var(--text-muted);
-            margin-bottom: 1.3rem;
-            font-weight: 300;
-        }
-
-        .checkbox-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-
-        .checkbox-item {
-            display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 12px;
-            background: rgba(255,255,255,0.01);
-            border: 1px solid var(--border-glass);
-            padding: 0.75rem 1.1rem;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: var(--transition-smooth);
+            margin-top: 2.5rem;
+            min-height: 600px;
         }
 
-        .checkbox-item:hover {
-            background: rgba(255,255,255,0.03);
-            border-color: rgba(255,255,255,0.12);
-        }
-
-        .checkbox-item input {
-            width: 17px;
-            height: 17px;
-            accent-color: var(--primary);
-            cursor: pointer;
-        }
-
-        .pitch-deck-sim {
-            flex: 1.2;
+        .pitch-deck-sim-centered {
+            width: 100%;
+            max-width: 900px;
             background: radial-gradient(circle at top right, #131724, #080a11);
             border: 1px solid var(--border-glow);
             border-radius: 20px;
             padding: 2.2rem;
-            position: relative;
             box-shadow: var(--shadow-glow);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
             transition: var(--transition-smooth);
+        }
+
+        .slide-nav-btn {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border-glass);
+            color: var(--text-main);
+            padding: 0.6rem 1.4rem;
+            border-radius: 8px;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .slide-nav-btn:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .slide-nav-btn:active {
+            transform: scale(0.97);
+        }
+
+        .slide-nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .slide-nav-btn:disabled:hover {
+            background: rgba(255,255,255,0.05);
+            border-color: var(--border-glass);
+            color: var(--text-main);
+            transform: none;
+        }
+
+        /* Pitch slide content transitions */
+        .pitch-slide-content {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0px);
+            transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                        filter 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .pitch-slide-content.transitioning {
+            opacity: 0;
+            transform: translateY(-12px);
+            filter: blur(4px);
+        }
+
+        /* Carousel indicator dots */
+        .slide-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 1.5rem;
+        }
+
+        .slide-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .slide-dot:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.2);
+        }
+
+        .slide-dot.active {
+            background: var(--primary);
+            width: 24px;
+            border-radius: 4px;
         }
 
         .pitch-deck-header {
@@ -813,11 +936,19 @@
             position: relative;
             box-shadow: 0 25px 80px rgba(0,0,0,0.5);
             transform: scale(0.95);
+            filter: blur(4px);
             transition: var(--transition-smooth);
         }
 
         .modal-overlay.active .modal-content {
             transform: scale(1);
+            filter: blur(0px);
+        }
+
+        /* Subtler exit animation */
+        .modal-overlay:not(.active) .modal-content {
+            transform: scale(0.98) translateY(-8px);
+            filter: blur(4px);
         }
 
         .close-modal {
@@ -1019,6 +1150,139 @@
             width: 250px;
         }
 
+        /* === MOTION SYSTEM === */
+
+        /* Hero entrance stagger */
+        @keyframes heroFadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+                filter: blur(6px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0px);
+            }
+        }
+
+        .hero h1 {
+            animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s backwards;
+        }
+
+        .hero p {
+            animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s backwards;
+        }
+
+        .hero-actions {
+            animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s backwards;
+        }
+
+        /* Scroll-triggered reveal */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(24px);
+            filter: blur(4px);
+            transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                        filter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-on-scroll.revealed {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0px);
+        }
+
+        /* Stagger children within revealed containers */
+        .stagger-children > * {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .stagger-children.revealed > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: translateY(0); }
+        .stagger-children.revealed > *:nth-child(2) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+        .stagger-children.revealed > *:nth-child(3) { transition-delay: 0.15s; opacity: 1; transform: translateY(0); }
+        .stagger-children.revealed > *:nth-child(4) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+        .stagger-children.revealed > *:nth-child(5) { transition-delay: 0.25s; opacity: 1; transform: translateY(0); }
+        .stagger-children.revealed > *:nth-child(6) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+        .stagger-children.revealed > *:nth-child(7) { transition-delay: 0.35s; opacity: 1; transform: translateY(0); }
+
+        /* Track switch cross-fade */
+        .track-content-wrapper {
+            transition: opacity 0.35s ease-out, filter 0.35s ease-out;
+        }
+
+        .track-content-wrapper.switching {
+            opacity: 0;
+            filter: blur(4px);
+        }
+
+        /* Enhanced card interactions */
+        .module-card {
+            will-change: transform, box-shadow;
+        }
+
+        .module-card:hover {
+            transform: translateY(-8px) scale(1.02);
+        }
+
+        .timeline-step:hover {
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: 0 12px 32px rgba(0, 102, 255, 0.15);
+        }
+
+        .ba-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .wn-card:hover {
+            transform: translateX(8px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Button shine effect on hover */
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+            pointer-events: none;
+        }
+
+        .btn-primary {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary:hover::after {
+            left: 100%;
+        }
+
+        /* Switcher button active indicator animation */
+        .switcher-btn.active {
+            transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Accessibility: Respect user motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
         @media (max-width: 900px) {
             header nav { display: none; }
             .before-after-grid, .timeline-container, .module-grid { grid-template-columns: 1fr; }
@@ -1031,25 +1295,44 @@
 
     <!-- Omnichannel Header -->
     <header>
-        <div class="logo">
-            <span>AiMY</span> Pitch Hub
+        <div class="header-left">
+            <div class="aimy-dispatch-logo" onclick="window.location.reload()">
+                <div class="logo-icon">
+                    <div class="logo-bar"></div>
+                    <div class="logo-bar"></div>
+                    <div class="logo-bar"></div>
+                    <div class="logo-bar"></div>
+                    <div class="logo-bar"></div>
+                </div>
+                <div class="logo-text">
+                    <div class="aimy">AIMY</div>
+                    <div class="dispatch">DISPATCH</div>
+                </div>
+            </div>
+
+            <div class="logo">
+                <span>AiMY</span> Pitch Hub
+            </div>
         </div>
-        
+
         <!-- Unified Track Switcher Toggle -->
         <div class="track-switcher">
             <button class="switcher-btn active" id="btn-support" onclick="switchTrack('support')">L1 Support Operations</button>
             <button class="switcher-btn" id="btn-sales" onclick="switchTrack('sales')">Sales Operations</button>
         </div>
-        
+
         <nav>
             <a href="#comparison">Overview</a>
             <a href="#journey">Journey</a>
             <a href="#explorer">Modules</a>
             <a href="#loop">The Loop</a>
             <a href="#pitch">Pitch Customizer</a>
-            <a href="https://osahmed.github.io/aimy-pitch-public/" target="_blank" style="color: var(--accent-magenta);">One-Page Pitch</a>
+            <a href="aimy-catalogue-site/one-page-pitch.html" style="color: var(--accent-magenta);">One-Page Pitch</a>
         </nav>
-        <button class="cta-btn" onclick="openDemoModal()">Request Assessment</button>
+        <div style="display: flex; align-items: center; gap: 1.5rem;">
+            <img src="aimy-catalogue-site/FlairsTech-logo.svg" alt="FlairsTech" style="height: 32px; width: auto;">
+            <button class="cta-btn" onclick="openDemoModal()">Request Assessment</button>
+        </div>
     </header>
 
     <!-- Hero Landing Section -->
@@ -1133,46 +1416,40 @@
         </div>
     </section>
 
-    <!-- Pitch Customizer -->
+    <!-- Pitch Deck Carousel -->
     <section id="pitch">
         <div class="section-header">
-            <h2>The Dynamic Pitch Builder</h2>
-            <p>Configure the ideal architecture blocks based on your customer's pain points, and watch the pitch slide compile instantly with **sanitized release proof**.</p>
+            <h2>AiMY Pitch Deck Simulator</h2>
+            <p>Navigate through the modular pitch slides to explore different architecture configurations.</p>
         </div>
-        <div class="pitch-container">
-            <div class="pitch-config">
-                <h3>Select Modular Blocks</h3>
-                <p>Select which modules your prospect needs:</p>
-                <div class="checkbox-group" id="pitch-checkboxes">
-                    <!-- Populated via Javascript based on track -->
+        <div class="pitch-carousel-container">
+            <div class="pitch-deck-sim-centered">
+                <div class="pitch-deck-header">
+                    <div class="pitch-deck-logo">AiMY Pitch Deck</div>
+                    <div style="font-size: 0.8rem; color: var(--text-muted)" id="slide-counter">Slide 1 of 4</div>
                 </div>
-            </div>
-            
-            <div class="pitch-deck-sim">
-                <div>
-                    <div class="pitch-deck-header">
-                        <div class="pitch-deck-logo">AiMY Pitch Deck Simulator</div>
-                        <div style="font-size: 0.8rem; color: var(--text-muted)">Slide 1 of 1</div>
-                    </div>
-                    <div class="pitch-deck-body">
-                        <div class="pitch-slide-content">
-                            <h3 style="font-family: var(--font-heading); color: #ffffff; font-size: 1.45rem; margin-bottom: 0.8rem;" id="pitch-title">Establishing Your Factual Knowledge Foundation</h3>
-                            <p style="font-size: 1rem; color: var(--text-muted); margin-bottom: 1.4rem;" id="pitch-opening">Your primary focus is solving scattered knowledge and agent search friction. Implementing **AiMY Knowledge** connects securely to your SOPs to enable consistent support answers.</p>
-                            
-                            <h4>📦 Suggested Operational Blueprint</h4>
-                            <p id="pitch-package" style="margin-bottom: 0.8rem;">AiMY Knowledge layer deployment + helpdesk integrations connecting in Week 1.</p>
-                            
-                            <h4>📊 Target Customer Outcomes</h4>
-                            <p id="pitch-outcomes" style="margin-bottom: 0.8rem;">Immediate reduction in Average Handle Times (AHT) and 100% answer consistency.</p>
-                            
-                            <h4>🛡️ Verifiable Production Proof</h4>
-                            <p id="pitch-evidence" style="color: var(--primary); font-family: var(--font-heading); font-weight: 600;">Enterprise SOP & FAQ Ingestion Pipeline</p>
-                        </div>
+                <div class="pitch-deck-body">
+                    <div class="pitch-slide-content" id="pitch-slide-content">
+                        <h3 style="font-family: var(--font-heading); color: #ffffff; font-size: 1.45rem; margin-bottom: 0.8rem;" id="pitch-title">Establishing Your Factual Knowledge Foundation</h3>
+                        <p style="font-size: 1rem; color: var(--text-muted); margin-bottom: 1.4rem;" id="pitch-opening">Your primary focus is solving scattered knowledge and agent search friction. Implementing **AiMY Knowledge** connects securely to your SOPs to enable consistent support answers.</p>
+
+                        <h4>📦 Suggested Operational Blueprint</h4>
+                        <p id="pitch-package" style="margin-bottom: 0.8rem;">AiMY Knowledge layer deployment + helpdesk integrations connecting in Week 1.</p>
+
+                        <h4>📊 Target Customer Outcomes</h4>
+                        <p id="pitch-outcomes" style="margin-bottom: 0.8rem;">Immediate reduction in Average Handle Times (AHT) and 100% answer consistency.</p>
+
+                        <h4>🛡️ Verifiable Production Proof</h4>
+                        <p id="pitch-evidence" style="color: var(--primary); font-family: var(--font-heading); font-weight: 600;">Enterprise SOP & FAQ Ingestion Pipeline</p>
                     </div>
                 </div>
-                <div style="border-top: 1px solid var(--border-glass); padding-top: 0.8rem; margin-top: 1.2rem; display: flex; justify-content: space-between; align-items: center;">
-                    <div style="font-size: 0.8rem; color: var(--text-muted);">Confidential — Customer Sales Pitch Deck</div>
-                    <button class="cta-btn" style="padding: 0.45rem 1.1rem; font-size: 0.78rem;" onclick="alert('Sales pitch package exported! Explore aimy-catalogue-site/ for copywriting docs.')">Export Slide</button>
+                <div style="border-top: 1px solid var(--border-glass); padding-top: 0.8rem; margin-top: 1.2rem;">
+                    <div class="slide-indicators" id="slide-indicators"></div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                        <button class="slide-nav-btn" onclick="previousSlide()">← Previous</button>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">Confidential — Customer Sales Pitch Deck</div>
+                        <button class="slide-nav-btn" onclick="nextSlide()">Next →</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1243,15 +1520,36 @@
 
     <!-- Booking Modal -->
     <div class="modal-overlay" id="demo-modal">
-        <div class="modal-content" style="max-width: 480px; text-align: center;">
+        <div class="modal-content" style="max-width: 520px; text-align: center;">
             <button class="close-modal" onclick="closeDemoModal()">✕</button>
-            <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 0.8rem;">Schedule Operational Call</h2>
-            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.8rem; font-weight: 300;">Book a 15-minute call with our solution architecture team to map your current platforms and design your go-live plan.</p>
-            <div style="display: flex; flex-direction: column; gap: 10px; text-align: left; margin-bottom: 1.8rem;">
-                <label style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Work Email Address</label>
-                <input type="email" placeholder="you@company.com" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-glass); padding: 0.75rem 1rem; border-radius: 10px; color: #ffffff; font-size: 0.95rem; outline: none; width: 100%;">
-            </div>
-            <button class="btn-primary" style="width: 100%;" onclick="alert('Assessment meeting requested! In production, this hooks to corporate calendars.')">Schedule 15-Min Call</button>
+            <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 0.8rem;">Request Assessment</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.8rem; font-weight: 300;">Fill in your details and our solution architecture team will reach out to schedule a 15-minute discovery call.</p>
+            <form id="assessment-form" onsubmit="submitAssessment(event)" style="display: flex; flex-direction: column; gap: 14px; text-align: left;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <div>
+                        <label style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 4px;">First Name *</label>
+                        <input type="text" id="form-first-name" required placeholder="John" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-glass); padding: 0.75rem 1rem; border-radius: 10px; color: #ffffff; font-size: 0.95rem; outline: none; width: 100%; transition: border-color 0.2s ease;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border-glass)'">
+                    </div>
+                    <div>
+                        <label style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 4px;">Last Name *</label>
+                        <input type="text" id="form-last-name" required placeholder="Smith" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-glass); padding: 0.75rem 1rem; border-radius: 10px; color: #ffffff; font-size: 0.95rem; outline: none; width: 100%; transition: border-color 0.2s ease;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border-glass)'">
+                    </div>
+                </div>
+                <div>
+                    <label style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 4px;">Work Email Address *</label>
+                    <input type="email" id="form-email" required placeholder="john.smith@company.com" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-glass); padding: 0.75rem 1rem; border-radius: 10px; color: #ffffff; font-size: 0.95rem; outline: none; width: 100%; transition: border-color 0.2s ease;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border-glass)'">
+                </div>
+                <div>
+                    <label style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 4px;">Phone Number *</label>
+                    <input type="tel" id="form-phone" required placeholder="+1 (555) 123-4567" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-glass); padding: 0.75rem 1rem; border-radius: 10px; color: #ffffff; font-size: 0.95rem; outline: none; width: 100%; transition: border-color 0.2s ease;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border-glass)'">
+                </div>
+                <button type="submit" class="btn-primary" id="submit-btn" style="width: 100%; margin-top: 0.5rem; position: relative; overflow: hidden;">
+                    <span id="submit-text">Request Assessment</span>
+                    <span id="submit-loading" style="display: none;">Submitting...</span>
+                </button>
+                <p id="form-success" style="display: none; color: #73f0ba; font-size: 0.9rem; text-align: center; margin-top: 0.5rem; font-weight: 500;">Your request has been submitted successfully. We'll be in touch shortly.</p>
+                <p id="form-error" style="display: none; color: #ff5e62; font-size: 0.9rem; text-align: center; margin-top: 0.5rem; font-weight: 500;"></p>
+            </form>
         </div>
     </div>
 
@@ -1453,7 +1751,7 @@
 
         function switchTrack(trackName) {
             currentTrack = trackName;
-            
+
             document.querySelectorAll('.switcher-btn').forEach(btn => btn.classList.remove('active'));
             if (trackName === 'support') {
                 document.getElementById('btn-support').classList.add('active');
@@ -1462,9 +1760,20 @@
                 document.getElementById('btn-sales').classList.add('active');
                 document.body.className = "sales-track";
             }
-            
-            renderTrackContent();
-            updatePitchSlide();
+
+            // Cross-fade content during track switch
+            const sections = document.querySelectorAll('section:not(.hero):not(.cta-section)');
+            sections.forEach(s => s.classList.add('track-content-wrapper', 'switching'));
+
+            setTimeout(() => {
+                renderTrackContent();
+                updatePitchSlide();
+                applyRevealClasses();
+
+                setTimeout(() => {
+                    sections.forEach(s => s.classList.remove('switching'));
+                }, 50);
+            }, 350);
         }
 
         function renderTrackContent() {
@@ -1570,18 +1879,9 @@
                 </div>
             `).join('');
             
-            // 6. Pitch Builder customizer checkboxes
-            const chkGroup = document.getElementById('pitch-checkboxes');
-            chkGroup.innerHTML = activeModulesList.map((m, idx) => `
-                <label class="checkbox-item">
-                    <input type="checkbox" id="chk-node-${idx}" ${idx === 0 ? 'checked' : ''} onchange="updatePitchSlide()">
-                    <div>
-                        <strong>${m.name}</strong>
-                        <div style="font-size: 0.8rem; color: var(--text-muted)">${m.oneLiner}</div>
-                    </div>
-                </label>
-            `).join('');
-            
+            // 6. Initialize pitch slides carousel
+            initializePitchSlides();
+
             // 7. Loop explanation
             activateLoopNode(1);
         }
@@ -1605,19 +1905,142 @@
             document.getElementById('loop-explain-phase').innerText = `Continuous Loop Phase ${num}/5`;
         }
 
-        // Slide simulator compiler
+        // Pitch Deck Carousel
+        let currentSlideIndex = 0;
+        let pitchSlides = [];
+
+        function renderSlideIndicators() {
+            const indicatorsContainer = document.getElementById('slide-indicators');
+            indicatorsContainer.innerHTML = '';
+
+            pitchSlides.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.className = `slide-dot ${index === currentSlideIndex ? 'active' : ''}`;
+                dot.onclick = () => goToSlide(index);
+                indicatorsContainer.appendChild(dot);
+            });
+        }
+
+        function goToSlide(index) {
+            if (index >= 0 && index < pitchSlides.length && index !== currentSlideIndex) {
+                currentSlideIndex = index;
+                renderSlide();
+            }
+        }
+
+        function initializePitchSlides() {
+            if (currentTrack === 'support') {
+                pitchSlides = [
+                    {
+                        title: "Establishing Your Factual Knowledge Foundation",
+                        opening: "Your primary focus is solving scattered knowledge and agent search friction. Implementing AiMY Knowledge connects securely to your SOPs to enable consistent support answers.",
+                        package: "AiMY Knowledge layer deployment + helpdesk integrations connecting in Week 1.",
+                        outcomes: "Immediate reduction in Average Handle Times (AHT) and 100% answer consistency.",
+                        evidence: "Enterprise SOP & FAQ Ingestion Pipeline"
+                    },
+                    {
+                        title: "Factual Knowledge + Native Call Transcription",
+                        opening: "Unlock complete support floor oversight by adding AiMY Voice call streams to your AiMY Knowledge foundation. Agents get live call transcriptions and answer assist widgets.",
+                        package: "AiMY Knowledge + AiMY Voice core integrations running in Week 1-2.",
+                        outcomes: "Native call recording search indices, live co-pilot answer assistance, and reduced handle times.",
+                        evidence: "Twilio native outbound/inbound calling pipelines"
+                    },
+                    {
+                        title: "Omnichannel Support + 100% QA Scoring",
+                        opening: "Establish complete operational confidence with AiMY QA scoring across all emails, chats, and transcribed live calls. Stop flying blind on conversation audits.",
+                        package: "Omnichannel ticket scoring + QA evaluation frameworks deployed in Week 1-3.",
+                        outcomes: "100% automated interaction audits, instant compliance violation flags, and granular agent coaching targets.",
+                        evidence: "Zendesk & Freshdesk Automatic Ticket Ingestion API"
+                    },
+                    {
+                        title: "The Self-Improving Automated Control Loop",
+                        opening: "The complete AiMY ecosystem: Knowledge, Voice, QA, and Connect unified. Low-confidence QA flags automatically trigger article drafts to auto-fill support gaps, creating a self-improving operation.",
+                        package: "Full modular loop deployment completing fully in Week 4.",
+                        outcomes: "A support system that maintains and improves itself based on live customer conversation logs, completely removing manual overhead.",
+                        evidence: "Self-Improving SOP Generation Pipeline"
+                    }
+                ];
+            } else {
+                pitchSlides = [
+                    {
+                        title: "Establishing Sales Battlecards & Playbooks",
+                        opening: "Your primary focus is solving rep onboarding lag and obsolete battlecards. Implementing AiMY Sales Knowledge indexes Playbooks, competitive cards, and pricing securely.",
+                        package: "Sales playbooks & battlecards repository ingestion in Week 1.",
+                        outcomes: "Uniform objection handling and 100% accurate competitor positioning by every rep.",
+                        evidence: "Sales Objections Battlecards Ingestion Core"
+                    },
+                    {
+                        title: "Playbook-Driven Outbound Outreach Sequencing",
+                        opening: "Your primary focus is establishing high-volume outbound cadences. Implementing AiMY Sales — BDR Mode equips reps with automated, playbook-grounded email outreach sequences.",
+                        package: "AiMY Sales BDR Mode activation + CRM sequencing integrations deploying in Week 2.",
+                        outcomes: "Increase outbound dials by 50% while enforcing 100% consistent product positioning.",
+                        evidence: "Playbook-Driven email outreach sequencing"
+                    },
+                    {
+                        title: "High-Velocity Outreach + Natural Language CRM Queries",
+                        opening: "Equip BDR reps with automated outreach sequences and give revenue leaders a real-time, natural language pipeline dashboard via Manager Mode.",
+                        package: "BDR Outreach sequences + Manager natural language query consoles in Week 1-3.",
+                        outcomes: "Absolute pipeline transparency, duplicate-free CRM hygiene, and 50% higher outbound conversation ratios.",
+                        evidence: "Apollo duplicates scrubbing & DNC Suppression register"
+                    },
+                    {
+                        title: "Self-Improving Outbound Revenue Engine",
+                        opening: "The complete sales acceleration loop: Playbook Knowledge, BDR outreach sequencing, Manager natural language pipeline queries, and won/lost closing loops closing automatically.",
+                        package: "Full dual-track sales loop implementation complete in Week 4.",
+                        outcomes: "Playbooks and battlecards update automatically based on won/lost transcripts and objection outcomes, maximizing closing speed.",
+                        evidence: "Closed Loop Sales Playbook Auto-Refiner"
+                    }
+                ];
+            }
+            currentSlideIndex = 0;
+            renderSlideIndicators();
+            renderSlide();
+        }
+
+        function renderSlide() {
+            const slideContent = document.getElementById('pitch-slide-content');
+            const slide = pitchSlides[currentSlideIndex];
+
+            // Add transitioning class for fade out
+            slideContent.classList.add('transitioning');
+
+            // Wait for transition, then swap content
+            setTimeout(() => {
+                document.getElementById('pitch-title').innerText = slide.title;
+                document.getElementById('pitch-opening').innerText = slide.opening;
+                document.getElementById('pitch-package').innerText = slide.package;
+                document.getElementById('pitch-outcomes').innerText = slide.outcomes;
+                document.getElementById('pitch-evidence').innerText = slide.evidence;
+                document.getElementById('slide-counter').innerText = `Slide ${currentSlideIndex + 1} of ${pitchSlides.length}`;
+
+                // Update indicator dots
+                renderSlideIndicators();
+
+                // Remove transitioning class for fade in
+                slideContent.classList.remove('transitioning');
+            }, 350);
+        }
+
+        function nextSlide() {
+            if (currentSlideIndex < pitchSlides.length - 1) {
+                currentSlideIndex++;
+                renderSlide();
+            }
+        }
+
+        function previousSlide() {
+            if (currentSlideIndex > 0) {
+                currentSlideIndex--;
+                renderSlide();
+            }
+        }
+
         function updatePitchSlide() {
-            const title = document.getElementById('pitch-title');
-            const opening = document.getElementById('pitch-opening');
-            const packageText = document.getElementById('pitch-package');
-            const outcomes = document.getElementById('pitch-outcomes');
-            const evidence = document.getElementById('pitch-evidence');
-            
-            const chk0 = document.getElementById('chk-node-0') ? document.getElementById('chk-node-0').checked : false;
-            const chk1 = document.getElementById('chk-node-1') ? document.getElementById('chk-node-1').checked : false;
-            const chk2 = document.getElementById('chk-node-2') ? document.getElementById('chk-node-2').checked : false;
-            const chk3 = document.getElementById('chk-node-3') ? document.getElementById('chk-node-3').checked : false;
-            
+            initializePitchSlides();
+        }
+
+        // Keep minimal support check
+        function oldUpdatePitchSlide() {
             if (currentTrack === 'support') {
                 if (chk0 && !chk1 && !chk2 && !chk3) {
                     title.innerText = "Establishing Your Factual Knowledge Foundation";
@@ -1782,13 +2205,109 @@
             document.getElementById('demo-modal').classList.remove('active');
         }
 
+        // REPLACE THIS URL with your Google Apps Script Web App URL
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxdYJAWR6ML_QJs2PX9jKvazd6r6mFgRanlClLp0oFFxc-1ZysO3pWJudMPfRPwEaB-AQ/exec';
+
+        function submitAssessment(event) {
+            event.preventDefault();
+
+            const firstName = document.getElementById('form-first-name').value.trim();
+            const lastName = document.getElementById('form-last-name').value.trim();
+            const email = document.getElementById('form-email').value.trim();
+            const phone = document.getElementById('form-phone').value.trim();
+
+            const submitBtn = document.getElementById('submit-btn');
+            const submitText = document.getElementById('submit-text');
+            const submitLoading = document.getElementById('submit-loading');
+            const successMsg = document.getElementById('form-success');
+            const errorMsg = document.getElementById('form-error');
+
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'none';
+            submitBtn.disabled = true;
+            submitText.style.display = 'none';
+            submitLoading.style.display = 'inline';
+
+            const payload = {
+                first_name: firstName,
+                last_name: lastName,
+                email: email,
+                phone: phone,
+                track: currentTrack === 'support' ? 'L1 Support Operations' : 'Sales Operations',
+                submitted_at: new Date().toLocaleString()
+            };
+
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            })
+            .then(function() {
+                successMsg.textContent = 'Your request has been submitted successfully. We\'ll be in touch shortly.';
+                successMsg.style.display = 'block';
+                document.getElementById('assessment-form').reset();
+                setTimeout(() => closeDemoModal(), 3000);
+            })
+            .catch(function(error) {
+                // Fallback: open mailto link
+                const subject = encodeURIComponent('AiMY Assessment Request - ' + firstName + ' ' + lastName);
+                const body = encodeURIComponent(
+                    'New Assessment Request\n\n' +
+                    'Name: ' + firstName + ' ' + lastName + '\n' +
+                    'Email: ' + email + '\n' +
+                    'Phone: ' + phone + '\n' +
+                    'Track: ' + (currentTrack === 'support' ? 'L1 Support Operations' : 'Sales Operations') + '\n' +
+                    'Submitted: ' + new Date().toLocaleString()
+                );
+                window.open('mailto:osama.ramadan@flairstech.com?subject=' + subject + '&body=' + body, '_blank');
+                successMsg.textContent = 'Your email client has been opened with the request details.';
+                successMsg.style.display = 'block';
+                document.getElementById('assessment-form').reset();
+            })
+            .finally(function() {
+                submitBtn.disabled = false;
+                submitText.style.display = 'inline';
+                submitLoading.style.display = 'none';
+            });
+        }
+
         function scrollToElement(id) {
             document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
         }
 
+
+        // Scroll-triggered reveal animations
+        function initScrollReveal() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            document.querySelectorAll('.reveal-on-scroll, .stagger-children').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Add reveal classes to sections after render
+        function applyRevealClasses() {
+            document.querySelectorAll('.section-header').forEach(el => el.classList.add('reveal-on-scroll'));
+            document.querySelectorAll('.before-after-grid').forEach(el => { el.classList.add('reveal-on-scroll'); el.classList.add('stagger-children'); });
+            document.querySelectorAll('.timeline-container').forEach(el => { el.classList.add('reveal-on-scroll'); el.classList.add('stagger-children'); });
+            document.querySelectorAll('.module-grid').forEach(el => { el.classList.add('reveal-on-scroll'); el.classList.add('stagger-children'); });
+            document.querySelectorAll('.whats-new-grid').forEach(el => { el.classList.add('reveal-on-scroll'); el.classList.add('stagger-children'); });
+            document.querySelectorAll('.loop-viz-container').forEach(el => el.classList.add('reveal-on-scroll'));
+            document.querySelectorAll('.pitch-carousel-container').forEach(el => el.classList.add('reveal-on-scroll'));
+
+            initScrollReveal();
+        }
+
         window.onload = function() {
             // Attempt to load dynamic data from catalogue-public.json if serving via web server
-            fetch('catalogue-public.json')
+            fetch('aimy-catalogue-site/catalogue-public.json')
                 .then(response => {
                     if (!response.ok) {
                         throw new Error("HTTP error " + response.status);
@@ -1806,6 +2325,7 @@
                 })
                 .finally(() => {
                     renderTrackContent();
+                    applyRevealClasses();
                 });
         };
     </script>

@@ -1,19 +1,5 @@
 {
   "cleanUrls": true,
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/aimy-catalogue-site/index.html"
-    },
-    {
-      "source": "/one-page-pitch",
-      "destination": "/aimy-catalogue-site/one-page-pitch.html"
-    },
-    {
-      "source": "/catalogue-public.json",
-      "destination": "/aimy-catalogue-site/catalogue-public.json"
-    }
-  ],
   "headers": [
     {
       "source": "/aimy-catalogue-site/catalogue-public.json",
