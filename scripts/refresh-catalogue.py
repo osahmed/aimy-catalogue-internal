@@ -4,6 +4,9 @@ import re
 import json
 import base64
 import sys
+import urllib.error
+import urllib.parse
+import urllib.request
 
 sys.stdout.reconfigure(encoding='utf-8')
 
@@ -20,6 +23,97 @@ def load_dotenv():
     for k, v in env_vars.items():
         if k not in os.environ:
             os.environ[k] = v
+
+def jira_base_url(site):
+    site = site.strip().rstrip("/")
+    if site.startswith("http://") or site.startswith("https://"):
+        return site
+    return f"https://{site}"
+
+def jira_auth_headers(email, token, include_content_type=False):
+    auth_str = f"{email}:{token}"
+    headers = {
+        "Authorization": f"Basic {base64.b64encode(auth_str.encode('utf-8')).decode('utf-8')}",
+        "Accept": "application/json"
+    }
+    if include_content_type:
+        headers["Content-Type"] = "application/json"
+    return headers
+
+def read_http_error(error):
+    try:
+        details = error.read().decode("utf-8", errors="replace")
+    except Exception:
+        details = str(error)
+    return details[:700]
+
+def request_jira_json(url, headers, payload=None, method="GET"):
+    body = None
+    if payload is not None:
+        body = json.dumps(payload).encode("utf-8")
+    req = urllib.request.Request(url, data=body, headers=headers, method=method)
+    try:
+        with urllib.request.urlopen(req, timeout=60) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as error:
+        raise RuntimeError(f"HTTP {error.code}: {read_http_error(error)}") from error
+    except urllib.error.URLError as error:
+        raise RuntimeError(f"Network error: {error.reason}") from error
+
+def fetch_jira_page(base_url, email, token, jql, start_at, max_results, fields):
+    payload = {
+        "jql": jql,
+        "startAt": start_at,
+        "maxResults": max_results,
+        "fields": fields
+    }
+
+    post_headers = jira_auth_headers(email, token, include_content_type=True)
+    get_headers = jira_auth_headers(email, token)
+    encoded_params = urllib.parse.urlencode({
+        "jql": jql,
+        "startAt": start_at,
+        "maxResults": max_results,
+        "fields": ",".join(fields)
+    })
+
+    attempts = [
+        ("POST Jira API v3 search", "POST", f"{base_url}/rest/api/3/search", post_headers, payload),
+        ("POST Jira API v2 search", "POST", f"{base_url}/rest/api/2/search", post_headers, payload),
+        ("GET Jira API v2 search", "GET", f"{base_url}/rest/api/2/search?{encoded_params}", get_headers, None),
+    ]
+
+    errors = []
+    for label, method, url, headers, body in attempts:
+        try:
+            return request_jira_json(url, headers, body, method)
+        except RuntimeError as exc:
+            errors.append(f"{label} failed ({exc})")
+
+    raise RuntimeError("; ".join(errors))
+
+def fetch_jira_issues(site, email, token, jql):
+    base_url = jira_base_url(site)
+    fields = ["summary", "status", "issuetype", "labels", "description", "updated"]
+    max_results = 100
+    start_at = 0
+    total = None
+    issues = []
+
+    print("[JIRA] Fetching latest issue data using ATLASSIAN_API_TOKEN...")
+
+    while total is None or start_at < total:
+        data = fetch_jira_page(base_url, email, token, jql, start_at, max_results, fields)
+        page_issues = data.get("issues", [])
+        total = int(data.get("total", len(issues) + len(page_issues)))
+        issues.extend(page_issues)
+        print(f"  [JIRA] Retrieved {len(issues)} of {total} issues...")
+
+        if not page_issues:
+            break
+        start_at += len(page_issues)
+
+    return {issue["key"]: issue for issue in issues if issue.get("key")}
 
 # ADF to Plain Text helper
 def adf_to_text(node):
@@ -56,8 +150,8 @@ def get_availability(status, category):
 def run_sanitization_safety_audit():
     """Runs safety verification scans on public files to guarantee zero Jira parameters leak."""
     print("\n[SAFETY CHECK] Running automated sanitization security scan...")
-    public_jsons = ["data/catalogue-public.json", "aimy-catalogue-site/catalogue-public.json"]
-    public_htmls = ["aimy-catalogue-site/index.html", "aimy-catalogue-site/one-page-pitch.html"]
+    public_jsons = ["catalogue-public.json", "data/catalogue-public.json", "aimy-catalogue-site/catalogue-public.json"]
+    public_htmls = ["index.html", "aimy-catalogue-site/index.html"]
     
     jira_key_pattern = re.compile(r'\b(?:AIMY|RD|AB)-\d+\b', re.IGNORECASE)
     jira_url_pattern = re.compile(r'atlassian\.net', re.IGNORECASE)
@@ -133,14 +227,16 @@ def main():
     print(f"[JQL] Target query: {jql}")
     
     cache_file = "jira_issues_cache.json"
-    if not os.path.exists(cache_file):
-        print(f"[ERROR] Local JIRA cache file '{cache_file}' not found. Please populate JIRA details first.")
+    try:
+        cache = fetch_jira_issues(site, email, token, jql)
+    except RuntimeError as exc:
+        print(f"[ERROR] Failed to fetch Jira data through the API token: {exc}")
         sys.exit(1)
+
+    with open(cache_file, 'w', encoding='utf-8') as f:
+        json.dump(cache, f, indent=2, ensure_ascii=False)
         
-    with open(cache_file, 'r', encoding='utf-8') as f:
-        cache = json.load(f)
-        
-    print(f"[OK] Loaded {len(cache)} issues from internal private JIRA repository cache.")
+    print(f"[OK] Loaded and cached {len(cache)} issues from Jira API.")
     
     # Static copy from the official download ZIP catalogue-public.json
     OUTPUT_SCHEMA = {
@@ -690,6 +786,9 @@ def main():
 
     # 5. Output separate files
     with open("data/catalogue-public.json", 'w', encoding='utf-8') as f:
+        json.dump(OUTPUT_SCHEMA, f, indent=2, ensure_ascii=False)
+
+    with open("catalogue-public.json", 'w', encoding='utf-8') as f:
         json.dump(OUTPUT_SCHEMA, f, indent=2, ensure_ascii=False)
         
     with open("aimy-catalogue-site/catalogue-public.json", 'w', encoding='utf-8') as f:

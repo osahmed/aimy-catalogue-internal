@@ -2,15 +2,12 @@
 
 A private repository for managing Jira data replication and generating customer-facing catalogue websites from Atlassian/Jira project data.
 
-## 🌐 Public Deployments
+## 🌐 Deployment
 
-### One-Page Pitch
-- **Primary (Vercel):** [https://aimy-pitch-report.vercel.app](https://aimy-pitch-report.vercel.app) ⚡
-- **Backup (GitHub Pages):** [https://osahmed.github.io/aimy-pitch-public/](https://osahmed.github.io/aimy-pitch-public/)
-- **Repository:** [aimy-pitch-public](https://github.com/osahmed/aimy-pitch-public)
+- **Catalogue Website (Vercel):** [https://aimy-pitch-report.vercel.app](https://aimy-pitch-report.vercel.app)
+- **Repository:** Private internal catalogue repository
 
-### Internal Catalogue (Private)
-This is the internal repository containing Jira data and automation scripts. For public-facing content, use the links above.
+This repository contains Jira data automation and the generated customer-facing catalogue website. The standalone one-page pitch workflow has been retired.
 
 ## 🔒 Security Notice
 

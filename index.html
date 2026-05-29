@@ -1283,11 +1283,261 @@
             }
         }
 
+        @media (max-width: 1180px) {
+            header {
+                gap: 1rem;
+                flex-wrap: wrap;
+                padding: 0.95rem 4%;
+            }
+
+            .header-left {
+                flex: 1 1 240px;
+                gap: 1rem;
+            }
+
+            header nav {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+                gap: 1.1rem;
+                flex-wrap: wrap;
+            }
+
+            .track-switcher {
+                flex: 0 1 auto;
+            }
+
+            header > div:last-child {
+                flex: 0 0 auto;
+            }
+
+            .hero {
+                padding-top: 13rem;
+            }
+
+            .timeline-container,
+            .module-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .loop-viz-container {
+                gap: 2rem;
+            }
+
+            .loop-diagram {
+                width: min(440px, 46vw);
+                height: 360px;
+            }
+        }
+
         @media (max-width: 900px) {
-            header nav { display: none; }
-            .before-after-grid, .timeline-container, .module-grid { grid-template-columns: 1fr; }
-            .loop-viz-container { flex-direction: column; }
-            .pitch-container { flex-direction: column; }
+            header {
+                position: sticky;
+                align-items: stretch;
+                gap: 0.85rem;
+            }
+
+            header nav {
+                display: none;
+            }
+
+            header > div:last-child {
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            .track-switcher {
+                width: 100%;
+            }
+
+            .switcher-btn {
+                flex: 1 1 0;
+                padding: 0.7rem 0.65rem;
+                white-space: normal;
+                line-height: 1.2;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 4.5rem 5% 4rem;
+            }
+
+            section,
+            .cta-section {
+                padding: 4.5rem 5%;
+            }
+
+            .before-after-grid,
+            .timeline-container,
+            .module-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .loop-viz-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .loop-diagram {
+                width: 100%;
+                height: auto;
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+
+            .loop-arrow-svg {
+                display: none;
+            }
+
+            .loop-node,
+            .node-1,
+            .node-2,
+            .node-3,
+            .node-4,
+            .node-5 {
+                position: relative;
+                inset: auto;
+                transform: none;
+                width: 100%;
+            }
+
+            .loop-node:hover,
+            .loop-node.active {
+                transform: translateY(-2px);
+            }
+
+            .loop-explanation {
+                min-height: auto;
+            }
+
+            .pitch-carousel-container {
+                min-height: auto;
+            }
+
+            .pitch-deck-sim-centered {
+                padding: 1.6rem;
+            }
+
+            .modal-content {
+                width: calc(100% - 24px);
+                max-height: calc(100dvh - 24px);
+                padding: 2rem;
+            }
+
+            .modal-detail-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.2rem !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            html {
+                font-size: 75%;
+            }
+
+            header {
+                padding: 0.85rem 4%;
+            }
+
+            .header-left {
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            .logo {
+                font-size: 1.15rem;
+            }
+
+            header > div:last-child img {
+                height: 26px !important;
+            }
+
+            header > div:last-child {
+                align-items: stretch !important;
+                flex-direction: column;
+                gap: 0.75rem !important;
+            }
+
+            .cta-btn,
+            .btn-primary,
+            .btn-outline {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .hero-actions {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .section-header {
+                margin-bottom: 2.2rem;
+            }
+
+            .ba-card,
+            .module-card,
+            .wn-card,
+            .loop-explanation {
+                padding: 1.5rem;
+            }
+
+            .wn-card {
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .pitch-deck-header,
+            .slide-controls,
+            .ticket-header,
+            .modal-section-title {
+                align-items: flex-start !important;
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+
+            .pitch-footer-note {
+                order: -1;
+            }
+
+            .slide-nav-btn {
+                width: 100%;
+            }
+
+            .modal-content {
+                padding: 1.4rem;
+                border-radius: 18px;
+            }
+
+            .modal-content h2 {
+                font-size: 1.65rem;
+                padding-right: 2.5rem;
+            }
+
+            .ticket-search-box,
+            .ticket-search-box:focus {
+                width: 100%;
+            }
+
+            #assessment-form > div:first-child {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .aimy-dispatch-logo {
+                display: none;
+            }
+
+            .switcher-btn {
+                font-size: 0.76rem;
+                padding-inline: 0.45rem;
+            }
+
+            .pitch-deck-sim-centered {
+                padding: 1.2rem;
+            }
         }
     </style>
 </head>
@@ -1327,7 +1577,6 @@
             <a href="#explorer">Modules</a>
             <a href="#loop">The Loop</a>
             <a href="#pitch">Pitch Customizer</a>
-            <a href="aimy-catalogue-site/one-page-pitch.html" style="color: var(--accent-magenta);">One-Page Pitch</a>
         </nav>
         <div style="display: flex; align-items: center; gap: 1.5rem;">
             <img src="aimy-catalogue-site/FlairsTech-logo.svg" alt="FlairsTech" style="height: 32px; width: auto;">
@@ -1445,9 +1694,9 @@
                 </div>
                 <div style="border-top: 1px solid var(--border-glass); padding-top: 0.8rem; margin-top: 1.2rem;">
                     <div class="slide-indicators" id="slide-indicators"></div>
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                    <div class="slide-controls" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
                         <button class="slide-nav-btn" onclick="previousSlide()">← Previous</button>
-                        <div style="font-size: 0.8rem; color: var(--text-muted);">Confidential — Customer Sales Pitch Deck</div>
+                        <div class="pitch-footer-note" style="font-size: 0.8rem; color: var(--text-muted);">Confidential — Customer Sales Pitch Deck</div>
                         <button class="slide-nav-btn" onclick="nextSlide()">Next →</button>
                     </div>
                 </div>
@@ -1478,7 +1727,7 @@
             </div>
             <h2 id="modal-title">Module Title</h2>
             
-            <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 2rem; margin-top: 0.5rem;">
+            <div class="modal-detail-grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 2rem; margin-top: 0.5rem;">
                 <div>
                     <div class="modal-section-title">Overview & Capabilities</div>
                     <p id="modal-desc" style="color: var(--text-main); font-size: 1rem; margin-bottom: 1rem; font-weight: 300;">Detailed module description.</p>

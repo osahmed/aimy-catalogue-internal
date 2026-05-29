@@ -1,8 +1,8 @@
 # Netlify/Vercel redirects for legacy URLs
 
-# Redirect old one-page-pitch paths to public GitHub Pages
-/one-page-pitch https://osahmed.github.io/aimy-pitch-public/ 301
-/one-page-pitch.html https://osahmed.github.io/aimy-pitch-public/ 301
+# Legacy one-page-pitch paths now return to the catalogue homepage
+/one-page-pitch / 301
+/one-page-pitch.html / 301
 
 # Catch-all for old Vercel subdomain patterns
-https://aimy-catalogue-internal-617r.vercel.app/* https://osahmed.github.io/aimy-pitch-public/:splat 301
+https://aimy-catalogue-internal-617r.vercel.app/* https://aimy-pitch-report.vercel.app/:splat 301

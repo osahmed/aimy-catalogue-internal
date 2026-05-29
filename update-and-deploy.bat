@@ -3,10 +3,9 @@ REM ============================================
 REM AiMY Catalogue - Update & Deploy Script
 REM ============================================
 REM This script:
-REM 1. Fetches latest Jira data
+REM 1. Fetches latest Jira data through the API token in .env
 REM 2. Regenerates catalogue files
 REM 3. Commits and pushes to GitHub
-REM 4. Updates public pitch page
 REM ============================================
 
 echo.
@@ -30,7 +29,7 @@ if not exist ".env" (
 )
 
 REM Run the Python refresh script
-echo [2/5] Fetching latest Jira data...
+echo [2/5] Fetching latest Jira data through ATLASSIAN_API_TOKEN...
 python scripts\refresh-catalogue.py
 if errorlevel 1 (
     echo [ERROR] Failed to fetch Jira data!
@@ -60,8 +59,9 @@ echo.
 REM Stage all changes
 echo [4/5] Staging changes...
 git add catalogue-public.json
-git add one-page-pitch.html
 git add index.html
+git add aimy-catalogue-site\index.html
+git add aimy-catalogue-site\catalogue-public.json
 git add data/
 echo [SUCCESS] Changes staged
 echo.
@@ -94,8 +94,5 @@ echo  UPDATE COMPLETE!
 echo ========================================
 echo.
 echo [SUCCESS] Private repository updated: https://github.com/osahmed/aimy-catalogue-internal
-echo.
-echo NOTE: Public pitch page is separate and doesn't auto-update.
-echo If you need to update the pitch page, run: update-public-pitch.bat
 echo.
 pause

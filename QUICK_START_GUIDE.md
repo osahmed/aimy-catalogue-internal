@@ -1,150 +1,63 @@
-# 🚀 Quick Start Guide - AiMY Catalogue Updates
+# Quick Start Guide - AiMY Catalogue Updates
 
-## 🎯 Easiest Method (Recommended)
+## Easiest Method
 
-### On Your Desktop
+On your Desktop, double-click:
 
-Find and double-click:
-
-```
-🔄 Update AiMY Catalogue.bat
+```text
+update repo.bat
 ```
 
-**That's it!** This will:
-- ✅ Fetch latest Jira data
-- ✅ Update private repository
-- ✅ Update public pitch page
-- ✅ Push everything to GitHub
+This will:
 
----
+- Fetch latest Jira data through `ATLASSIAN_API_TOKEN`.
+- Regenerate the sanitized catalogue.
+- Commit and push the catalogue repository.
+- Trigger the normal Vercel deployment from GitHub.
 
-## 📂 Alternative Methods
+## From The Repository Folder
 
-### From Repository Folder
-
-Navigate to: `C:\Users\osama.ramadan\Documents\aimy-catalogue-internal\`
-
-Then double-click one of these:
+You can also run:
 
 | File | What It Does |
 |------|--------------|
-| **`update-all.bat`** | **Everything** - Complete update workflow |
-| `update-and-deploy.bat` | Only private catalogue (Jira → GitHub) |
-| `update-public-pitch.bat` | Only public pitch page |
+| `update-and-deploy.bat` | Main Jira-to-catalogue update workflow |
+| `update-all.bat` | Compatibility wrapper for the same workflow |
 
----
+## Verify Updates
 
-## ⏱️ How Long Does It Take?
-
-| Step | Time |
-|------|------|
-| Fetch Jira data | 5-10 seconds |
-| Commit & push | 2-5 seconds |
-| GitHub Pages deploy | 1-2 minutes |
-| **Total** | **~2 minutes** |
-
----
-
-## ✅ What You'll See
-
-The script will show:
-
-```
-========================================
- AiMY COMPLETE UPDATE - ALL REPOS
-========================================
-
-[1/5] Changed to repository directory
-[2/5] Fetching latest Jira data...
-[SUCCESS] Jira data fetched successfully
-
-[3/5] Changes detected
-[4/5] Staging changes...
-[5/5] Committing and pushing to GitHub...
-
-========================================
- ALL UPDATES COMPLETE!
-========================================
-
-Private Catalogue: https://github.com/osahmed/aimy-catalogue-internal
-Public Pitch Page: https://osahmed.github.io/aimy-pitch-public/
-```
-
----
-
-## 🔍 Verify Updates
-
-### Private Repository
 Visit: https://github.com/osahmed/aimy-catalogue-internal/commits/main
-- You should see a new commit with today's date
 
-### Public Pitch Page
-**Primary (Vercel):** https://aimy-pitch-report.vercel.app
-- Updates automatically from private repo
-- Changes appear instantly (no wait time)
+Then check the deployed catalogue:
 
-**Backup (GitHub Pages):** https://osahmed.github.io/aimy-pitch-public/
-- Requires manual sync via `update-public-pitch.bat`
-- Wait 1-2 minutes after script completes
-- Refresh the page (Ctrl+F5 for hard refresh)
+```text
+https://aimy-pitch-report.vercel.app
+```
 
----
-
-## ❌ Troubleshooting
+## Troubleshooting
 
 ### "Python not found"
-**Solution**: Install Python from https://www.python.org/downloads/
+
+Install Python from https://www.python.org/downloads/.
 
 ### ".env file not found"
-**Solution**: 
-1. Copy `.env.example` to `.env`
-2. Add your Jira credentials
-3. Save the file
+
+Copy `.env.example` to `.env`, add your Jira credentials, and save the file.
+
+### "Failed to fetch Jira data through the API token"
+
+Check the `.env` values for `ATLASSIAN_SITE`, `ATLASSIAN_EMAIL`, `ATLASSIAN_API_TOKEN`, and `JIRA_PROJECT_KEY`.
 
 ### "Git push failed"
-**Solution**: Check your internet connection and GitHub authentication
+
+Check your internet connection and GitHub authentication.
 
 ### No changes detected
-**Solution**: This is normal! It means Jira data hasn't changed since last update
 
----
+This is normal when Jira data has not changed since the last update.
 
-## 📝 When to Run This
+## Security
 
-Run the update script:
-- ✅ After making changes to Jira tickets
-- ✅ Before sharing the pitch page with clients
-- ✅ Weekly to keep catalogue fresh
-- ✅ Anytime you want latest data
-
----
-
-## 🔐 Security
-
-- ✅ All credentials stay in `.env` (never committed)
-- ✅ Only sanitized data goes to GitHub
-- ✅ Private repository stays private
-- ✅ Public pitch page has no sensitive data
-
----
-
-## 💡 Pro Tips
-
-1. **Run it regularly** - Keep data fresh
-2. **Check the output** - Watch for errors
-3. **Wait for deployment** - GitHub Pages takes 1-2 minutes
-4. **Hard refresh browser** - Press Ctrl+F5 to see changes
-
----
-
-## 📞 Need Help?
-
-See full documentation: `UPDATE_SCRIPTS.md`
-
-Or check:
-- Repository structure: `README.md`
-- Security guidelines: `SECURITY_AUDIT_REPORT.md`
-
----
-
-**Last Updated**: 2026-05-25
+- Credentials stay in `.env`.
+- Raw Jira cache stays in `jira_issues_cache.json`, which is git-ignored.
+- Only sanitized catalogue files are staged for deployment.
