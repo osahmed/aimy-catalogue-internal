@@ -1133,6 +1133,51 @@
             font-style: italic;
         }
 
+        .ticket-meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 0.5rem;
+        }
+
+        .ticket-module {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+            color: var(--primary);
+            background: rgba(99, 102, 241, 0.08);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 99px;
+            padding: 3px 9px;
+        }
+
+        .ticket-date {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .ticket-problem {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+            margin-bottom: 0.45rem;
+        }
+
+        .ticket-problem strong, .ticket-changed strong {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .ticket-changed {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+            margin-top: 0.5rem;
+        }
+
         .ticket-search-box {
             background: rgba(255,255,255,0.03);
             border: 1px solid var(--border-glass);
@@ -2411,11 +2456,16 @@
             
             ticketsList.forEach(t => {
                 let pillClass = "status-roadmap";
-                if (t.availability === "Available") pillClass = "status-released";
-                else if (t.availability === "Recently Released") pillClass = "status-recently-updated";
+                if (t.availability === "Released" || t.availability === "Available") pillClass = "status-released";
+                else if (t.availability === "Recently Updated" || t.availability === "Recently Released") pillClass = "status-recently-updated";
                 else if (t.availability === "Coming Soon") pillClass = "status-roadmap";
                 else if (t.availability === "Needs Review") pillClass = "status-needs-review";
-                
+
+                const moduleTag = t.module ? `<span class="ticket-module">${t.module}</span>` : '';
+                const dateTag = t.displayDate ? `<span class="ticket-date">${t.displayDate}</span>` : '';
+                const problemRow = t.customerProblem ? `<div class="ticket-problem"><strong>Solves:</strong> ${t.customerProblem}</div>` : '';
+                const changedRow = t.whatChanged ? `<div class="ticket-changed"><strong>What changed:</strong> ${t.whatChanged}</div>` : '';
+
                 const item = document.createElement('div');
                 item.className = "ticket-item";
                 item.innerHTML = `
@@ -2426,8 +2476,11 @@
                         </div>
                         <span class="ticket-status-pill ${pillClass}">${t.availability}</span>
                     </div>
+                    <div class="ticket-meta">${moduleTag}${dateTag}</div>
                     <div class="ticket-desc">${t.description}</div>
+                    ${problemRow}
                     <div class="ticket-value"><strong>Customer Outcome:</strong> ${t.customer_value}</div>
+                    ${changedRow}
                 `;
                 list.appendChild(item);
             });
