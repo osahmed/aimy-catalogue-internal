@@ -101,10 +101,10 @@
           "customerProblem": "Knowledge is scattered across drives, wikis, chat threads, and senior agents' heads, so answers are inconsistent and slow.",
           "customerValue": "A single source of truth that both support agents and sales reps can trust from day one.",
           "whatChanged": "Released the ingestion and indexing layer that grounds every AiMY answer in your real, approved content.",
-          "availability": "Released",
+          "availability": "Needs Review",
           "releaseDate": null,
-          "lastChangeDate": "2026-02-20",
-          "displayDate": "Updated February 2026",
+          "lastChangeDate": null,
+          "displayDate": null,
           "bestFor": [
             "Support Leaders",
             "Agents"
@@ -127,10 +127,10 @@
           "customerProblem": "Agents lose time hunting for the right policy or answer and often guess, creating inconsistent customer conversations.",
           "customerValue": "Faster handle times and consistent answers, regardless of who is on shift.",
           "whatChanged": "Released the conversational answer experience built on the verified knowledge layer.",
-          "availability": "Released",
+          "availability": "Needs Review",
           "releaseDate": null,
-          "lastChangeDate": "2026-02-20",
-          "displayDate": "Updated February 2026",
+          "lastChangeDate": null,
+          "displayDate": null,
           "bestFor": [
             "Agents",
             "Support Leaders"
@@ -153,10 +153,10 @@
           "customerProblem": "Without clear access controls, sensitive content and admin settings are hard to govern as teams grow.",
           "customerValue": "Confident, governed rollout across departments without exposing the wrong content to the wrong people.",
           "whatChanged": "Released user, role, and permission management for the knowledge platform.",
-          "availability": "Released",
-          "releaseDate": "2025-10-20",
-          "lastChangeDate": "2026-05-13",
-          "displayDate": "Released October 2025",
+          "availability": "Needs Review",
+          "releaseDate": null,
+          "lastChangeDate": null,
+          "displayDate": null,
           "bestFor": [
             "Support Leaders"
           ],
@@ -178,10 +178,10 @@
           "customerProblem": "Static answers still leave agents copying references and switching tabs to act on them.",
           "customerValue": "Less context-switching and faster resolution from a single answer surface.",
           "whatChanged": "Released contactable hyperlinks across the platform.",
-          "availability": "Released",
+          "availability": "Needs Review",
           "releaseDate": null,
-          "lastChangeDate": "2026-02-20",
-          "displayDate": "Updated February 2026",
+          "lastChangeDate": null,
+          "displayDate": null,
           "bestFor": [
             "Agents"
           ],
@@ -202,10 +202,10 @@
           "customerProblem": "Bolt-on tools that don't sync with the helpdesk create double work and stale data.",
           "customerValue": "AiMY fits into the tools your team already uses, with no rip-and-replace.",
           "whatChanged": "Released Zendesk sync.",
-          "availability": "Released",
+          "availability": "Needs Review",
           "releaseDate": null,
-          "lastChangeDate": "2025-10-05",
-          "displayDate": "Updated October 2025",
+          "lastChangeDate": null,
+          "displayDate": null,
           "bestFor": [
             "Support Leaders"
           ],
@@ -228,7 +228,7 @@
           "whatChanged": "Building Zendesk and Freshdesk integrations.",
           "availability": "Coming Soon",
           "releaseDate": null,
-          "lastChangeDate": "2026-02-20",
+          "lastChangeDate": "2026-06-02",
           "displayDate": "Coming Soon",
           "bestFor": [
             "Support Leaders"
@@ -281,10 +281,10 @@
           "customerProblem": "Voice conversations are hard to monitor, search, and feed back into improvement, even though they hold the richest signals.",
           "customerValue": "Calls become searchable, coachable operational data instead of disappearing after they end.",
           "whatChanged": "Released the calls integration that connects voice interactions to AiMY.",
-          "availability": "Released",
+          "availability": "Needs Review",
           "releaseDate": null,
-          "lastChangeDate": "2026-02-20",
-          "displayDate": "Updated February 2026",
+          "lastChangeDate": null,
+          "displayDate": null,
           "bestFor": [
             "Support Leaders",
             "Supervisors"
@@ -308,7 +308,7 @@
           "whatChanged": "Building native voice infrastructure for inbound and outbound calls.",
           "availability": "Coming Soon",
           "releaseDate": null,
-          "lastChangeDate": "2026-04-02",
+          "lastChangeDate": null,
           "displayDate": "Coming Soon",
           "bestFor": [
             "Support Leaders"
@@ -333,7 +333,7 @@
           "whatChanged": "Designing the active call experience with live assist.",
           "availability": "Coming Soon",
           "releaseDate": null,
-          "lastChangeDate": "2026-04-02",
+          "lastChangeDate": "2026-06-02",
           "displayDate": "Coming Soon",
           "bestFor": [
             "Agents",
@@ -359,7 +359,7 @@
           "whatChanged": "Building post-call summarisation and follow-up actions.",
           "availability": "Coming Soon",
           "releaseDate": null,
-          "lastChangeDate": "2026-04-02",
+          "lastChangeDate": null,
           "displayDate": "Coming Soon",
           "bestFor": [
             "Supervisors",
@@ -416,10 +416,10 @@
           "customerProblem": "Manual QA reviews a fraction of conversations, catches issues late, and misses recurring patterns.",
           "customerValue": "Quality becomes a live signal with far broader coverage than manual sampling.",
           "whatChanged": "Released the QA v1 evaluation platform.",
-          "availability": "Released",
+          "availability": "Needs Review",
           "releaseDate": null,
-          "lastChangeDate": "2025-09-08",
-          "displayDate": "Updated September 2025",
+          "lastChangeDate": null,
+          "displayDate": null,
           "bestFor": [
             "Support Leaders",
             "Supervisors"
@@ -442,10 +442,10 @@
           "customerProblem": "High call volumes make it impossible to review conversations one at a time.",
           "customerValue": "QA keeps pace with real operational volume instead of falling behind.",
           "whatChanged": "Released bulk call uploads and large-call handling.",
-          "availability": "Released",
+          "availability": "Needs Review",
           "releaseDate": null,
-          "lastChangeDate": "2025-09-08",
-          "displayDate": "Updated September 2025",
+          "lastChangeDate": null,
+          "displayDate": null,
           "bestFor": [
             "Support Leaders",
             "Supervisors"
@@ -468,10 +468,10 @@
           "customerProblem": "Raw QA scores are hard to act on without seeing trends and drivers.",
           "customerValue": "Leaders spot recurring issues and coaching opportunities at a glance.",
           "whatChanged": "Released insight enhancements and charts inside the insights chat.",
-          "availability": "Released",
+          "availability": "Needs Review",
           "releaseDate": null,
-          "lastChangeDate": "2026-02-20",
-          "displayDate": "Updated February 2026",
+          "lastChangeDate": null,
+          "displayDate": null,
           "bestFor": [
             "Support Leaders",
             "Supervisors"
@@ -494,10 +494,10 @@
           "customerProblem": "Automated scoring without a review path erodes agent trust and adoption.",
           "customerValue": "Fair, transparent QA that teams actually trust and adopt.",
           "whatChanged": "Released the QA dispute system.",
-          "availability": "Released",
+          "availability": "Needs Review",
           "releaseDate": null,
-          "lastChangeDate": "2026-05-13",
-          "displayDate": "Updated February 2026",
+          "lastChangeDate": null,
+          "displayDate": null,
           "bestFor": [
             "Supervisors",
             "Agents"
@@ -522,7 +522,7 @@
           "whatChanged": "Building the v2 AI evaluation engine.",
           "availability": "Coming Soon",
           "releaseDate": null,
-          "lastChangeDate": "2026-04-03",
+          "lastChangeDate": null,
           "displayDate": "Coming Soon",
           "bestFor": [
             "Support Leaders",
@@ -578,10 +578,10 @@
           "customerProblem": "Supervisors often discover problems only after escalation, SLA risk, or quality drift has already happened.",
           "customerValue": "Supervisors move from firefighting to acting early on the cases that matter most.",
           "whatChanged": "Released the urgency and escalation engine with AI alerts on interactions.",
-          "availability": "Released",
+          "availability": "Needs Review",
           "releaseDate": null,
-          "lastChangeDate": "2026-05-07",
-          "displayDate": "Updated May 2026",
+          "lastChangeDate": null,
+          "displayDate": null,
           "bestFor": [
             "Supervisors",
             "Support Leaders"
@@ -606,7 +606,7 @@
           "whatChanged": "Building the Operations Hub visibility dashboard.",
           "availability": "Recently Updated",
           "releaseDate": null,
-          "lastChangeDate": "2026-06-01",
+          "lastChangeDate": "2026-06-03",
           "displayDate": "Updated May 2026",
           "bestFor": [
             "Supervisors",
@@ -632,7 +632,7 @@
           "whatChanged": "Building SLA-aware triage, routing, and proactive breach alerting.",
           "availability": "Coming Soon",
           "releaseDate": null,
-          "lastChangeDate": "2026-05-05",
+          "lastChangeDate": null,
           "displayDate": "Coming Soon",
           "bestFor": [
             "Supervisors",
@@ -688,9 +688,9 @@
           "customerValue": "Every rep works from the same approved playbooks and positioning.",
           "whatChanged": "Released the sales knowledge experience.",
           "availability": "Released",
-          "releaseDate": "2026-02-18",
-          "lastChangeDate": "2026-06-01",
-          "displayDate": "Released February 2026",
+          "releaseDate": null,
+          "lastChangeDate": "2026-06-03",
+          "displayDate": "Updated June 2026",
           "bestFor": [
             "BDRs",
             "Sales Leaders"
@@ -715,7 +715,7 @@
           "whatChanged": "Building BDR outbound dispatch and follow-up sequencing.",
           "availability": "Coming Soon",
           "releaseDate": null,
-          "lastChangeDate": "2026-04-09",
+          "lastChangeDate": null,
           "displayDate": "Coming Soon",
           "bestFor": [
             "BDRs",
@@ -772,8 +772,8 @@
           "customerValue": "Managers get a clearer operating picture without chasing reps for manual updates.",
           "whatChanged": "Building queryable, natural-language pipeline visibility.",
           "availability": "Coming Soon",
-          "releaseDate": "2025-05-09",
-          "lastChangeDate": "2026-05-10",
+          "releaseDate": null,
+          "lastChangeDate": "2026-06-02",
           "displayDate": "Coming Soon",
           "bestFor": [
             "Sales Managers",
@@ -799,7 +799,7 @@
           "whatChanged": "Building the BDR activity and lead redistribution console.",
           "availability": "Coming Soon",
           "releaseDate": null,
-          "lastChangeDate": "2026-04-14",
+          "lastChangeDate": null,
           "displayDate": "Coming Soon",
           "bestFor": [
             "Sales Managers"
@@ -852,7 +852,7 @@
           "whatChanged": "Building QA-driven knowledge gap detection and article enrichment.",
           "availability": "Coming Soon",
           "releaseDate": null,
-          "lastChangeDate": "2026-04-21",
+          "lastChangeDate": null,
           "displayDate": "Coming Soon",
           "bestFor": [
             "Support Leaders",
@@ -878,7 +878,7 @@
           "whatChanged": "Planned sales improvement loop linking outcomes back to playbooks.",
           "availability": "Coming Soon",
           "releaseDate": null,
-          "lastChangeDate": "2026-03-10",
+          "lastChangeDate": null,
           "displayDate": "Coming Soon",
           "bestFor": [
             "Sales Leaders",
@@ -911,48 +911,8 @@
       "title": "Sales Playbooks & Collateral Layer",
       "module": "AiMY Sales — BDR Mode",
       "availability": "Released",
-      "displayDate": "Released February 2026",
+      "displayDate": "Updated June 2026",
       "whyItMatters": "Every rep works from the same approved playbooks and positioning."
-    },
-    {
-      "id": "knowledge-user-management",
-      "title": "Roles & Access Management",
-      "module": "AiMY Knowledge",
-      "availability": "Released",
-      "displayDate": "Released October 2025",
-      "whyItMatters": "Confident, governed rollout across departments without exposing the wrong content to the wrong people."
-    },
-    {
-      "id": "qa-dispute-management",
-      "title": "QA Dispute Management",
-      "module": "AiMY QA",
-      "availability": "Released",
-      "displayDate": "Updated February 2026",
-      "whyItMatters": "Fair, transparent QA that teams actually trust and adopt."
-    },
-    {
-      "id": "connect-urgency-escalation",
-      "title": "Proactive Urgency & Escalation Detection",
-      "module": "AiMY Connect",
-      "availability": "Released",
-      "displayDate": "Updated May 2026",
-      "whyItMatters": "Supervisors move from firefighting to acting early on the cases that matter most."
-    },
-    {
-      "id": "knowledge-multi-source-ingestion",
-      "title": "Multi-Source Knowledge Ingestion",
-      "module": "AiMY Knowledge",
-      "availability": "Released",
-      "displayDate": "Updated February 2026",
-      "whyItMatters": "A single source of truth that both support agents and sales reps can trust from day one."
-    },
-    {
-      "id": "knowledge-grounded-answer-console",
-      "title": "Grounded Answer Console",
-      "module": "AiMY Knowledge",
-      "availability": "Released",
-      "displayDate": "Updated February 2026",
-      "whyItMatters": "Faster handle times and consistent answers, regardless of who is on shift."
     }
   ]
 }

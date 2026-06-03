@@ -1,0 +1,38 @@
+# Vercel deploys from the working tree, so .gitignore is NOT enough.
+# This file is the authoritative guard preventing internal Jira data from
+# ever being served on the public site.
+
+# --- Internal Jira evidence & triage (NEVER deploy) ---
+data/catalogue-internal-evidence.json
+data/catalogue-review-needed.json
+data/catalogue-llm-drafts.json
+internal-review-notes.md
+jira_issues_cache.json
+
+# --- Secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Local deps (Vercel reinstalls from package.json server-side) ---
+node_modules/
+
+# --- Pipeline / tooling (server-side only, never needs to ship) ---
+scripts/
+*.py
+test_*.py
+check_jira_endpoints.py
+*.bat
+*.sh
+
+# --- Repo docs / dev artifacts ---
+.agents/
+.claude/
+atlassian-creator/
+*.md
+!README.md
+aimy-dispatch-logo-concepts.html
+aimy-dispatch-logo-gallery.html
+
+# NOTE: the only catalogue file that SHOULD deploy is catalogue-public.json
+# (at repo root, in data/, and in aimy-catalogue-site/).

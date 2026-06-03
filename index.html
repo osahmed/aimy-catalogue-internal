@@ -195,6 +195,33 @@
             transition: var(--transition-smooth);
         }
 
+        /* Cognito SSO auth status (header) */
+        .auth-status {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            font-size: 0.78rem;
+        }
+        .auth-email {
+            color: var(--text-muted);
+            max-width: 180px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .auth-logout {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 99px;
+            padding: 4px 12px;
+            transition: var(--transition-smooth);
+        }
+        .auth-logout:hover {
+            background: rgba(99, 102, 241, 0.1);
+        }
+
         /* Switcher switch buttons */
         .track-switcher {
             display: flex;
@@ -1624,6 +1651,10 @@
             <a href="#pitch">Pitch Customizer</a>
         </nav>
         <div style="display: flex; align-items: center; gap: 1.5rem;">
+            <div id="auth-status" class="auth-status" style="display:none;">
+                <span class="auth-email" id="auth-email"></span>
+                <a class="auth-logout" href="/api/auth/logout">Log out</a>
+            </div>
             <img src="aimy-catalogue-site/FlairsTech-logo.svg" alt="FlairsTech" style="height: 32px; width: auto;">
             <button class="cta-btn" onclick="openDemoModal()">Request Assessment</button>
         </div>
@@ -2630,6 +2661,20 @@
                     applyRevealClasses();
                 });
         };
+
+        // Populate the signed-in user in the header. Access is already enforced
+        // by the edge middleware; this only reflects who is logged in.
+        fetch('/api/auth/me', { credentials: 'same-origin' })
+            .then(r => r.ok ? r.json() : null)
+            .then(d => {
+                if (d && d.authenticated) {
+                    const box = document.getElementById('auth-status');
+                    const email = document.getElementById('auth-email');
+                    if (email) email.textContent = d.email || 'Signed in';
+                    if (box) box.style.display = 'flex';
+                }
+            })
+            .catch(() => {});
     </script>
 </body>
 </html>

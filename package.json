@@ -1,0 +1,14 @@
+{
+  "name": "aimy-catalogue",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AiMY customer pitch catalogue, gated by AWS Cognito SSO.",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel deploy --prod"
+  },
+  "dependencies": {
+    "jose": "^5.9.6"
+  }
+}
