@@ -153,10 +153,10 @@
           "customerProblem": "Without clear access controls, sensitive content and admin settings are hard to govern as teams grow.",
           "customerValue": "Confident, governed rollout across departments without exposing the wrong content to the wrong people.",
           "whatChanged": "Released user, role, and permission management for the knowledge platform.",
-          "availability": "Needs Review",
+          "availability": "Released",
           "releaseDate": null,
-          "lastChangeDate": null,
-          "displayDate": null,
+          "lastChangeDate": "2026-06-04",
+          "displayDate": "Updated June 2026",
           "bestFor": [
             "Support Leaders"
           ],
@@ -606,8 +606,8 @@
           "whatChanged": "Building the Operations Hub visibility dashboard.",
           "availability": "Recently Updated",
           "releaseDate": null,
-          "lastChangeDate": "2026-06-03",
-          "displayDate": "Updated May 2026",
+          "lastChangeDate": "2026-06-08",
+          "displayDate": "Updated June 2026",
           "bestFor": [
             "Supervisors",
             "Support Leaders"
@@ -689,7 +689,7 @@
           "whatChanged": "Released the sales knowledge experience.",
           "availability": "Released",
           "releaseDate": null,
-          "lastChangeDate": "2026-06-03",
+          "lastChangeDate": "2026-06-09",
           "displayDate": "Updated June 2026",
           "bestFor": [
             "BDRs",
@@ -773,7 +773,7 @@
           "whatChanged": "Building queryable, natural-language pipeline visibility.",
           "availability": "Coming Soon",
           "releaseDate": null,
-          "lastChangeDate": "2026-06-02",
+          "lastChangeDate": "2026-06-08",
           "displayDate": "Coming Soon",
           "bestFor": [
             "Sales Managers",
@@ -899,20 +899,28 @@
   ],
   "whatsNew": [
     {
-      "id": "connect-operations-hub",
-      "title": "Supervisor Operations Hub",
-      "module": "AiMY Connect",
-      "availability": "Recently Updated",
-      "displayDate": "Updated May 2026",
-      "whyItMatters": "A clear operating picture that supports proactive, evidence-based decisions."
-    },
-    {
       "id": "sales-bdr-knowledge",
       "title": "Sales Playbooks & Collateral Layer",
       "module": "AiMY Sales — BDR Mode",
       "availability": "Released",
       "displayDate": "Updated June 2026",
       "whyItMatters": "Every rep works from the same approved playbooks and positioning."
+    },
+    {
+      "id": "connect-operations-hub",
+      "title": "Supervisor Operations Hub",
+      "module": "AiMY Connect",
+      "availability": "Recently Updated",
+      "displayDate": "Updated June 2026",
+      "whyItMatters": "A clear operating picture that supports proactive, evidence-based decisions."
+    },
+    {
+      "id": "knowledge-user-management",
+      "title": "Roles & Access Management",
+      "module": "AiMY Knowledge",
+      "availability": "Released",
+      "displayDate": "Updated June 2026",
+      "whyItMatters": "Confident, governed rollout across departments without exposing the wrong content to the wrong people."
     }
   ]
 }
