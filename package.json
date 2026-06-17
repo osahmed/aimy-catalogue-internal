@@ -6,9 +6,15 @@
   "description": "AiMY customer pitch catalogue, gated by AWS Cognito SSO.",
   "scripts": {
     "dev": "vercel dev",
-    "deploy": "vercel deploy --prod"
+    "deploy": "vercel deploy --prod",
+    "marp:aimy-sales:pptx": "marp --no-stdin outputs/marp/aimy-sales-flairstech/aimy-sales-flairstech-marp.md --html --allow-local-files --pptx -o outputs/marp/aimy-sales-flairstech/aimy-sales-flairstech-marp.pptx",
+    "marp:aimy-sales:html": "marp --no-stdin outputs/marp/aimy-sales-flairstech/aimy-sales-flairstech-marp.md --html --allow-local-files -o outputs/marp/aimy-sales-flairstech/aimy-sales-flairstech-marp.html",
+    "marp:aimy-sales:preview": "marp --no-stdin outputs/marp/aimy-sales-flairstech/aimy-sales-flairstech-marp.md --html --allow-local-files --images png -o outputs/marp/aimy-sales-flairstech/preview"
   },
   "dependencies": {
     "jose": "^5.9.6"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.4.0"
   }
 }

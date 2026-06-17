@@ -155,7 +155,7 @@
           "whatChanged": "Released user, role, and permission management for the knowledge platform.",
           "availability": "Released",
           "releaseDate": null,
-          "lastChangeDate": "2026-06-04",
+          "lastChangeDate": "2026-06-16",
           "displayDate": "Updated June 2026",
           "bestFor": [
             "Support Leaders"
@@ -606,7 +606,7 @@
           "whatChanged": "Building the Operations Hub visibility dashboard.",
           "availability": "Recently Updated",
           "releaseDate": null,
-          "lastChangeDate": "2026-06-08",
+          "lastChangeDate": "2026-06-17",
           "displayDate": "Updated June 2026",
           "bestFor": [
             "Supervisors",
@@ -689,7 +689,7 @@
           "whatChanged": "Released the sales knowledge experience.",
           "availability": "Released",
           "releaseDate": null,
-          "lastChangeDate": "2026-06-09",
+          "lastChangeDate": "2026-06-17",
           "displayDate": "Updated June 2026",
           "bestFor": [
             "BDRs",
@@ -773,7 +773,7 @@
           "whatChanged": "Building queryable, natural-language pipeline visibility.",
           "availability": "Coming Soon",
           "releaseDate": null,
-          "lastChangeDate": "2026-06-08",
+          "lastChangeDate": "2026-06-16",
           "displayDate": "Coming Soon",
           "bestFor": [
             "Sales Managers",
@@ -899,20 +899,20 @@
   ],
   "whatsNew": [
     {
-      "id": "sales-bdr-knowledge",
-      "title": "Sales Playbooks & Collateral Layer",
-      "module": "AiMY Sales — BDR Mode",
-      "availability": "Released",
-      "displayDate": "Updated June 2026",
-      "whyItMatters": "Every rep works from the same approved playbooks and positioning."
-    },
-    {
       "id": "connect-operations-hub",
       "title": "Supervisor Operations Hub",
       "module": "AiMY Connect",
       "availability": "Recently Updated",
       "displayDate": "Updated June 2026",
       "whyItMatters": "A clear operating picture that supports proactive, evidence-based decisions."
+    },
+    {
+      "id": "sales-bdr-knowledge",
+      "title": "Sales Playbooks & Collateral Layer",
+      "module": "AiMY Sales — BDR Mode",
+      "availability": "Released",
+      "displayDate": "Updated June 2026",
+      "whyItMatters": "Every rep works from the same approved playbooks and positioning."
     },
     {
       "id": "knowledge-user-management",
