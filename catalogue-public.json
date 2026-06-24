@@ -155,7 +155,7 @@
           "whatChanged": "Released user, role, and permission management for the knowledge platform.",
           "availability": "Released",
           "releaseDate": null,
-          "lastChangeDate": "2026-06-16",
+          "lastChangeDate": "2026-06-23",
           "displayDate": "Updated June 2026",
           "bestFor": [
             "Support Leaders"
@@ -606,7 +606,7 @@
           "whatChanged": "Building the Operations Hub visibility dashboard.",
           "availability": "Recently Updated",
           "releaseDate": null,
-          "lastChangeDate": "2026-06-17",
+          "lastChangeDate": "2026-06-24",
           "displayDate": "Updated June 2026",
           "bestFor": [
             "Supervisors",
@@ -689,7 +689,7 @@
           "whatChanged": "Released the sales knowledge experience.",
           "availability": "Released",
           "releaseDate": null,
-          "lastChangeDate": "2026-06-17",
+          "lastChangeDate": "2026-06-24",
           "displayDate": "Updated June 2026",
           "bestFor": [
             "BDRs",
@@ -773,7 +773,7 @@
           "whatChanged": "Building queryable, natural-language pipeline visibility.",
           "availability": "Coming Soon",
           "releaseDate": null,
-          "lastChangeDate": "2026-06-16",
+          "lastChangeDate": "2026-06-18",
           "displayDate": "Coming Soon",
           "bestFor": [
             "Sales Managers",
